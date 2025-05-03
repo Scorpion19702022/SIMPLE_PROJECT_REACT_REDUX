@@ -14,10 +14,10 @@ const NavBar = () => {
 					<NavLink to='/'>
 						<li className={styles.link}>Home</li>
 					</NavLink>
-					<NavLink to='./Notes'>
+					<NavLink to='/Notes'>
 						<li className={styles.link}>Notes</li>
 					</NavLink>
-					<NavLink to='./Users'>
+					<NavLink to='/Users'>
 						<li className={styles.link}>Users</li>
 					</NavLink>
 				</ul>
