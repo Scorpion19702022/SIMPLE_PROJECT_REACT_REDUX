@@ -4,22 +4,22 @@ import styles from './NavBar.module.css'
 const NavBar = () => {
 	return (
 		<nav className={styles.nav_container}>
-			<button>
-				<div></div>
-				<div></div>
-				<div></div>
+			<button className={styles.btn}>
+				<div className={styles.line}></div>
+				<div className={styles.line}></div>
+				<div className={styles.line}></div>
 			</button>
-			<div>
-				<ul>
-					<li>
-						<NavLink to='/'>Home</NavLink>
-					</li>
-					<li>
-						<NavLink to='./Notes'>Notes</NavLink>
-					</li>
-					<li>
-						<NavLink to='./Users'>Users</NavLink>
-					</li>
+			<div className={styles.nav}>
+				<ul className={styles.nav_links}>
+					<NavLink to='/'>
+						<li className={styles.link}>Home</li>
+					</NavLink>
+					<NavLink to='./Notes'>
+						<li className={styles.link}>Notes</li>
+					</NavLink>
+					<NavLink to='./Users'>
+						<li className={styles.link}>Users</li>
+					</NavLink>
 				</ul>
 			</div>
 		</nav>
