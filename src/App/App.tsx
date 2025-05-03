@@ -11,8 +11,8 @@ function App() {
 			<section>
 				<Routes>
 					<Route path='/' Component={HomeComponent} />
-					<Route path='./Notes' Component={NotesComponent} />
-					<Route path='./Users' Component={UsersComponent} />
+					<Route path='/Notes' Component={NotesComponent} />
+					<Route path='/Users' Component={UsersComponent} />
 				</Routes>
 			</section>
 		</Router>
