@@ -3,7 +3,7 @@ import styles from './NavBar.module.css'
 import { useState } from 'react'
 
 const NavBar = () => {
-	const [viewNav, setViewNav] = useState<boolean>(false)
+	const [viewNav, setViewNav] = useState<boolean>(true)
 
 	const handleViewNav = () => {
 		setViewNav(!viewNav)
@@ -16,7 +16,7 @@ const NavBar = () => {
 				<div className={styles.line}></div>
 				<div className={styles.line}></div>
 			</button>
-			<div className={viewNav ? styles.nav : styles.no_nav}>
+			<div className={!viewNav ? styles.nav : styles.no_nav}>
 				<ul className={styles.nav_links}>
 					<NavLink to='/'>
 						<li className={styles.link} onClick={handleViewNav}>
