@@ -112,8 +112,9 @@
 
 a {
 	text-decoration: none;
-	color: var(--color-dark05);
+	color: var(--color-dark02);
 	padding: 0.6em 0em;
+	font-size: 1.2em;
 }
 
 @media (min-width: 1200px) {
@@ -137,7 +138,7 @@ a {
 		justify-content: center;
 	}
 
-	.link {
+	a {
 		margin: 0em 1em;
 		font-size: 1.4em;
 	}
