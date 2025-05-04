@@ -39,16 +39,18 @@
 	padding: 0.4em;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-around;
 	z-index: 10;
 	cursor: pointer;
 	visibility: visible;
+	background: none;
+	border: 0.04em solid var(--color-dark05);
 }
 
 .line {
 	width: 0%;
 	height: 2px;
-	background-color: var(--color-dark09);
+	background-color: var(--color-dark05);
 }
 
 .line:nth-child(1) {
