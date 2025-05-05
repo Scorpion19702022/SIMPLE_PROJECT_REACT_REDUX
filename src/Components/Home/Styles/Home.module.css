@@ -44,6 +44,11 @@
 	position: relative;
 	width: 100%;
 	height: 100%;
+	padding: 2em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
 	perspective: 800px;
 	background-color: #fff;
 }
@@ -54,6 +59,7 @@
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	z-index: -1;
 }
 
 .shadow {
@@ -62,4 +68,20 @@
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.6);
+	z-index: -1;
+}
+
+.heading_front {
+	color: var(--color-color02);
+}
+
+.btn_front {
+	width: 100%;
+	padding: 0.4em;
+	color: var(--color-color02);
+	background-color: var(--color-color08);
+	border: 0.04em solid var(--color-color02);
+	border-radius: 6px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
 }
