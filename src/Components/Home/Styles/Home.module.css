@@ -85,3 +85,10 @@
 	cursor: pointer;
 	transition: all 0.3s ease-in-out;
 }
+
+@media (min-width: 1200px) {
+	.wrapper {
+		width: 26%;
+		height: 600px;
+	}
+}
