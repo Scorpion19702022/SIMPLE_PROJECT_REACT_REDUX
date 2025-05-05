@@ -79,9 +79,9 @@
 	width: 100%;
 	padding: 0.4em;
 	color: var(--color-color02);
-	background-color: var(--color-color08);
-	border: 0.04em solid var(--color-color02);
-	border-radius: 6px;
+	background-color: var(--color-dark10);
+	border: 0.04em solid var(--color-dark06);
+	border-radius: 2px;
 	cursor: pointer;
 	transition: all 0.3s ease-in-out;
 }
