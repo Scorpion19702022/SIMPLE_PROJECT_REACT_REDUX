@@ -62,7 +62,7 @@
 	z-index: -1;
 }
 
-.shadow {
+.shadow_front {
 	position: absolute;
 	top: 0;
 	width: 100%;
