@@ -72,6 +72,7 @@
 
 .heading_front {
 	color: var(--color-color02);
+	z-index: 1;
 }
 
 .btn_front {
@@ -81,11 +82,12 @@
 	background-color: var(--color-dark10);
 	border: 0.04em solid var(--color-dark06);
 	border-radius: 2px;
+	z-index: 1;
 	cursor: pointer;
 	transition: all 0.3s ease-in-out;
 }
 
-/* .card_back {
+.card_back {
 	position: absolute;
 	top: 0;
 	width: 100%;
@@ -116,6 +118,13 @@
 
 .heading_back {
 	color: var(--color-color02);
+	z-index: 1;
+}
+
+.text_back {
+	color: var(--color-color02);
+	z-index: 1;
+	text-align: center;
 }
 
 .btn_back {
@@ -127,7 +136,8 @@
 	border-radius: 2px;
 	cursor: pointer;
 	transition: all 0.3s ease-in-out;
-} */
+	z-index: 1;
+}
 
 @media (min-width: 1200px) {
 	.wrapper {

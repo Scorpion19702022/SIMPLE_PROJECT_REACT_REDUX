@@ -15,9 +15,9 @@ const Home = () => {
 				</div>
 				<div className={styles.card_back}>
 					<h2 className={styles.heading_back}>Opis projektów</h2>
-					<img className={styles.img_Back} src={code02} alt='picture_code' />
+					<img className={styles.img_back} src={code02} alt='picture_code' />
 					<div className={styles.shadow_back}></div>
-					<p>
+					<p className={styles.text_back}>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias nihil recusandae necessitatibus quibusdam
 						quasi blanditiis explicabo quam facilis repellendus labore.
 					</p>
