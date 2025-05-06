@@ -54,6 +54,7 @@
 	perspective: 800px;
 	transform: rotateY(0deg);
 	visibility: visible;
+	transition: all 0.8s ease-in-out;
 }
 
 .card_front_action {
@@ -107,6 +108,13 @@
 	justify-content: space-between;
 	perspective: 800px;
 	visibility: hidden;
+	transition: all 0.8s ease-in-out;
+}
+
+.card_bback_action {
+	perspective: 800px;
+	transform: rotateY(0deg);
+	visibility: visible;
 }
 
 .img_back {
