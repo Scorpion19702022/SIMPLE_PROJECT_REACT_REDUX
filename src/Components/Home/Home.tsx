@@ -3,7 +3,12 @@ import styles from './Styles/Home.module.css'
 import code01 from '../../assets/code01.png'
 import code02 from '../../assets/code02.png'
 
-const Home = () => {
+interface InitialProps {
+	actionCard: boolean
+	addActionCard: () => void
+}
+
+const Home: React.FC<InitialProps> = ({ actionCard, addActionCard }) => {
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.box_card}>
@@ -11,7 +16,9 @@ const Home = () => {
 					<img className={styles.img_front} src={code01} alt='picture_code' />
 					<div className={styles.shadow_front}></div>
 					<h2 className={styles.heading_front}>Projekty w REDUX</h2>
-					<button className={styles.btn_front}>odwróć kartę</button>
+					<button className={styles.btn_front} onClick={addActionCard}>
+						odwróć kartę
+					</button>
 				</div>
 				<div className={styles.card_back}>
 					<h2 className={styles.heading_back}>Opis projektów</h2>
@@ -21,7 +28,9 @@ const Home = () => {
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias nihil recusandae necessitatibus quibusdam
 						quasi blanditiis explicabo quam facilis repellendus labore.
 					</p>
-					<button className={styles.btn_back}>odwróć kartę</button>
+					<button className={styles.btn_back} onClick={addActionCard}>
+						odwróć kartę
+					</button>
 				</div>
 			</div>
 		</div>
