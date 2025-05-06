@@ -52,6 +52,14 @@
 	align-items: center;
 	justify-content: space-between;
 	perspective: 800px;
+	transform: rotateY(0deg);
+	visibility: visible;
+}
+
+.card_front_action {
+	perspective: 800px;
+	transform: rotateY(180deg);
+	visibility: hidden;
 }
 
 .img_front {
@@ -98,6 +106,7 @@
 	align-items: center;
 	justify-content: space-between;
 	perspective: 800px;
+	visibility: hidden;
 }
 
 .img_back {
