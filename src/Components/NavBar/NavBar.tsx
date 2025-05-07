@@ -23,7 +23,7 @@ const NavBar = () => {
 							Home
 						</li>
 					</NavLink>
-					<NavLink to='/Users'>
+					<NavLink to='/UsersInputs'>
 						<li className={styles.link} onClick={handleViewNav}>
 							Users
 						</li>

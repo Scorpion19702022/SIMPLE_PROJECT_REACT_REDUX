@@ -1,11 +1,11 @@
 import styles from './Styles/UsersComponent.module.css'
 
-import Users from './Users'
+import UsersInputs from './UsersInputs'
 
 const UsersComponent = () => {
 	return (
 		<section className={styles.wrapper}>
-			<Users />
+			<UsersInputs />
 		</section>
 	)
 }
