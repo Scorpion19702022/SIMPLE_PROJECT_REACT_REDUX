@@ -18,7 +18,7 @@ const router = createBrowserRouter(
 					element: <HomeComponent />,
 				},
 				{
-					path: 'Users',
+					path: 'UsersInputs',
 					element: <UsersComponent />,
 				},
 				{

@@ -1,5 +1,4 @@
 import styles from './Styles/UsersComponent.module.css'
-
 import UsersInputs from './UsersInputs'
 
 const UsersComponent = () => {

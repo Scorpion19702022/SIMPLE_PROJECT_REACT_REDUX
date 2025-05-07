@@ -25,11 +25,7 @@
 }
 
 .wrapper {
-	width: 100%;
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background-color: var(--color-color09);
+	width: 90%;
+	height: 600px;
+	background-color: #0d98ba;
 }

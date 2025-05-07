@@ -1,7 +1,39 @@
-import styles from './Styles/Users.module.css'
+import styles from './Styles/UsersInputs.module.css'
 
 const UsersInputs = () => {
-	return <div className={styles.wrapper}></div>
+	const genderSelect = ['wybierz płeć', 'kobieta', 'mężczyzna']
+
+	const optionSelect = genderSelect.map((item, index) => (
+		<option value='' key={index}>
+			{item}
+		</option>
+	))
+
+	return (
+		<div className={styles.wrapper}>
+			<form className={styles.form}>
+				<h2 className={styles.headig}>Dodaj użytkownika</h2>
+				<div className={styles.box_inputs}>
+					<label className={styles.label}>Podaj imię:</label>
+					<input className={styles.input} type='text' />
+					<span className={styles.error}>error</span>
+				</div>
+				<div className={styles.box_inputs}>
+					<label className={styles.label}>Podaj nazwisko:</label>
+					<input className={styles.input} type='text' />
+					<span className={styles.error}>error</span>
+				</div>
+				<div className={styles.box_inputs}>
+					<label className={styles.label}>Wybierz płeć::</label>
+					<select className={styles.select}>{optionSelect}</select>
+					<span className={styles.error}>error</span>
+				</div>
+				<button type='submit' className={styles.btn}>
+					dodaj
+				</button>
+			</form>
+		</div>
+	)
 }
 
 export default UsersInputs
