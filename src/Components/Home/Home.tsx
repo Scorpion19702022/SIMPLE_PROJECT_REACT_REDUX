@@ -2,6 +2,7 @@ import styles from './Styles/Home.module.css'
 
 import code01 from '../../assets/code01.png'
 import code02 from '../../assets/code02.png'
+import iconRedux from '../../assets/icon_redux.png'
 
 interface InitialProps {
 	actionCard: boolean
@@ -16,6 +17,7 @@ const Home: React.FC<InitialProps> = ({ actionCard, addActionCard }) => {
 					<img className={styles.img_front} src={code01} alt='picture_code' />
 					<div className={styles.shadow_front}></div>
 					<h2 className={styles.heading_front}>Projekty w REDUX</h2>
+					<img className={styles.img_front_icon} src={iconRedux} alt='picture_icon' />
 					<button className={styles.btn_front} onClick={addActionCard}>
 						odwróć kartę
 					</button>
