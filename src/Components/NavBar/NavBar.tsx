@@ -23,14 +23,14 @@ const NavBar = () => {
 							Home
 						</li>
 					</NavLink>
-					<NavLink to='/Notes'>
-						<li className={styles.link} onClick={handleViewNav}>
-							Notes
-						</li>
-					</NavLink>
 					<NavLink to='/Users'>
 						<li className={styles.link} onClick={handleViewNav}>
 							Users
+						</li>
+					</NavLink>
+					<NavLink to='/Notes'>
+						<li className={styles.link} onClick={handleViewNav}>
+							Notes
 						</li>
 					</NavLink>
 				</ul>

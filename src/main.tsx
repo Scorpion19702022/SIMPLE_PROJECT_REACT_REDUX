@@ -18,12 +18,12 @@ const router = createBrowserRouter(
 					element: <HomeComponent />,
 				},
 				{
-					path: 'Notes',
-					element: <NotesComponent />,
-				},
-				{
 					path: 'Users',
 					element: <UsersComponent />,
+				},
+				{
+					path: 'Notes',
+					element: <NotesComponent />,
 				},
 			],
 		},
