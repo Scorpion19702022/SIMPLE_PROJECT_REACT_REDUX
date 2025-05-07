@@ -202,6 +202,10 @@
 		font-size: 3.2em;
 	}
 
+	.text_back {
+		font-size: 2em;
+	}
+
 	.btn_front:hover {
 		background-color: var(--color-dark11);
 	}
