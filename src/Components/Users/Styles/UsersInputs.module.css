@@ -26,6 +26,12 @@
 
 .wrapper {
 	width: 90%;
-	height: 600px;
+	height: 400px;
 	background-color: #0d98ba;
+}
+
+@media (min-width: 1200px) {
+	.wrapper {
+		height: 200px;
+	}
 }

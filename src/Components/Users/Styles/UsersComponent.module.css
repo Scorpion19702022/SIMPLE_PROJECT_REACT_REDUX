@@ -23,3 +23,16 @@
 
 	--color-error: #e32636;
 }
+
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	padding-top: 6em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@media (min-width: 1200px) {
+}
