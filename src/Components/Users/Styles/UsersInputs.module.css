@@ -46,6 +46,14 @@
 	justify-content: space-between;
 }
 
+.heading {
+	width: 100%;
+	text-align: center;
+	color: var(--color-color03);
+	padding-bottom: 0.4em;
+	border-bottom: 0.04em dotted var(--color-color03);
+}
+
 @media (min-width: 1200px) {
 	.wrapper {
 		height: 200px;

@@ -12,7 +12,7 @@ const UsersInputs = () => {
 	return (
 		<div className={styles.wrapper}>
 			<form className={styles.form}>
-				<h2 className={styles.headig}>Dodaj użytkownika</h2>
+				<h3 className={styles.heading}>Dodaj użytkownika</h3>
 				<div className={styles.box_inputs}>
 					<label className={styles.label}>Podaj imię:</label>
 					<input className={styles.input} type='text' />
