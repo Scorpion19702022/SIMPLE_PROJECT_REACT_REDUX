@@ -26,7 +26,7 @@
 
 .wrapper {
 	width: 90%;
-	height: 400px;
+	height: 580px;
 	background-color: var(--color-dark10);
 	box-shadow: 0.2em 0.2em 1em var(--color-dark11);
 	display: flex;
@@ -35,6 +35,7 @@
 	align-items: center;
 	border: 0.04em solid var(--color-dark05);
 	padding: 2em;
+	margin-bottom: 2em;
 }
 
 .form {
@@ -52,6 +53,41 @@
 	color: var(--color-color03);
 	padding-bottom: 0.4em;
 	border-bottom: 0.04em dotted var(--color-color03);
+}
+
+.box_inputs {
+	width: 100%;
+	padding: 1em 0em;
+	display: flex;
+	flex-direction: column;
+}
+
+.label {
+	color: var(--color-color04);
+	padding-bottom: 0.2em;
+}
+
+.input {
+	width: 100%;
+	padding: 0.6em 0em;
+	background: none;
+	border: none;
+	font-size: 1.2em;
+	color: var(--color-color02);
+	border-bottom: 0.04em solid var(--color-color04);
+	outline: none;
+}
+
+.error {
+	height: 10px;
+	color: var(--color-error);
+}
+
+.select {
+	width: 50%;
+	padding: 0.6em;
+	background-color: var(--color-color09);
+	border: none;
 }
 
 @media (min-width: 1200px) {
