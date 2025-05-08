@@ -87,7 +87,16 @@
 	width: 50%;
 	padding: 0.6em;
 	background-color: var(--color-color09);
+	color: var(--color-color02);
 	border: none;
+}
+
+.btn {
+	width: 100%;
+	padding: 0.8em;
+	background: none;
+	border: 0.04em solid var(--color-dark06);
+	color: var(--color-color02);
 }
 
 @media (min-width: 1200px) {
