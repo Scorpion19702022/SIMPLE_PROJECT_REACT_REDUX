@@ -126,5 +126,12 @@
 
 	.btn {
 		width: 20%;
+		padding: 0.8em;
+		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.btn:hover {
+		background-color: var(--color-dark11);
 	}
 }
