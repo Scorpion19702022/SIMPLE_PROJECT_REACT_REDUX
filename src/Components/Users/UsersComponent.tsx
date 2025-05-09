@@ -24,7 +24,6 @@ const UsersComponent = () => {
 	}
 
 	const handleAddUser = (e: React.FormEvent) => {
-		e.preventDefault()
 		if (firstName === '' && lastName === '' && gender === 'wybierz płeć') {
 			setEmptyFirstName('podaj imię')
 			setEmptyLastName('podaj nazwisko')
@@ -37,7 +36,12 @@ const UsersComponent = () => {
 		setEmptyFirstName('')
 		setEmptyLastName('')
 		setEmptyGender('')
+		e.preventDefault()
 	}
+
+	console.log(firstName)
+	console.log(lastName)
+	console.log(gender)
 
 	return (
 		<section className={styles.wrapper}>
