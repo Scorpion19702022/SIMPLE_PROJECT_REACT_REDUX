@@ -9,7 +9,7 @@ const UsersComponent = () => {
 
 	const [emptyFirstName, setEmptyFirstName] = useState<string>('')
 	const [emptyLastName, setEmptyLastName] = useState<string>('')
-	const [emptyGender, setEmptyGender] = useState<string>('wybierz płeć')
+	const [emptyGender, setEmptyGender] = useState<string>('')
 
 	const handleChangeFirstName = (e: string) => {
 		setFirstName(e)
