@@ -25,6 +25,11 @@ const UsersComponent = () => {
 
 	const handleAddUser = (e: React.FormEvent) => {
 		e.preventDefault()
+		if (firstName !== '' && lastName !== '' && gender !== '') {
+			setEmptyFirstame('')
+			setEmptyLastName('')
+			setEmptyGender('')
+		}
 	}
 
 	return (
