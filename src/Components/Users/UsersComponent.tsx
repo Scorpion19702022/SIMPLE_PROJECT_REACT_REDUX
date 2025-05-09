@@ -7,11 +7,17 @@ const UsersComponent = () => {
 	const [lastName, setLastName] = useState<string>('')
 	const [gender, setGender] = useState<string>('')
 
-	const handleChangeFirstName = (e: string) => {}
+	const handleChangeFirstName = (e: string) => {
+		setFirstName(e)
+	}
 
-	const handleChangeLastName = (e: string) => {}
+	const handleChangeLastName = (e: string) => {
+		setLastName(e)
+	}
 
-	const handleChangeGender = (e: string) => {}
+	const handleChangeGender = (e: string) => {
+		setGender(e)
+	}
 
 	return (
 		<section className={styles.wrapper}>
