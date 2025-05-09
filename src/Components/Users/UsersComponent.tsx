@@ -29,6 +29,10 @@ const UsersComponent = () => {
 			setEmptyFirstame('')
 			setEmptyLastName('')
 			setEmptyGender('')
+		} else if (firstName === '' && lastName === '' && gender === 'wybierz płeć') {
+			setEmptyFirstame('podaj imię')
+			setEmptyLastName('podaj nazwisko')
+			setEmptyGender('wybierz płeć')
 		}
 	}
 
