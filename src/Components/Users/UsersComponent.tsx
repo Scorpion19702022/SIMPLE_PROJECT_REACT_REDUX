@@ -15,7 +15,14 @@ const UsersComponent = () => {
 
 	return (
 		<section className={styles.wrapper}>
-			<UsersInputs />
+			<UsersInputs
+				firstNameValue={firstName}
+				lastNameValue={lastName}
+				genderValue={gender}
+				changeFirstName={handleChangeFirstName}
+				changeLastName={handleChangeLastName}
+				changeGender={handleChangeGender}
+			/>
 		</section>
 	)
 }
