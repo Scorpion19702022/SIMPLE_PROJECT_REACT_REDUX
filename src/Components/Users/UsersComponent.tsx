@@ -9,7 +9,7 @@ const UsersComponent = () => {
 
 	const [emptyFirstName, setEmptyFirstName] = useState<string>('')
 	const [emptyLastName, setEmptyLastName] = useState<string>('')
-	const [emptyGender, setEmptyGender] = useState<string>('')
+	const [emptyGender, setEmptyGender] = useState<string>('wybierz płeć')
 
 	const handleChangeFirstName = (e: string) => {
 		setFirstName(e)
@@ -33,11 +33,10 @@ const UsersComponent = () => {
 			setEmptyFirstName('')
 			setEmptyLastName('podaj nazwisko')
 			setEmptyGender('wybierz płeć')
-		} else if (firstName !== '' && lastName !== '' && gender !== '') {
-			setEmptyFirstName('')
-			setEmptyLastName('')
-			setEmptyGender('')
 		}
+		setEmptyFirstName('')
+		setEmptyLastName('')
+		setEmptyGender('')
 	}
 
 	return (

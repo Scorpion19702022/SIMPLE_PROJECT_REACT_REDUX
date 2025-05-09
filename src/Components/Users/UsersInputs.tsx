@@ -28,7 +28,7 @@ const UsersInputs: React.FC<InitialProps> = ({
 	const genderSelect = ['wybierz płeć', 'kobieta', 'mężczyzna']
 
 	const optionSelect = genderSelect.map((item, index) => (
-		<option value={genderValue} key={index}>
+		<option value={item} key={index}>
 			{item}
 		</option>
 	))
@@ -59,7 +59,7 @@ const UsersInputs: React.FC<InitialProps> = ({
 				</div>
 				<div className={styles.box_inputs}>
 					<label className={styles.label}>Wybierz płeć::</label>
-					<select className={styles.select} onChange={e => changeGender(e.target.value)}>
+					<select className={styles.select} onChange={e => changeGender(e.target.value)} value={genderValue}>
 						{optionSelect}
 					</select>
 					<span className={styles.error}>{isEmptyGender}</span>
