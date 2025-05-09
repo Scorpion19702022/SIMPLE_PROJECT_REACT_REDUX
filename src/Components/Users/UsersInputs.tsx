@@ -1,10 +1,10 @@
 import styles from './Styles/UsersInputs.module.css'
 
-interface InnitialProps {
+interface InitialProps {
 	firstNameValue: string
 	lastNameValue: string
 	genderValue: string
-	isEmptyFirstNName: string
+	isEmptyFirstName: string
 	isEmptyLastName: string
 	isEmptyGender: string
 	changeFirstName: (e: string) => void
@@ -13,11 +13,11 @@ interface InnitialProps {
 	submitAddUser: (e: React.FormEvent) => void
 }
 
-const UsersInputs: React.FC<InnitialProps> = ({
+const UsersInputs: React.FC<InitialProps> = ({
 	firstNameValue,
 	lastNameValue,
 	genderValue,
-	isEmptyFirstNName,
+	isEmptyFirstName,
 	isEmptyLastName,
 	isEmptyGender,
 	changeFirstName,
@@ -45,7 +45,7 @@ const UsersInputs: React.FC<InnitialProps> = ({
 						value={firstNameValue}
 						onChange={e => changeFirstName(e.target.value)}
 					/>
-					<span className={styles.error}>{isEmptyFirstNName}</span>
+					<span className={styles.error}>{isEmptyFirstName}</span>
 				</div>
 				<div className={styles.box_inputs}>
 					<label className={styles.label}>Podaj nazwisko:</label>

@@ -7,7 +7,7 @@ const UsersComponent = () => {
 	const [lastName, setLastName] = useState<string>('')
 	const [gender, setGender] = useState<string>('')
 
-	const [emptyFirstName, setEmptyFirstame] = useState<string>('')
+	const [emptyFirstName, setEmptyFirstName] = useState<string>('')
 	const [emptyLastName, setEmptyLastName] = useState<string>('')
 	const [emptyGender, setEmptyGender] = useState<string>('')
 
@@ -25,14 +25,18 @@ const UsersComponent = () => {
 
 	const handleAddUser = (e: React.FormEvent) => {
 		e.preventDefault()
-		if (firstName !== '' && lastName !== '' && gender !== '') {
-			setEmptyFirstame('')
-			setEmptyLastName('')
-			setEmptyGender('')
-		} else if (firstName === '' && lastName === '' && gender === 'wybierz płeć') {
-			setEmptyFirstame('podaj imię')
+		if (firstName === '' && lastName === '' && gender === 'wybierz płeć') {
+			setEmptyFirstName('podaj imię')
 			setEmptyLastName('podaj nazwisko')
 			setEmptyGender('wybierz płeć')
+		} else if (firstName !== '' && lastName === '' && gender === 'wybierz płeć') {
+			setEmptyFirstName('')
+			setEmptyLastName('podaj nazwisko')
+			setEmptyGender('wybierz płeć')
+		} else if (firstName !== '' && lastName !== '' && gender !== '') {
+			setEmptyFirstName('')
+			setEmptyLastName('')
+			setEmptyGender('')
 		}
 	}
 
@@ -42,7 +46,7 @@ const UsersComponent = () => {
 				firstNameValue={firstName}
 				lastNameValue={lastName}
 				genderValue={gender}
-				isEmptyFirstNName={emptyFirstName}
+				isEmptyFirstName={emptyFirstName}
 				isEmptyLastName={emptyLastName}
 				isEmptyGender={emptyGender}
 				changeFirstName={handleChangeFirstName}
