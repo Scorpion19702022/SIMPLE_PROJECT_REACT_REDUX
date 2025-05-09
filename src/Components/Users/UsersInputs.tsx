@@ -10,7 +10,7 @@ interface InnitialProps {
 	changeFirstName: (e: string) => void
 	changeLastName: (e: string) => void
 	changeGender: (e: string) => void
-	submit: (e: React.FormEvent) => void
+	submitAddUser: (e: React.FormEvent) => void
 }
 
 const UsersInputs: React.FC<InnitialProps> = ({
@@ -23,7 +23,7 @@ const UsersInputs: React.FC<InnitialProps> = ({
 	changeFirstName,
 	changeLastName,
 	changeGender,
-	submit,
+	submitAddUser,
 }) => {
 	const genderSelect = ['wybierz płeć', 'kobieta', 'mężczyzna']
 
@@ -36,7 +36,7 @@ const UsersInputs: React.FC<InnitialProps> = ({
 	return (
 		<div className={styles.wrapper}>
 			<h3 className={styles.heading}>Dodaj użytkownika</h3>
-			<form className={styles.form} onSubmit={submit}>
+			<form className={styles.form} onSubmit={submitAddUser}>
 				<div className={styles.box_inputs}>
 					<label className={styles.label}>Podaj imię:</label>
 					<input
