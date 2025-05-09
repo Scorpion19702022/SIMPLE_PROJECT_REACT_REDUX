@@ -1,10 +1,26 @@
 import styles from './Styles/UsersInputs.module.css'
 
-const UsersInputs = () => {
+interface InnitialProps {
+	firstNameValue: string
+	lastNameValue: string
+	genderValue: string
+	changeFirstName: (e: string) => void
+	changeLastName: (e: string) => void
+	changeGender: (e: string) => void
+}
+
+const UsersInputs: React.FC<InnitialProps> = ({
+	firstNameValue,
+	lastNameValue,
+	genderValue,
+	changeFirstName,
+	changeLastName,
+	changeGender,
+}) => {
 	const genderSelect = ['wybierz płeć', 'kobieta', 'mężczyzna']
 
 	const optionSelect = genderSelect.map((item, index) => (
-		<option value='' key={index}>
+		<option value={genderValue} key={index}>
 			{item}
 		</option>
 	))
@@ -15,17 +31,29 @@ const UsersInputs = () => {
 			<form className={styles.form}>
 				<div className={styles.box_inputs}>
 					<label className={styles.label}>Podaj imię:</label>
-					<input className={styles.input} type='text' />
+					<input
+						className={styles.input}
+						type='text'
+						value={firstNameValue}
+						onChange={e => changeFirstName(e.target.value)}
+					/>
 					<span className={styles.error}>error</span>
 				</div>
 				<div className={styles.box_inputs}>
 					<label className={styles.label}>Podaj nazwisko:</label>
-					<input className={styles.input} type='text' />
+					<input
+						className={styles.input}
+						type='text'
+						value={lastNameValue}
+						onChange={e => changeLastName(e.target.value)}
+					/>
 					<span className={styles.error}>error</span>
 				</div>
 				<div className={styles.box_inputs}>
 					<label className={styles.label}>Wybierz płeć::</label>
-					<select className={styles.select}>{optionSelect}</select>
+					<select className={styles.select} onChange={e => changeGender(e.target.value)}>
+						{optionSelect}
+					</select>
 					<span className={styles.error}>error</span>
 				</div>
 				<button type='submit' className={styles.btn}>
