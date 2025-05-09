@@ -4,18 +4,26 @@ interface InnitialProps {
 	firstNameValue: string
 	lastNameValue: string
 	genderValue: string
+	isEmptyFirstNName: string
+	isEmptyLastName: string
+	isEmptyGender: string
 	changeFirstName: (e: string) => void
 	changeLastName: (e: string) => void
 	changeGender: (e: string) => void
+	submit: (e: React.FormEvent) => void
 }
 
 const UsersInputs: React.FC<InnitialProps> = ({
 	firstNameValue,
 	lastNameValue,
 	genderValue,
+	isEmptyFirstNName,
+	isEmptyLastName,
+	isEmptyGender,
 	changeFirstName,
 	changeLastName,
 	changeGender,
+	submit,
 }) => {
 	const genderSelect = ['wybierz płeć', 'kobieta', 'mężczyzna']
 
@@ -28,7 +36,7 @@ const UsersInputs: React.FC<InnitialProps> = ({
 	return (
 		<div className={styles.wrapper}>
 			<h3 className={styles.heading}>Dodaj użytkownika</h3>
-			<form className={styles.form}>
+			<form className={styles.form} onSubmit={submit}>
 				<div className={styles.box_inputs}>
 					<label className={styles.label}>Podaj imię:</label>
 					<input
@@ -37,7 +45,7 @@ const UsersInputs: React.FC<InnitialProps> = ({
 						value={firstNameValue}
 						onChange={e => changeFirstName(e.target.value)}
 					/>
-					<span className={styles.error}>error</span>
+					<span className={styles.error}>{isEmptyFirstNName}</span>
 				</div>
 				<div className={styles.box_inputs}>
 					<label className={styles.label}>Podaj nazwisko:</label>
@@ -47,14 +55,14 @@ const UsersInputs: React.FC<InnitialProps> = ({
 						value={lastNameValue}
 						onChange={e => changeLastName(e.target.value)}
 					/>
-					<span className={styles.error}>error</span>
+					<span className={styles.error}>{isEmptyLastName}</span>
 				</div>
 				<div className={styles.box_inputs}>
 					<label className={styles.label}>Wybierz płeć::</label>
 					<select className={styles.select} onChange={e => changeGender(e.target.value)}>
 						{optionSelect}
 					</select>
-					<span className={styles.error}>error</span>
+					<span className={styles.error}>{isEmptyGender}</span>
 				</div>
 				<button type='submit' className={styles.btn}>
 					dodaj
