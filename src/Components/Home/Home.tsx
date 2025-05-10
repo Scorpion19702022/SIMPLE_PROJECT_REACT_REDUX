@@ -12,6 +12,9 @@ interface InitialProps {
 const Home: React.FC<InitialProps> = ({ actionCard, addActionCard }) => {
 	return (
 		<div className={styles.wrapper}>
+			<div className={styles.box_background}>
+				<img className={styles.img_background} src={code01} alt='picture_background' />
+			</div>
 			<div className={styles.box_card}>
 				<div className={!actionCard ? styles.card_front : styles.card_front_action}>
 					<img className={styles.img_front} src={code01} alt='picture_code' />

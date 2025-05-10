@@ -25,6 +25,7 @@
 }
 
 .wrapper {
+	position: relative;
 	width: 100%;
 	height: 100vh;
 	display: flex;
@@ -32,6 +33,17 @@
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
+}
+
+.box_background {
+	/* z-index: -10; */
+	position: absolute;
+}
+
+.img_background {
+	width: 100%;
+	opacity: 0.2;
+	filter: blur(5px);
 }
 
 .box_card {
