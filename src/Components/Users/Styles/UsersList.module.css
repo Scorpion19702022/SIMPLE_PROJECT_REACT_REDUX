@@ -101,7 +101,25 @@
 
 @media (min-width: 1200px) {
 	.wrapper {
-		width: 70%;
+		width: 50%;
 		height: 540px;
+	}
+
+	.btn_select {
+		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.btn_select:hover {
+		background-color: var(--color-color09);
+	}
+
+	.btn_clean_all {
+		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.btn_clean_all:hover {
+		background-color: var(--color-dark11);
 	}
 }
