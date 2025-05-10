@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './Styles/UsersComponent.module.css'
 import UsersInputs from './UsersInputs'
 
 const UsersComponent = () => {
 	const [firstName, setFirstName] = useState<string>('')
 	const [lastName, setLastName] = useState<string>('')
-	const [gender, setGender] = useState<string>('')
+	const [gender, setGender] = useState<string>('wybierz płeć')
 
 	const [emptyFirstName, setEmptyFirstName] = useState<string>('')
 	const [emptyLastName, setEmptyLastName] = useState<string>('')
@@ -24,24 +24,13 @@ const UsersComponent = () => {
 	}
 
 	const handleAddUser = (e: React.FormEvent) => {
-		if (firstName === '' && lastName === '' && gender === 'wybierz płeć') {
-			setEmptyFirstName('podaj imię')
-			setEmptyLastName('podaj nazwisko')
-			setEmptyGender('wybierz płeć')
-		} else if (firstName !== '' && lastName === '' && gender === 'wybierz płeć') {
-			setEmptyFirstName('')
-			setEmptyLastName('podaj nazwisko')
-			setEmptyGender('wybierz płeć')
-		}
-		setEmptyFirstName('')
-		setEmptyLastName('')
-		setEmptyGender('')
 		e.preventDefault()
+		if (firstName === '' && lastName === '' && gender === 'wybierz płeć') {
+			setEmptyFirstName('test')
+			setEmptyLastName('test')
+			setEmptyGender('test')
+		}
 	}
-
-	console.log(firstName)
-	console.log(lastName)
-	console.log(gender)
 
 	return (
 		<section className={styles.wrapper}>
