@@ -42,8 +42,9 @@
 
 .img_background {
 	width: 100%;
-	opacity: 0.2;
-	filter: blur(5px);
+	opacity: 0.3;
+	filter: blur(3px);
+	object-fit: cover;
 }
 
 .box_card {
