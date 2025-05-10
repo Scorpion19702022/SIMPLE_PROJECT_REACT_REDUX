@@ -34,7 +34,7 @@ const UsersInputs: React.FC<InitialProps> = ({
 	))
 
 	return (
-		<div className={styles.wrapper}>
+		<section className={styles.wrapper}>
 			<h3 className={styles.heading}>Dodaj użytkownika</h3>
 			<form className={styles.form} onSubmit={submitAddUser}>
 				<div className={styles.box_inputs}>
@@ -68,7 +68,7 @@ const UsersInputs: React.FC<InitialProps> = ({
 					dodaj
 				</button>
 			</form>
-		</div>
+		</section>
 	)
 }
 

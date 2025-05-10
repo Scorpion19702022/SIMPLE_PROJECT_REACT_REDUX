@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import styles from './Styles/UsersComponent.module.css'
 import UsersInputs from './UsersInputs'
+import UsersList from './UsersList'
 
 const UsersComponent = () => {
 	const [firstName, setFirstName] = useState<string>('')
@@ -64,7 +65,7 @@ const UsersComponent = () => {
 	}
 
 	return (
-		<section className={styles.wrapper}>
+		<main className={styles.wrapper}>
 			<UsersInputs
 				firstNameValue={firstName}
 				lastNameValue={lastName}
@@ -77,7 +78,8 @@ const UsersComponent = () => {
 				changeGender={handleChangeGender}
 				submitAddUser={handleAddUser}
 			/>
-		</section>
+			<UsersList />
+		</main>
 	)
 }
 
