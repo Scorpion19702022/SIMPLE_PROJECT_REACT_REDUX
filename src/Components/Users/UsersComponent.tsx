@@ -33,6 +33,14 @@ const UsersComponent = () => {
 			setEmptyFirstName('musisz podać imię')
 			setEmptyLastName('musisz podać nazwisko')
 			setEmptyGender('')
+		} else if (firstName === '' && lastName !== '' && gender === 'wybierz płeć') {
+			setEmptyFirstName('musisz podać imię')
+			setEmptyLastName('')
+			setEmptyGender('musisz wybrać płeć')
+		} else if (firstName !== '' && lastName === '' && gender === 'wybierz płeć') {
+			setEmptyFirstName('')
+			setEmptyLastName('musisz podać nazwisko')
+			setEmptyGender('musisz wybrać płeć')
 		} else if (firstName === '' && lastName !== '' && gender !== 'wybierz płeć') {
 			setEmptyFirstName('musisz podać imię')
 			setEmptyLastName('')
@@ -41,6 +49,17 @@ const UsersComponent = () => {
 			setEmptyFirstName('')
 			setEmptyLastName('musisz podać nazwisko')
 			setEmptyGender('')
+		} else if (firstName !== '' && lastName !== '' && gender === 'wybierz płeć') {
+			setEmptyFirstName('')
+			setEmptyLastName('')
+			setEmptyGender('musisz wybrać płeć')
+		} else if (firstName !== '' && lastName !== '' && gender !== 'wybierz płeć') {
+			setEmptyFirstName('')
+			setEmptyLastName('')
+			setEmptyGender('')
+			setFirstName('')
+			setLastName('')
+			setGender('wybierz płeć')
 		}
 	}
 
