@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import styles from './Styles/UsersComponent.module.css'
 import UsersInputs from './UsersInputs'
 
@@ -26,9 +26,21 @@ const UsersComponent = () => {
 	const handleAddUser = (e: React.FormEvent) => {
 		e.preventDefault()
 		if (firstName === '' && lastName === '' && gender === 'wybierz płeć') {
-			setEmptyFirstName('test')
-			setEmptyLastName('test')
-			setEmptyGender('test')
+			setEmptyFirstName('musisz podać imię')
+			setEmptyLastName('musisz podać nazwisko')
+			setEmptyGender('musisz wybrać płeć')
+		} else if (firstName === '' && lastName === '' && gender !== 'wybierz płeć') {
+			setEmptyFirstName('musisz podać imię')
+			setEmptyLastName('musisz podać nazwisko')
+			setEmptyGender('')
+		} else if (firstName === '' && lastName !== '' && gender !== 'wybierz płeć') {
+			setEmptyFirstName('musisz podać imię')
+			setEmptyLastName('')
+			setEmptyGender('')
+		} else if (firstName !== '' && lastName === '' && gender !== 'wybierz płeć') {
+			setEmptyFirstName('')
+			setEmptyLastName('musisz podać nazwisko')
+			setEmptyGender('')
 		}
 	}
 
