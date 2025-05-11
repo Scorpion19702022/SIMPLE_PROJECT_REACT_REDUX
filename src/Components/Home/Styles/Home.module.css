@@ -69,6 +69,7 @@
 	overflow: hidden;
 	transform: rotateY(0deg);
 	visibility: visible;
+	box-shadow: 0.4em 0.4em 2em var(--color-dark11);
 	opacity: 1;
 	transition: opacity 0.2s, all 1s ease-in-out;
 }
@@ -87,6 +88,7 @@
 	overflow: hidden;
 	transform: rotateY(360deg);
 	visibility: hidden;
+	box-shadow: 0.4em 0.4em 2em var(--color-dark11);
 	opacity: 0;
 	transition: opacity 0.2s, all 1s ease-in-out;
 }
