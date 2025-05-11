@@ -2,8 +2,14 @@ import { useState } from 'react'
 import styles from './Styles/UsersComponent.module.css'
 import UsersInputs from './UsersInputs'
 import UsersList from './UsersList'
+import { useAppDispatch, useAppSelector } from '../../Hooks/reduxHooks'
 
 const UsersComponent = () => {
+	const { allUsersList } = useAppSelector(state => state.users)
+	const dispatch = useAppDispatch()
+
+	console.log(allUsersList)
+
 	const [firstName, setFirstName] = useState<string>('')
 	const [lastName, setLastName] = useState<string>('')
 	const [gender, setGender] = useState<string>('wybierz płeć')
