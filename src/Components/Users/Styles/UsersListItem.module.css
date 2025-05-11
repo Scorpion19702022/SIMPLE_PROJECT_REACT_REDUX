@@ -48,7 +48,10 @@
 
 .btn {
 	width: 20%;
-	padding: 0.2em;
+	padding: 0.3em;
+	background: none;
+	color: var(--color-color03);
+	border: 0.04em solid var(--color-color08);
 }
 
 @media (min-width: 1200px) {
