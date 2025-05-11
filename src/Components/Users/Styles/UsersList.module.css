@@ -86,7 +86,7 @@
 .box_list_users {
 	width: 100%;
 	height: 70%;
-	margin-bottom: 1em;
+	margin: 1em 0em;
 	overflow: auto;
 }
 
