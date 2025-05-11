@@ -13,7 +13,16 @@ export const UsersSlice = createSlice({
 	name: 'user',
 	initialState,
 	reducers: {
-		addUser: (state: usersState, action: PayloadAction<TypeUsers>) => {},
+		addUser: (state: usersState, action: PayloadAction<TypeUsers>) => {
+			const newUsersList: TypeUsers = {
+				id: action.payload.id,
+				firstNameType: action.payload.firstNameType,
+				lastNameType: action.payload.lastNameType,
+				genderType: action.payload.genderType,
+			}
+
+			state.allUsersList.push(newUsersList)
+		},
 	},
 })
 
