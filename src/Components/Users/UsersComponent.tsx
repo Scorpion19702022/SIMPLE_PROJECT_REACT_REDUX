@@ -61,7 +61,7 @@ const UsersComponent = () => {
 			setEmptyFirstName('')
 			setEmptyLastName('')
 			setEmptyGender('musisz wybrać płeć')
-		} else if (firstName !== '' && lastName !== '' && gender !== 'wybierz płeć' && allUsersList.length < 5) {
+		} else if (firstName !== '' && lastName !== '' && gender !== 'wybierz płeć') {
 			dispatch(addUser({ id: uuidv4(), firstNameType: firstName, lastNameType: lastName, genderType: gender }))
 			setEmptyFirstName('')
 			setEmptyLastName('')
