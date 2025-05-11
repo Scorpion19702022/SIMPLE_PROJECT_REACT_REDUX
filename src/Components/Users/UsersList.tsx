@@ -1,6 +1,12 @@
+import { TypeUsers } from '../../Features/Users/TypesUsers'
 import styles from './Styles/UsersList.module.css'
+import UsersListItem from './UsersListItem'
 
-const UsersList = () => {
+interface InitialProps {
+	usersList: TypeUsers[]
+}
+
+const UsersList: React.FC<InitialProps> = ({ usersList }) => {
 	return (
 		<section className={styles.wrapper}>
 			<h3 className={styles.heading}>Lista użytkowików</h3>
@@ -21,7 +27,11 @@ const UsersList = () => {
 				<button className={styles.btn_select}>mężczyźni</button>
 			</div>
 			<div className={styles.box_list_users}>
-				<p>lista</p>
+				<ul>
+					{usersList.map((item: TypeUsers) => (
+						<UsersListItem user={item} key={item.id} />
+					))}
+				</ul>
 			</div>
 			<button className={styles.btn_clean_all}>wyczyść</button>
 		</section>
