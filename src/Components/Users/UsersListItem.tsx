@@ -11,7 +11,7 @@ const UsersListItem: React.FC<InitialProps> = ({ user }) => {
 			<span className={styles.firstName}>{user.firstNameType}</span>
 			<span className={styles.lastName}>{user.lastNameType}</span>
 			<span className={styles.gender}>{user.genderType}</span>
-			<button className={styles.btn}>usuńń</button>
+			<button className={styles.btn}>usuń</button>
 		</li>
 	)
 }

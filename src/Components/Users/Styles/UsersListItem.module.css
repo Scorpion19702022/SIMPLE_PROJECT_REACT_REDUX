@@ -55,4 +55,12 @@
 }
 
 @media (min-width: 1200px) {
+	.btn {
+		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.btn:hover {
+		background-color: var(--color-color09);
+	}
 }
