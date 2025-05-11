@@ -3,6 +3,9 @@ import styles from './Styles/UsersComponent.module.css'
 import UsersInputs from './UsersInputs'
 import UsersList from './UsersList'
 import { useAppDispatch, useAppSelector } from '../../Hooks/reduxHooks'
+import { addUser } from '../../Features/Users/UsersSlice'
+
+import { v4 as uuidv4 } from 'uuid'
 
 const UsersComponent = () => {
 	const { allUsersList } = useAppSelector(state => state.users)
@@ -61,6 +64,7 @@ const UsersComponent = () => {
 			setEmptyLastName('')
 			setEmptyGender('musisz wybrać płeć')
 		} else if (firstName !== '' && lastName !== '' && gender !== 'wybierz płeć') {
+			dispatch(addUser({ id: uuidv4(), firstNameType: firstName, lastNameType: lastName, genderType: gender }))
 			setEmptyFirstName('')
 			setEmptyLastName('')
 			setEmptyGender('')
