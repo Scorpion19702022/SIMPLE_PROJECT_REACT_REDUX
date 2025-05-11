@@ -23,8 +23,12 @@ export const UsersSlice = createSlice({
 
 			state.allUsersList.push(newUsersList)
 		},
+
+		deleteAll: state => {
+			state.allUsersList = []
+		},
 	},
 })
 
-export const { addUser } = UsersSlice.actions
+export const { addUser, deleteAll } = UsersSlice.actions
 export default UsersSlice.reducer

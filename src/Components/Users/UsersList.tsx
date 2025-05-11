@@ -4,9 +4,10 @@ import UsersListItem from './UsersListItem'
 
 interface InitialProps {
 	usersList: TypeUsers[]
+	deleteAllUsers: () => void
 }
 
-const UsersList: React.FC<InitialProps> = ({ usersList }) => {
+const UsersList: React.FC<InitialProps> = ({ usersList, deleteAllUsers }) => {
 	return (
 		<section className={styles.wrapper}>
 			<h3 className={styles.heading}>Lista użytkowików</h3>
@@ -33,7 +34,9 @@ const UsersList: React.FC<InitialProps> = ({ usersList }) => {
 					))}
 				</ul>
 			</div>
-			<button className={styles.btn_clean_all}>wyczyść</button>
+			<button className={styles.btn_clean_all} onClick={deleteAllUsers}>
+				wyczyść
+			</button>
 		</section>
 	)
 }
