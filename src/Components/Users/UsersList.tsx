@@ -9,18 +9,21 @@ interface InitialProps {
 }
 
 const UsersList: React.FC<InitialProps> = ({ usersList, deleteOneUser, deleteAllUsers }) => {
+	const woman = usersList.filter(gender => gender.genderType === 'kobieta')
+	const man = usersList.filter(gender => gender.genderType === 'mężczyzna')
+
 	return (
 		<section className={styles.wrapper}>
 			<h3 className={styles.heading}>Lista użytkowików</h3>
 			<div className={styles.box_count}>
 				<span className={styles.span_count}>
-					wszyscy: <span className={styles.count}>0</span>
+					wszyscy: <span className={styles.count}>{usersList.length}</span>
 				</span>
 				<span className={styles.span_count}>
-					koiety: <span className={styles.count}>0</span>
+					koiety: <span className={styles.count}>{woman.length}</span>
 				</span>
 				<span className={styles.span_count}>
-					mężczyźni: <span className={styles.count}>0</span>
+					mężczyźni: <span className={styles.count}>{man.length}</span>
 				</span>
 			</div>
 			<div className={styles.box_btn_select}>
