@@ -6,16 +6,15 @@ interface InitialProps {
 	usersList: TypeUsers[]
 	deleteOneUser: (id: string) => void
 	deleteAllUsers: () => void
-	allCountUsers: number
 }
 
-const UsersList: React.FC<InitialProps> = ({ usersList, deleteOneUser, deleteAllUsers, allCountUsers }) => {
+const UsersList: React.FC<InitialProps> = ({ usersList, deleteOneUser, deleteAllUsers }) => {
 	return (
 		<section className={styles.wrapper}>
 			<h3 className={styles.heading}>Lista użytkowików</h3>
 			<div className={styles.box_count}>
 				<span className={styles.span_count}>
-					wszyscy: <span className={styles.count}>{allCountUsers}</span>
+					wszyscy: <span className={styles.count}>0</span>
 				</span>
 				<span className={styles.span_count}>
 					koiety: <span className={styles.count}>0</span>

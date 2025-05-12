@@ -8,14 +8,12 @@ import { addUser, deleteAll, deleteOne } from '../../Features/Users/UsersSlice'
 import { v4 as uuidv4 } from 'uuid'
 
 const UsersComponent = () => {
-	const { allUsersList, countAll } = useAppSelector(state => state.users)
+	const { allUsersList } = useAppSelector(state => state.users)
 	const dispatch = useAppDispatch()
 
 	const [firstName, setFirstName] = useState<string>('')
 	const [lastName, setLastName] = useState<string>('')
 	const [gender, setGender] = useState<string>('wybierz płeć')
-
-	const [allCount, setAllCount] = useState<number>(countAll)
 
 	const [emptyFirstName, setEmptyFirstName] = useState<string>('')
 	const [emptyLastName, setEmptyLastName] = useState<string>('')
@@ -31,10 +29,6 @@ const UsersComponent = () => {
 
 	const handleChangeGender = (e: string) => {
 		setGender(e)
-	}
-
-	const handleCount = () => {
-		setAllCount(countAll)
 	}
 
 	const handleAddUser = (e: React.FormEvent) => {
@@ -69,7 +63,6 @@ const UsersComponent = () => {
 			setEmptyGender('musisz wybrać płeć')
 		} else if (firstName !== '' && lastName !== '' && gender !== 'wybierz płeć') {
 			dispatch(addUser({ id: uuidv4(), firstNameType: firstName, lastNameType: lastName, genderType: gender }))
-			handleCount()
 			setEmptyFirstName('')
 			setEmptyLastName('')
 			setEmptyGender('')
@@ -101,12 +94,7 @@ const UsersComponent = () => {
 				changeGender={handleChangeGender}
 				submitAddUser={handleAddUser}
 			/>
-			<UsersList
-				usersList={allUsersList}
-				deleteAllUsers={handleDeleteAllUsers}
-				deleteOneUser={handleDeleteUser}
-				allCountUsers={allCount}
-			/>
+			<UsersList usersList={allUsersList} deleteAllUsers={handleDeleteAllUsers} deleteOneUser={handleDeleteUser} />
 		</main>
 	)
 }

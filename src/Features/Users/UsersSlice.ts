@@ -3,16 +3,10 @@ import { TypeUsers } from './TypesUsers'
 
 interface usersState {
 	allUsersList: TypeUsers[]
-	countAll: number
-	countWoman: number
-	countMan: number
 }
 
 const initialState: usersState = {
 	allUsersList: [],
-	countAll: 0,
-	countWoman: 0,
-	countMan: 0,
 }
 
 export const UsersSlice = createSlice({
@@ -28,10 +22,6 @@ export const UsersSlice = createSlice({
 			}
 
 			state.allUsersList.push(newUsersList)
-		},
-
-		count: (state: usersState) => {
-			state.countAll = state.allUsersList.length
 		},
 
 		deleteAll: state => {
