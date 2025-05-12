@@ -44,7 +44,7 @@ const UsersList: React.FC<InitialProps> = ({ usersList, deleteOneUser, deleteAll
 					))}
 				</ul>
 			</div>
-			<button className={styles.btn_clean_all} onClick={deleteAllUsers}>
+			<button className={styles.btn_clean_all} onClick={deleteAllUsers} disabled={usersList.length > 0 ? false : true}>
 				wyczyść
 			</button>
 		</section>
