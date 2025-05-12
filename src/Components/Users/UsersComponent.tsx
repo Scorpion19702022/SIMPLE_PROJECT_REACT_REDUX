@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './Styles/UsersComponent.module.css'
 import UsersInputs from './UsersInputs'
 import UsersList from './UsersList'
@@ -8,7 +8,7 @@ import { addUser, deleteAll, deleteOne } from '../../Features/Users/UsersSlice'
 import { v4 as uuidv4 } from 'uuid'
 
 const UsersComponent = () => {
-	const { allUsersList } = useAppSelector(state => state.users)
+	const { allUsersList, countAll, countWoman, countMan } = useAppSelector(state => state.users)
 	const dispatch = useAppDispatch()
 
 	const [firstName, setFirstName] = useState<string>('')
@@ -30,6 +30,10 @@ const UsersComponent = () => {
 	const handleChangeGender = (e: string) => {
 		setGender(e)
 	}
+
+	// useEffect(() => {
+	// 	dispatch(addUser(countAll))
+	// }, [])
 
 	const handleAddUser = (e: React.FormEvent) => {
 		e.preventDefault()
