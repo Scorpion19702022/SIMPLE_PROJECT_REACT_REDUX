@@ -15,6 +15,10 @@ const UsersComponent = () => {
 	const [lastName, setLastName] = useState<string>('')
 	const [gender, setGender] = useState<string>('wybierz płeć')
 
+	const [userAllCount, setUserAllCounnt] = useState<number>(0)
+	const [userWomansCount, setUserWomaCount] = useState<number>(0)
+	const [userManCount, setUserManCount] = useState<number>(0)
+
 	const [emptyFirstName, setEmptyFirstName] = useState<string>('')
 	const [emptyLastName, setEmptyLastName] = useState<string>('')
 	const [emptyGender, setEmptyGender] = useState<string>('')
@@ -31,9 +35,13 @@ const UsersComponent = () => {
 		setGender(e)
 	}
 
-	// useEffect(() => {
-	// 	dispatch(addUser(countAll))
-	// }, [])
+	useEffect(() => {
+		if (allUsersList.length) {
+			setUserAllCounnt(countAll)
+			setUserWomaCount(countWoman)
+			setUserManCount(countMan)
+		}
+	}, [allUsersList, countAll, countWoman, countMan])
 
 	const handleAddUser = (e: React.FormEvent) => {
 		e.preventDefault()
@@ -67,6 +75,9 @@ const UsersComponent = () => {
 			setEmptyGender('musisz wybrać płeć')
 		} else if (firstName !== '' && lastName !== '' && gender !== 'wybierz płeć') {
 			dispatch(addUser({ id: uuidv4(), firstNameType: firstName, lastNameType: lastName, genderType: gender }))
+			setUserAllCounnt(countAll)
+			setUserWomaCount(countWoman)
+			setUserManCount(countMan)
 			setEmptyFirstName('')
 			setEmptyLastName('')
 			setEmptyGender('')
@@ -98,7 +109,14 @@ const UsersComponent = () => {
 				changeGender={handleChangeGender}
 				submitAddUser={handleAddUser}
 			/>
-			<UsersList usersList={allUsersList} deleteAllUsers={handleDeleteAllUsers} deleteOneUser={handleDeleteUser} />
+			<UsersList
+				usersList={allUsersList}
+				deleteAllUsers={handleDeleteAllUsers}
+				deleteOneUser={handleDeleteUser}
+				allCount={userAllCount}
+				womanCount={userWomansCount}
+				manCount={userManCount}
+			/>
 		</main>
 	)
 }
