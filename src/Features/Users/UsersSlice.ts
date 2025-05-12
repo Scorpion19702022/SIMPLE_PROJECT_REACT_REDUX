@@ -28,13 +28,10 @@ export const UsersSlice = createSlice({
 			}
 
 			state.allUsersList.push(newUsersList)
+		},
 
-			const woman = state.allUsersList.filter(item => item.genderType === 'kobieta')
-			const man = state.allUsersList.filter(item => item.genderType === 'mężczyzna')
-
+		count: (state: usersState) => {
 			state.countAll = state.allUsersList.length
-			state.countWoman = woman.length
-			state.countMan = man.length
 		},
 
 		deleteAll: state => {

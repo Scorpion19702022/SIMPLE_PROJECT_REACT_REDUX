@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import styles from './Styles/UsersComponent.module.css'
 import UsersInputs from './UsersInputs'
 import UsersList from './UsersList'
@@ -8,18 +8,14 @@ import { addUser, deleteAll, deleteOne } from '../../Features/Users/UsersSlice'
 import { v4 as uuidv4 } from 'uuid'
 
 const UsersComponent = () => {
-	const { allUsersList, countAll, countWoman, countMan } = useAppSelector(state => state.users)
+	const { allUsersList, countAll } = useAppSelector(state => state.users)
 	const dispatch = useAppDispatch()
 
 	const [firstName, setFirstName] = useState<string>('')
 	const [lastName, setLastName] = useState<string>('')
 	const [gender, setGender] = useState<string>('wybierz płeć')
 
-	const [isUserList, setIsUserList] = useState<boolean>(false)
-
-	const [userAllCount, setUserAllCounnt] = useState<number>(0)
-	const [userWomansCount, setUserWomaCount] = useState<number>(0)
-	const [userManCount, setUserManCount] = useState<number>(0)
+	const [allCount, setAllCount] = useState<number>(countAll)
 
 	const [emptyFirstName, setEmptyFirstName] = useState<string>('')
 	const [emptyLastName, setEmptyLastName] = useState<string>('')
@@ -37,13 +33,9 @@ const UsersComponent = () => {
 		setGender(e)
 	}
 
-	useEffect(() => {
-		if (!isUserList) {
-			setUserAllCounnt(countAll)
-			setUserWomaCount(countWoman)
-			setUserManCount(countMan)
-		}
-	}, [isUserList])
+	const handleCount = () => {
+		setAllCount(countAll)
+	}
 
 	const handleAddUser = (e: React.FormEvent) => {
 		e.preventDefault()
@@ -77,10 +69,7 @@ const UsersComponent = () => {
 			setEmptyGender('musisz wybrać płeć')
 		} else if (firstName !== '' && lastName !== '' && gender !== 'wybierz płeć') {
 			dispatch(addUser({ id: uuidv4(), firstNameType: firstName, lastNameType: lastName, genderType: gender }))
-			setIsUserList(true)
-			setUserAllCounnt(countAll)
-			setUserWomaCount(countWoman)
-			setUserManCount(countMan)
+			handleCount()
 			setEmptyFirstName('')
 			setEmptyLastName('')
 			setEmptyGender('')
@@ -116,9 +105,7 @@ const UsersComponent = () => {
 				usersList={allUsersList}
 				deleteAllUsers={handleDeleteAllUsers}
 				deleteOneUser={handleDeleteUser}
-				allCount={userAllCount}
-				womanCount={userWomansCount}
-				manCount={userManCount}
+				allCountUsers={allCount}
 			/>
 		</main>
 	)
