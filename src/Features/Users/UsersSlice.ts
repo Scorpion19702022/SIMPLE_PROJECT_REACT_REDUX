@@ -3,10 +3,16 @@ import { TypeUsers } from './TypesUsers'
 
 interface usersState {
 	allUsersList: TypeUsers[]
+	countAll: number
+	countWoman: number
+	countMan: number
 }
 
 const initialState: usersState = {
 	allUsersList: [],
+	countAll: 0,
+	countWoman: 0,
+	countMan: 0,
 }
 
 export const UsersSlice = createSlice({
@@ -22,6 +28,13 @@ export const UsersSlice = createSlice({
 			}
 
 			state.allUsersList.push(newUsersList)
+
+			const woman = state.allUsersList.filter(item => item.genderType === 'kobieta')
+			const man = state.allUsersList.filter(item => item.genderType === 'mężczyzna')
+
+			state.countAll = state.allUsersList.length
+			state.countWoman = woman.length
+			state.countMan = man.length
 		},
 
 		deleteAll: state => {
