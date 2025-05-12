@@ -27,9 +27,15 @@ const UsersList: React.FC<InitialProps> = ({ usersList, deleteOneUser, deleteAll
 				</span>
 			</div>
 			<div className={styles.box_btn_select}>
-				<button className={styles.btn_select}>wszyscy</button>
-				<button className={styles.btn_select}>kobiety</button>
-				<button className={styles.btn_select}>mężczyźni</button>
+				<button className={styles.btn_select} disabled={usersList.length > 0 ? false : true}>
+					wszyscy
+				</button>
+				<button className={styles.btn_select} disabled={usersList.length > 0 ? false : true}>
+					kobiety
+				</button>
+				<button className={styles.btn_select} disabled={usersList.length > 0 ? false : true}>
+					mężczyźni
+				</button>
 			</div>
 			<div className={styles.box_list_users}>
 				<ul>
