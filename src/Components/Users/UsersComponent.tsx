@@ -15,6 +15,8 @@ const UsersComponent = () => {
 	const [lastName, setLastName] = useState<string>('')
 	const [gender, setGender] = useState<string>('wybierz płeć')
 
+	const [isUserList, setIsUserList] = useState<boolean>(false)
+
 	const [userAllCount, setUserAllCounnt] = useState<number>(0)
 	const [userWomansCount, setUserWomaCount] = useState<number>(0)
 	const [userManCount, setUserManCount] = useState<number>(0)
@@ -36,12 +38,12 @@ const UsersComponent = () => {
 	}
 
 	useEffect(() => {
-		if (allUsersList.length) {
+		if (!isUserList) {
 			setUserAllCounnt(countAll)
 			setUserWomaCount(countWoman)
 			setUserManCount(countMan)
 		}
-	}, [allUsersList, countAll, countWoman, countMan])
+	}, [isUserList])
 
 	const handleAddUser = (e: React.FormEvent) => {
 		e.preventDefault()
@@ -75,6 +77,7 @@ const UsersComponent = () => {
 			setEmptyGender('musisz wybrać płeć')
 		} else if (firstName !== '' && lastName !== '' && gender !== 'wybierz płeć') {
 			dispatch(addUser({ id: uuidv4(), firstNameType: firstName, lastNameType: lastName, genderType: gender }))
+			setIsUserList(true)
 			setUserAllCounnt(countAll)
 			setUserWomaCount(countWoman)
 			setUserManCount(countMan)
