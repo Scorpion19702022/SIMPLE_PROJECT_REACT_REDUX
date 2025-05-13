@@ -75,7 +75,7 @@
 	border-bottom: 0.04em solid var(--color-color08);
 }
 
-.btn_select {
+.btn_select_active {
 	width: 30%;
 	padding: 0.4em;
 	color: var(--color-color04);
@@ -83,7 +83,7 @@
 	border: 0.04em solid var(--color-color08);
 }
 
-.btn_select:disabled {
+.btn_select_active:disabled {
 	width: 30%;
 	padding: 0.4em;
 	color: var(--color-dark06);
@@ -122,16 +122,16 @@
 		height: 540px;
 	}
 
-	.btn_select {
+	.btn_select_active {
 		cursor: pointer;
 		transition: all 0.3s ease-in-out;
 	}
 
-	.btn_select:hover {
+	.btn_select_active:hover {
 		background-color: var(--color-color09);
 	}
 
-	.btn_select:disabled {
+	.btn_select_active:disabled {
 		width: 30%;
 		padding: 0.4em;
 		color: var(--color-dark06);
