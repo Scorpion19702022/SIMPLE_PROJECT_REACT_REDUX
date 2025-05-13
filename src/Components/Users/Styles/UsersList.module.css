@@ -78,9 +78,10 @@
 .btn_select_active {
 	width: 30%;
 	padding: 0.4em;
-	color: var(--color-color04);
-	background: none;
-	border: 0.04em solid var(--color-color08);
+	color: var(--color-color02);
+	background-color: var(--color-color08);
+	border: 0.04em solid var(--color-color01);
+	box-shadow: 0em 0em 0.6em var(--color-color04);
 }
 
 .btn_select_active:disabled {
@@ -89,6 +90,7 @@
 	color: var(--color-dark06);
 	background-color: var(--color-dark09);
 	border: 0.04em solid var(--color-dark07);
+	box-shadow: 0em 0em 0em var(--color-color04);
 	cursor: auto;
 }
 
