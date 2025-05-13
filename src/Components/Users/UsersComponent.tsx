@@ -86,6 +86,11 @@ const UsersComponent = () => {
 
 	const handleSelectGender = (select: string) => {
 		dispatch(selectGender(select))
+		if (select === 'all') {
+			setAll(true)
+			setWoman(false)
+			setMan(false)
+		}
 	}
 
 	return (
