@@ -19,6 +19,10 @@ const UsersComponent = () => {
 	const [emptyLastName, setEmptyLastName] = useState<string>('')
 	const [emptyGender, setEmptyGender] = useState<string>('')
 
+	const [all, setAll] = useState<boolean>(true)
+	const [woman, setWoman] = useState<boolean>(false)
+	const [man, setMan] = useState<boolean>(false)
+
 	const handleChangeFirstName = (e: string) => {
 		setFirstName(e)
 	}

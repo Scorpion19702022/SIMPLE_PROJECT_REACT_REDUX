@@ -5,6 +5,9 @@ import UsersListItem from './UsersListItem'
 interface InitialProps {
 	usersList: TypeUsers[]
 	selectGenderUsersList: TypeUsers[]
+	isAll: boolean
+	isWoman: boolean
+	isMan: boolean
 	deleteOneUser: (id: string) => void
 	deleteAllUsers: () => void
 	selectGender: (select: string) => void
@@ -13,6 +16,9 @@ interface InitialProps {
 const UsersList: React.FC<InitialProps> = ({
 	usersList,
 	selectGenderUsersList,
+	isAll,
+	isWoman,
+	isMan,
 	deleteOneUser,
 	deleteAllUsers,
 	selectGender,
@@ -36,21 +42,21 @@ const UsersList: React.FC<InitialProps> = ({
 			</div>
 			<div className={styles.box_btn_select}>
 				<button
-					className={styles.btn_select}
+					className={styles.btn_select_active}
 					disabled={usersList.length > 0 ? false : true}
 					onClick={() => selectGender('all')}
 				>
 					wszyscy
 				</button>
 				<button
-					className={styles.btn_select}
+					className={styles.btn_select_active}
 					disabled={usersList.length > 0 ? false : true}
 					onClick={() => selectGender('woman')}
 				>
 					kobiety
 				</button>
 				<button
-					className={styles.btn_select}
+					className={styles.btn_select_active}
 					disabled={usersList.length > 0 ? false : true}
 					onClick={() => selectGender('man')}
 				>
