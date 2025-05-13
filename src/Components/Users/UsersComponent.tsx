@@ -104,6 +104,9 @@ const UsersComponent = () => {
 			/>
 			<UsersList
 				usersList={allUsersList}
+				isAll={all}
+				isWoman={woman}
+				isMan={man}
 				selectGenderUsersList={selectGenderUsers}
 				deleteAllUsers={handleDeleteAllUsers}
 				deleteOneUser={handleDeleteUser}
