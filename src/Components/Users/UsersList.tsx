@@ -4,12 +4,19 @@ import UsersListItem from './UsersListItem'
 
 interface InitialProps {
 	usersList: TypeUsers[]
+	selectGenderUsersList: TypeUsers[]
 	deleteOneUser: (id: string) => void
 	deleteAllUsers: () => void
 	selectGender: (select: string) => void
 }
 
-const UsersList: React.FC<InitialProps> = ({ usersList, deleteOneUser, deleteAllUsers, selectGender }) => {
+const UsersList: React.FC<InitialProps> = ({
+	usersList,
+	selectGenderUsersList,
+	deleteOneUser,
+	deleteAllUsers,
+	selectGender,
+}) => {
 	const woman = usersList.filter(gender => gender.genderType === 'kobieta')
 	const man = usersList.filter(gender => gender.genderType === 'mężczyzna')
 
@@ -52,7 +59,7 @@ const UsersList: React.FC<InitialProps> = ({ usersList, deleteOneUser, deleteAll
 			</div>
 			<div className={styles.box_list_users}>
 				<ul>
-					{usersList.map((item: TypeUsers) => (
+					{selectGenderUsersList.map((item: TypeUsers) => (
 						<UsersListItem user={item} key={item.id} deleteUser={deleteOneUser} />
 					))}
 				</ul>

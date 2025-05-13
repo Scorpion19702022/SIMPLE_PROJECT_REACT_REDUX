@@ -100,6 +100,7 @@ const UsersComponent = () => {
 			/>
 			<UsersList
 				usersList={allUsersList}
+				selectGenderUsersList={selectGenderUsers}
 				deleteAllUsers={handleDeleteAllUsers}
 				deleteOneUser={handleDeleteUser}
 				selectGender={handleSelectGender}
