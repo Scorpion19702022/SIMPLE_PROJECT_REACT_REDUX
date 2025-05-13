@@ -24,6 +24,7 @@ export const UsersSlice = createSlice({
 			}
 
 			state.allUsersList.push(newUsersList)
+			state.selectGenderUsers.push(newUsersList)
 		},
 
 		selectGender: (state: usersState, action: PayloadAction<string>) => {
@@ -38,10 +39,12 @@ export const UsersSlice = createSlice({
 
 		deleteAll: state => {
 			state.allUsersList = []
+			state.selectGenderUsers = []
 		},
 
 		deleteOne: (state: usersState, action: PayloadAction<string>) => {
 			state.allUsersList = state.allUsersList.filter(item => item.id !== action.payload)
+			state.selectGenderUsers = state.selectGenderUsers.filter(item => item.id !== action.payload)
 		},
 	},
 })
