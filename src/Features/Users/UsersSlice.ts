@@ -3,10 +3,12 @@ import { TypeUsers } from './TypesUsers'
 
 interface usersState {
 	allUsersList: TypeUsers[]
+	selectGenderUsers: TypeUsers[]
 }
 
 const initialState: usersState = {
 	allUsersList: [],
+	selectGenderUsers: [],
 }
 
 export const UsersSlice = createSlice({
@@ -24,6 +26,16 @@ export const UsersSlice = createSlice({
 			state.allUsersList.push(newUsersList)
 		},
 
+		selectGender: (state: usersState, action: PayloadAction<string>) => {
+			if (action.payload === 'all') {
+				state.selectGenderUsers = state.allUsersList
+			} else if (action.payload === 'woman') {
+				state.selectGenderUsers = state.allUsersList.filter(gender => gender.genderType === 'kobieta')
+			} else if (action.payload === 'man') {
+				state.selectGenderUsers = state.allUsersList.filter(gender => gender.genderType === 'mężczyzna')
+			}
+		},
+
 		deleteAll: state => {
 			state.allUsersList = []
 		},
@@ -34,5 +46,5 @@ export const UsersSlice = createSlice({
 	},
 })
 
-export const { addUser, deleteAll, deleteOne } = UsersSlice.actions
+export const { addUser, deleteAll, deleteOne, selectGender } = UsersSlice.actions
 export default UsersSlice.reducer

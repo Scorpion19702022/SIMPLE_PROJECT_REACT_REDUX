@@ -3,12 +3,12 @@ import styles from './Styles/UsersComponent.module.css'
 import UsersInputs from './UsersInputs'
 import UsersList from './UsersList'
 import { useAppDispatch, useAppSelector } from '../../Hooks/reduxHooks'
-import { addUser, deleteAll, deleteOne } from '../../Features/Users/UsersSlice'
+import { addUser, deleteAll, deleteOne, selectGender } from '../../Features/Users/UsersSlice'
 
 import { v4 as uuidv4 } from 'uuid'
 
 const UsersComponent = () => {
-	const { allUsersList } = useAppSelector(state => state.users)
+	const { allUsersList, selectGenderUsers } = useAppSelector(state => state.users)
 	const dispatch = useAppDispatch()
 
 	const [firstName, setFirstName] = useState<string>('')
@@ -80,6 +80,10 @@ const UsersComponent = () => {
 		dispatch(deleteOne(id))
 	}
 
+	const handleSelectGender = (select: string) => {
+		dispatch(selectGender(select))
+	}
+
 	return (
 		<main className={styles.wrapper}>
 			<UsersInputs
@@ -94,7 +98,12 @@ const UsersComponent = () => {
 				changeGender={handleChangeGender}
 				submitAddUser={handleAddUser}
 			/>
-			<UsersList usersList={allUsersList} deleteAllUsers={handleDeleteAllUsers} deleteOneUser={handleDeleteUser} />
+			<UsersList
+				usersList={allUsersList}
+				deleteAllUsers={handleDeleteAllUsers}
+				deleteOneUser={handleDeleteUser}
+				selectGender={handleSelectGender}
+			/>
 		</main>
 	)
 }
