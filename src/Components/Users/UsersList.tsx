@@ -6,9 +6,10 @@ interface InitialProps {
 	usersList: TypeUsers[]
 	deleteOneUser: (id: string) => void
 	deleteAllUsers: () => void
+	selectGender: (select: string) => void
 }
 
-const UsersList: React.FC<InitialProps> = ({ usersList, deleteOneUser, deleteAllUsers }) => {
+const UsersList: React.FC<InitialProps> = ({ usersList, deleteOneUser, deleteAllUsers, selectGender }) => {
 	const woman = usersList.filter(gender => gender.genderType === 'kobieta')
 	const man = usersList.filter(gender => gender.genderType === 'mężczyzna')
 
@@ -27,13 +28,25 @@ const UsersList: React.FC<InitialProps> = ({ usersList, deleteOneUser, deleteAll
 				</span>
 			</div>
 			<div className={styles.box_btn_select}>
-				<button className={styles.btn_select} disabled={usersList.length > 0 ? false : true}>
+				<button
+					className={styles.btn_select}
+					disabled={usersList.length > 0 ? false : true}
+					onClick={() => selectGender('all')}
+				>
 					wszyscy
 				</button>
-				<button className={styles.btn_select} disabled={usersList.length > 0 ? false : true}>
+				<button
+					className={styles.btn_select}
+					disabled={usersList.length > 0 ? false : true}
+					onClick={() => selectGender('woman')}
+				>
 					kobiety
 				</button>
-				<button className={styles.btn_select} disabled={usersList.length > 0 ? false : true}>
+				<button
+					className={styles.btn_select}
+					disabled={usersList.length > 0 ? false : true}
+					onClick={() => selectGender('man')}
+				>
 					mężczyźni
 				</button>
 			</div>
