@@ -49,14 +49,14 @@ const UsersList: React.FC<InitialProps> = ({
 					wszyscy
 				</button>
 				<button
-					className={styles.btn_select_active}
+					className={styles.btn_select}
 					disabled={usersList.length > 0 ? false : true}
 					onClick={() => selectGender('woman')}
 				>
 					kobiety
 				</button>
 				<button
-					className={styles.btn_select_active}
+					className={styles.btn_select}
 					disabled={usersList.length > 0 ? false : true}
 					onClick={() => selectGender('man')}
 				>
