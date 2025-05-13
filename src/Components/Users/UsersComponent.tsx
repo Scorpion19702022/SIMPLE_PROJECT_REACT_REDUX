@@ -90,6 +90,14 @@ const UsersComponent = () => {
 			setAll(true)
 			setWoman(false)
 			setMan(false)
+		} else if (select === 'woman') {
+			setAll(false)
+			setWoman(true)
+			setMan(false)
+		} else if (select === 'man') {
+			setAll(false)
+			setWoman(false)
+			setMan(true)
 		}
 	}
 
