@@ -29,7 +29,7 @@ const NotesInputs: React.FC<InitialState> = ({ date }) => {
 				</div>
 				<div className={styles.box_inputs}>
 					<div className={styles.info_textarea}>
-						<label className={styles.label_textarea}>wpisz tekst:</label>
+						<label className={styles.label_textarea}>wpisz tekst max 100 znaków:</label>
 						<span className={styles.marks_textarea}>Znaków: 0</span>
 					</div>
 					<textarea className={styles.textarea}></textarea>

@@ -73,16 +73,18 @@
 
 .label_textarea,
 .marks_textarea {
-	color: var(--color-color05);
+	color: var(--color-color04);
 }
 
 .input {
 	width: 100%;
-	padding: 0.8em 0.2em;
+	padding: 0.4em 0.2em;
 	background: none;
 	border: none;
 	border-bottom: 0.04em solid var(--color-color06);
 	color: var(--color-color02);
+	font-size: 1.2em;
+	outline: none;
 }
 
 .input_date {
