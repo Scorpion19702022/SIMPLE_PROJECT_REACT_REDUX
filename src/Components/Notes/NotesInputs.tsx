@@ -2,9 +2,9 @@ import styles from './Styles/NotesInputs.module.css'
 
 const Notes = () => {
 	return (
-		<div className={styles.wrapper}>
-			<h1>Notes</h1>
-		</div>
+		<section className={styles.wrapper}>
+			<h2 className={styles.heading}>Wypełnij formularz</h2>
+		</section>
 	)
 }
 

@@ -25,13 +25,15 @@
 }
 
 .wrapper {
-	width: 100%;
-	height: 100vh;
+	width: 90%;
+	height: 500px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--color-color04);
+	background-color: var(--color-dark10);
+	padding: 2em;
+	margin-bottom: 2em;
 }
 
 @media (min-width: 1200px) {
