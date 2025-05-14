@@ -1,6 +1,10 @@
 import styles from './Styles/NotesInputs.module.css'
 
-const Notes = () => {
+interface InitialState {
+	date: string
+}
+
+const NotesInputs: React.FC<InitialState> = ({ date }) => {
 	const kind = ['wybierz kategorię', 'dom', 'praca', 'rozrywka', 'inne']
 
 	const optionSelect = kind.map((option, id) => (
@@ -20,7 +24,7 @@ const Notes = () => {
 				</div>
 				<div className={styles.box_inputs}>
 					<label className={styles.label}>wybierz datę:</label>
-					<input className={styles.input_date} type='date' />
+					<input className={styles.input_date} type='date' min={date} value={date} />
 					<span className={styles.error}>error</span>
 				</div>
 				<div className={styles.box_inputs}>
@@ -42,4 +46,4 @@ const Notes = () => {
 	)
 }
 
-export default Notes
+export default NotesInputs
