@@ -54,7 +54,7 @@
 
 .box_inputs {
 	width: 100%;
-	padding: 1em 0em;
+	padding: 0.4em 0em;
 	display: flex;
 	flex-direction: column;
 }
@@ -93,6 +93,47 @@
 	background-color: var(--color-dark10);
 	border: 0.04em solid var(--color-color06);
 	color: var(--color-color02);
+}
+
+.textarea {
+	width: 100%;
+	min-height: 140px;
+	max-height: 140px;
+	background: none;
+	border: 0.04em solid var(--color-color06);
+	color: var(--color-color02);
+	font-size: 1.2em;
+	padding: 0.2em;
+	outline: none;
+}
+
+.error {
+	width: 100%;
+	height: 10px;
+	padding: 0.4em 0em;
+	color: var(--color-error);
+}
+
+.select {
+	width: 50%;
+	background: none;
+	padding: 0.4em 0.1em;
+	border: 0.04em solid var(--color-color06);
+	color: var(--color-color02);
+	outline: none;
+}
+
+.option {
+	background-color: var(--color-dark11);
+}
+
+.btn {
+	width: 100%;
+	padding: 0.4em;
+	background: none;
+	border: 0.04em solid var(--color-color06);
+	color: var(--color-color02);
+	margin-top: 0.4em;
 }
 
 @media (min-width: 1200px) {

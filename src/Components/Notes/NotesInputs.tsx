@@ -8,7 +8,7 @@ const NotesInputs: React.FC<InitialState> = ({ date }) => {
 	const kind = ['wybierz kategorię', 'dom', 'praca', 'rozrywka', 'inne']
 
 	const optionSelect = kind.map((option, id) => (
-		<option value='' key={id}>
+		<option className={styles.option} value='' key={id}>
 			{option}
 		</option>
 	))
