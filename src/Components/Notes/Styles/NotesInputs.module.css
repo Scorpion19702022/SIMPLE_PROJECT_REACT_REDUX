@@ -33,3 +33,6 @@
 	align-items: center;
 	background-color: var(--color-color04);
 }
+
+@media (min-width: 1200px) {
+}

@@ -1,4 +1,4 @@
-import styles from './Styles/Notes.module.css'
+import styles from './Styles/NotesInputs.module.css'
 
 const Notes = () => {
 	return (
