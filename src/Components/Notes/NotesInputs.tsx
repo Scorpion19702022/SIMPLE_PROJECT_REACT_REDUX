@@ -1,6 +1,14 @@
 import styles from './Styles/NotesInputs.module.css'
 
 const Notes = () => {
+	const kind = ['wybierz kategorię', 'dom', 'praca', 'rozrywka', 'inne']
+
+	const optionSelect = kind.map((option, id) => (
+		<option value='' key={id}>
+			{option}
+		</option>
+	))
+
 	return (
 		<section className={styles.wrapper}>
 			<h2 className={styles.heading}>Wypełnij formularz</h2>
@@ -22,8 +30,8 @@ const Notes = () => {
 					<span className={styles.error}>error</span>
 				</div>
 				<div className={styles.box_inputs}>
-					<label className={styles.label}>wybierz rodzaj</label>
-					<select className={styles.select}></select>
+					<label className={styles.label}>wybierz kategorię zadania:</label>
+					<select className={styles.select}>{optionSelect}</select>
 					<span className={styles.error}>error</span>
 				</div>
 				<button className={styles.btn} type='submit'>
