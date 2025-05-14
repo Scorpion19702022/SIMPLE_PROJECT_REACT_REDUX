@@ -28,8 +28,10 @@ const NotesInputs: React.FC<InitialState> = ({ date }) => {
 					<span className={styles.error}>error</span>
 				</div>
 				<div className={styles.box_inputs}>
-					<label className={styles.label}>wpisz tekst:</label>
-					<span className={styles.marks}>Znaków: 0</span>
+					<div className={styles.info_textarea}>
+						<label className={styles.label_textarea}>wpisz tekst:</label>
+						<span className={styles.marks_textarea}>Znaków: 0</span>
+					</div>
 					<textarea className={styles.textarea}></textarea>
 					<span className={styles.error}>error</span>
 				</div>

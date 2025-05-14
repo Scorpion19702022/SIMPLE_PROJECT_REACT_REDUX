@@ -26,7 +26,7 @@
 
 .wrapper {
 	width: 90%;
-	height: 500px;
+	height: 700px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -50,6 +50,47 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+}
+
+.box_inputs {
+	width: 100%;
+	padding: 1em 0em;
+	display: flex;
+	flex-direction: column;
+}
+
+.label {
+	color: var(--color-color04);
+	padding-bottom: 0.4em;
+}
+
+.info_textarea {
+	width: 100%;
+	padding: 0.4em 0em;
+	display: flex;
+	justify-content: space-between;
+}
+
+.label_textarea,
+.marks_textarea {
+	color: var(--color-color05);
+}
+
+.input {
+	width: 100%;
+	padding: 0.8em 0.2em;
+	background: none;
+	border: none;
+	border-bottom: 0.04em solid var(--color-color06);
+	color: var(--color-color02);
+}
+
+.input_date {
+	width: 50%;
+	padding: 0.4em;
+	background-color: var(--color-dark10);
+	border: 0.04em solid var(--color-color06);
+	color: var(--color-color02);
 }
 
 @media (min-width: 1200px) {
