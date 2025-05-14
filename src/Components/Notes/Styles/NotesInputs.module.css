@@ -34,6 +34,8 @@
 	background-color: var(--color-dark10);
 	padding: 2em;
 	margin-bottom: 2em;
+	border: 0.04em solid var(--color-dark06);
+	box-shadow: 0.4em 0.4em 1em var(--color-dark11);
 }
 
 .heading {
@@ -137,4 +139,8 @@
 }
 
 @media (min-width: 1200px) {
+	.wrapper {
+		width: 30%;
+		height: 780px;
+	}
 }
