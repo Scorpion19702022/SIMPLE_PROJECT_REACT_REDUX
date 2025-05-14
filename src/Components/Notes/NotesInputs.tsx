@@ -1,15 +1,18 @@
 import styles from './Styles/NotesInputs.module.css'
 
 interface InitialState {
+	inputTheme: string
 	date: string
+	inputText: string
+	inputSelect: string
 }
 
-const NotesInputs: React.FC<InitialState> = ({ date }) => {
+const NotesInputs: React.FC<InitialState> = ({ inputTheme, date, inputText, inputSelect }) => {
 	const kind = ['wybierz kategorię', 'dom', 'praca', 'rozrywka', 'inne']
 
-	const optionSelect = kind.map((option, id) => (
-		<option className={styles.option} value='' key={id}>
-			{option}
+	const optionSelect = kind.map((kind, id) => (
+		<option className={styles.option} value={kind} key={id}>
+			{kind}
 		</option>
 	))
 
@@ -19,7 +22,7 @@ const NotesInputs: React.FC<InitialState> = ({ date }) => {
 			<form className={styles.form}>
 				<div className={styles.box_inputs}>
 					<label className={styles.label}>wpisz tytuł:</label>
-					<input className={styles.input} type='text' />
+					<input className={styles.input} type='text' value={inputTheme} />
 					<span className={styles.error}>error</span>
 				</div>
 				<div className={styles.box_inputs}>
@@ -32,12 +35,14 @@ const NotesInputs: React.FC<InitialState> = ({ date }) => {
 						<label className={styles.label_textarea}>wpisz tekst max 100 znaków:</label>
 						<span className={styles.marks_textarea}>Znaków: 0</span>
 					</div>
-					<textarea className={styles.textarea}></textarea>
+					<textarea className={styles.textarea} value={inputText}></textarea>
 					<span className={styles.error}>error</span>
 				</div>
 				<div className={styles.box_inputs}>
 					<label className={styles.label}>wybierz kategorię zadania:</label>
-					<select className={styles.select}>{optionSelect}</select>
+					<select className={styles.select} value={inputSelect}>
+						{optionSelect}
+					</select>
 					<span className={styles.error}>error</span>
 				</div>
 				<button className={styles.btn} type='submit'>
