@@ -15,7 +15,7 @@ const NotesInputs: React.FC<InitialState> = ({ date }) => {
 
 	return (
 		<section className={styles.wrapper}>
-			<h2 className={styles.heading}>Wypełnij formularz</h2>
+			<h3 className={styles.heading}>Wypełnij formularz</h3>
 			<form className={styles.form}>
 				<div className={styles.box_inputs}>
 					<label className={styles.label}>wpisz tytuł:</label>
