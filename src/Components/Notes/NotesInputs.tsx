@@ -4,10 +4,14 @@ interface InitialState {
 	inputTheme: string
 	date: string
 	inputText: string
-	inputSelect: string
+	inputKind: string
+	changeTheme: (e: string) => void
+	changeDate: (e: string) => void
+	changeText: (e: string) => void
+	changeKind: (e: string) => void
 }
 
-const NotesInputs: React.FC<InitialState> = ({ inputTheme, date, inputText, inputSelect }) => {
+const NotesInputs: React.FC<InitialState> = ({ inputTheme, date, inputText, inputKind }) => {
 	const kind = ['wybierz kategorię', 'dom', 'praca', 'rozrywka', 'inne']
 
 	const optionSelect = kind.map((kind, id) => (
@@ -40,7 +44,7 @@ const NotesInputs: React.FC<InitialState> = ({ inputTheme, date, inputText, inpu
 				</div>
 				<div className={styles.box_inputs}>
 					<label className={styles.label}>wybierz kategorię zadania:</label>
-					<select className={styles.select} value={inputSelect}>
+					<select className={styles.select} value={inputKind}>
 						{optionSelect}
 					</select>
 					<span className={styles.error}>error</span>

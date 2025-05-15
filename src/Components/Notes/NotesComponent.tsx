@@ -12,7 +12,7 @@ const NotesComponent = () => {
 
 	return (
 		<section className={styles.wrapper}>
-			<NotesInputs inputTheme={theme} date={inputDate} inputText={text} inputSelect={kind} />
+			<NotesInputs inputTheme={theme} date={inputDate} inputText={text} inputKind={kind} />
 		</section>
 	)
 }
