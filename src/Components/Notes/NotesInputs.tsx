@@ -11,7 +11,16 @@ interface InitialState {
 	changeKind: (e: string) => void
 }
 
-const NotesInputs: React.FC<InitialState> = ({ inputTheme, date, inputText, inputKind }) => {
+const NotesInputs: React.FC<InitialState> = ({
+	inputTheme,
+	date,
+	inputText,
+	inputKind,
+	changeTheme,
+	changeText,
+	changeDate,
+	changeKind,
+}) => {
 	const kind = ['wybierz kategorię', 'dom', 'praca', 'rozrywka', 'inne']
 
 	const optionSelect = kind.map((kind, id) => (
@@ -26,12 +35,18 @@ const NotesInputs: React.FC<InitialState> = ({ inputTheme, date, inputText, inpu
 			<form className={styles.form}>
 				<div className={styles.box_inputs}>
 					<label className={styles.label}>wpisz tytuł:</label>
-					<input className={styles.input} type='text' value={inputTheme} />
+					<input className={styles.input} type='text' value={inputTheme} onChange={e => changeTheme(e.target.value)} />
 					<span className={styles.error}>error</span>
 				</div>
 				<div className={styles.box_inputs}>
 					<label className={styles.label}>wybierz datę:</label>
-					<input className={styles.input_date} type='date' min={date} value={date} />
+					<input
+						className={styles.input_date}
+						type='date'
+						min={date}
+						value={date}
+						onChange={e => changeDate(e.target.value)}
+					/>
 					<span className={styles.error}>error</span>
 				</div>
 				<div className={styles.box_inputs}>
@@ -39,12 +54,12 @@ const NotesInputs: React.FC<InitialState> = ({ inputTheme, date, inputText, inpu
 						<label className={styles.label_textarea}>wpisz tekst max 100 znaków:</label>
 						<span className={styles.marks_textarea}>Znaków: 0</span>
 					</div>
-					<textarea className={styles.textarea} value={inputText}></textarea>
+					<textarea className={styles.textarea} value={inputText} onChange={e => changeText(e.target.value)}></textarea>
 					<span className={styles.error}>error</span>
 				</div>
 				<div className={styles.box_inputs}>
 					<label className={styles.label}>wybierz kategorię zadania:</label>
-					<select className={styles.select} value={inputKind}>
+					<select className={styles.select} value={inputKind} onChange={e => changeKind(e.target.value)}>
 						{optionSelect}
 					</select>
 					<span className={styles.error}>error</span>
