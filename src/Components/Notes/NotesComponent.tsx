@@ -10,9 +10,36 @@ const NotesComponent = () => {
 	const [text, setText] = useState<string>('')
 	const [kind, setKind] = useState<string>('wybierz kategorię')
 
+	const handleChangeTheme = (e: string) => {
+		setTheme(e)
+	}
+
+	const handleChangeDate = (e: string) => {
+		setInputDate(e)
+	}
+
+	const handleChangeText = (e: string) => {
+		if (e.length < 100) {
+			setText(e)
+		}
+	}
+
+	const handleChangeKind = (e: string) => {
+		setKind(e)
+	}
+
 	return (
 		<section className={styles.wrapper}>
-			<NotesInputs inputTheme={theme} date={inputDate} inputText={text} inputKind={kind} />
+			<NotesInputs
+				inputTheme={theme}
+				date={inputDate}
+				inputText={text}
+				inputKind={kind}
+				changeTheme={handleChangeTheme}
+				changeDate={handleChangeDate}
+				changeText={handleChangeText}
+				changeKind={handleChangeKind}
+			/>
 		</section>
 	)
 }
