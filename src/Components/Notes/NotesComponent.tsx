@@ -10,6 +10,10 @@ const NotesComponent = () => {
 	const [text, setText] = useState<string>('')
 	const [kind, setKind] = useState<string>('wybierz kategorię')
 
+	const [emptyTheme, setEmptyTheme] = useState<string>('')
+	const [emptyText, setEmptyText] = useState<string>('')
+	const [emptyKind, setEmptyKind] = useState<string>('')
+
 	const handleChangeTheme = (e: string) => {
 		setTheme(e)
 	}
@@ -35,6 +39,9 @@ const NotesComponent = () => {
 				date={inputDate}
 				inputText={text}
 				inputKind={kind}
+				isErrorTheme={emptyTheme}
+				isErrorText={emptyText}
+				isErrorKind={emptyKind}
 				changeTheme={handleChangeTheme}
 				changeDate={handleChangeDate}
 				changeText={handleChangeText}

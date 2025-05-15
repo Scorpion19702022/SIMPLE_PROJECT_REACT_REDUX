@@ -5,6 +5,9 @@ interface InitialState {
 	date: string
 	inputText: string
 	inputKind: string
+	isErrorTheme: string
+	isErrorText: string
+	isErrorKind: string
 	changeTheme: (e: string) => void
 	changeDate: (e: string) => void
 	changeText: (e: string) => void
@@ -16,6 +19,9 @@ const NotesInputs: React.FC<InitialState> = ({
 	date,
 	inputText,
 	inputKind,
+	isErrorTheme,
+	isErrorText,
+	isErrorKind,
 	changeTheme,
 	changeText,
 	changeDate,
@@ -29,6 +35,8 @@ const NotesInputs: React.FC<InitialState> = ({
 		</option>
 	))
 
+	console.log(date)
+
 	return (
 		<section className={styles.wrapper}>
 			<h3 className={styles.heading}>Wypełnij formularz</h3>
@@ -36,7 +44,7 @@ const NotesInputs: React.FC<InitialState> = ({
 				<div className={styles.box_inputs}>
 					<label className={styles.label}>wpisz tytuł:</label>
 					<input className={styles.input} type='text' value={inputTheme} onChange={e => changeTheme(e.target.value)} />
-					<span className={styles.error}>error</span>
+					<span className={styles.error}>{isErrorTheme}</span>
 				</div>
 				<div className={styles.box_inputs}>
 					<label className={styles.label}>wybierz datę:</label>
@@ -47,7 +55,6 @@ const NotesInputs: React.FC<InitialState> = ({
 						value={date}
 						onChange={e => changeDate(e.target.value)}
 					/>
-					<span className={styles.error}>error</span>
 				</div>
 				<div className={styles.box_inputs}>
 					<div className={styles.info_textarea}>
@@ -55,14 +62,14 @@ const NotesInputs: React.FC<InitialState> = ({
 						<span className={styles.marks_textarea}>Znaków: 0</span>
 					</div>
 					<textarea className={styles.textarea} value={inputText} onChange={e => changeText(e.target.value)}></textarea>
-					<span className={styles.error}>error</span>
+					<span className={styles.error}>{isErrorText}</span>
 				</div>
 				<div className={styles.box_inputs}>
 					<label className={styles.label}>wybierz kategorię zadania:</label>
 					<select className={styles.select} value={inputKind} onChange={e => changeKind(e.target.value)}>
 						{optionSelect}
 					</select>
-					<span className={styles.error}>error</span>
+					<span className={styles.error}>{isErrorKind}</span>
 				</div>
 				<button className={styles.btn} type='submit'>
 					dodaj
