@@ -78,6 +78,14 @@
 	color: var(--color-color04);
 }
 
+.marks {
+	font-weight: bold;
+}
+
+.marks_border {
+	color: var(--color-error);
+}
+
 .input {
 	width: 100%;
 	padding: 0.4em 0.2em;
