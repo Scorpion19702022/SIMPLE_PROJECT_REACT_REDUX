@@ -12,6 +12,7 @@ interface InitialState {
 	changeDate: (e: string) => void
 	changeText: (e: string) => void
 	changeKind: (e: string) => void
+	submit: (e: React.FormEvent) => void
 }
 
 const NotesInputs: React.FC<InitialState> = ({
@@ -26,6 +27,7 @@ const NotesInputs: React.FC<InitialState> = ({
 	changeText,
 	changeDate,
 	changeKind,
+	submit,
 }) => {
 	const kind = ['wybierz kategorię', 'dom', 'praca', 'rozrywka', 'inne']
 
@@ -35,12 +37,10 @@ const NotesInputs: React.FC<InitialState> = ({
 		</option>
 	))
 
-	console.log(date)
-
 	return (
 		<section className={styles.wrapper}>
 			<h3 className={styles.heading}>Wypełnij formularz</h3>
-			<form className={styles.form}>
+			<form className={styles.form} onSubmit={submit}>
 				<div className={styles.box_inputs}>
 					<label className={styles.label}>wpisz tytuł:</label>
 					<input className={styles.input} type='text' value={inputTheme} onChange={e => changeTheme(e.target.value)} />

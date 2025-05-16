@@ -32,6 +32,15 @@ const NotesComponent = () => {
 		setKind(e)
 	}
 
+	const handleSubmit = (e: React.FormEvent) => {
+		e.preventDefault()
+		if (theme === '' && text === '' && kind === 'wybierz kategorię') {
+			setEmptyTheme('podaj tytuł')
+			setEmptyText('wpisz tekst')
+			setEmptyKind('wybierz kategorię')
+		}
+	}
+
 	return (
 		<section className={styles.wrapper}>
 			<NotesInputs
@@ -46,6 +55,7 @@ const NotesComponent = () => {
 				changeDate={handleChangeDate}
 				changeText={handleChangeText}
 				changeKind={handleChangeKind}
+				submit={handleSubmit}
 			/>
 		</section>
 	)
