@@ -57,6 +57,18 @@ const NotesComponent = () => {
 			setEmptyTheme('')
 			setEmptyText('')
 			setEmptyKind('wybierz kategorię')
+		} else if (theme !== '' && text === '' && kind !== 'wybierz kategorię') {
+			setEmptyTheme('')
+			setEmptyText('wpisz tekst')
+			setEmptyKind('')
+		} else if (theme === '' && text !== '' && kind !== 'wybierz kategorię') {
+			setEmptyTheme('podaj tytuł')
+			setEmptyText('')
+			setEmptyKind('')
+		} else if (theme !== '' && text !== '' && kind !== 'wybierz kategorię') {
+			setEmptyTheme('')
+			setEmptyText('')
+			setEmptyKind('')
 		}
 	}
 
