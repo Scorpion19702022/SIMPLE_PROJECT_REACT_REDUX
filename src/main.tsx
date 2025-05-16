@@ -7,7 +7,7 @@ import NotesComponent from './Components/Notes/NotesComponent'
 import UsersComponent from './Components/Users/UsersComponent'
 import HomeComponent from './Components/Home/HomeComponent'
 import { Provider } from 'react-redux'
-import { store } from './store'
+import { store } from './Features/store'
 
 const router = createBrowserRouter(
 	[
