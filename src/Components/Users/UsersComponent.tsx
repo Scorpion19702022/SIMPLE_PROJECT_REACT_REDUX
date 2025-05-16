@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styles from './Styles/UsersComponent.module.css'
 import UsersInputs from './UsersInputs'
 import UsersList from './UsersList'
-import { useAppDispatch, useAppSelector } from '../../Hooks/UseReduxHooks'
+import { useAppDispatch, useAppSelector } from '../../Hooks/useReduxHooks'
 import { addUser, deleteAll, deleteOne, selectGender } from '../../Features/Users/UsersSlice'
 
 import { v4 as uuidv4 } from 'uuid'
