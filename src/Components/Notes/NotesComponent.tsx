@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import NotesInputs from './NotesInputs'
 import styles from './Styles/NotesComponent.module.css'
+import NotesResult from './NotesResult'
 
 const NotesComponent = () => {
 	const currentDate = new Date().toLocaleString('en-CA').slice(0, 10)
@@ -94,6 +95,7 @@ const NotesComponent = () => {
 				changeKind={handleChangeKind}
 				submit={handleSubmit}
 			/>
+			<NotesResult />
 		</section>
 	)
 }
