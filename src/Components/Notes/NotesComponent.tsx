@@ -10,6 +10,8 @@ const NotesComponent = () => {
 	const [text, setText] = useState<string>('')
 	const [kind, setKind] = useState<string>('wybierz kategorię')
 
+	const [marksCounter, setMarksCounter] = useState<number>(0)
+
 	const [emptyTheme, setEmptyTheme] = useState<string>('')
 	const [emptyText, setEmptyText] = useState<string>('')
 	const [emptyKind, setEmptyKind] = useState<string>('')
@@ -23,8 +25,9 @@ const NotesComponent = () => {
 	}
 
 	const handleChangeText = (e: string) => {
-		if (e.length < 100) {
+		if (e.length <= 100) {
 			setText(e)
+			setMarksCounter(e.length)
 		}
 	}
 
@@ -64,6 +67,7 @@ const NotesComponent = () => {
 				date={inputDate}
 				inputText={text}
 				inputKind={kind}
+				countMarks={marksCounter}
 				isErrorTheme={emptyTheme}
 				isErrorText={emptyText}
 				isErrorKind={emptyKind}

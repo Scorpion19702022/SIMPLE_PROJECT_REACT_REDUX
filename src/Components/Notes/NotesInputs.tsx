@@ -5,6 +5,7 @@ interface InitialState {
 	date: string
 	inputText: string
 	inputKind: string
+	countMarks: number
 	isErrorTheme: string
 	isErrorText: string
 	isErrorKind: string
@@ -20,6 +21,7 @@ const NotesInputs: React.FC<InitialState> = ({
 	date,
 	inputText,
 	inputKind,
+	countMarks,
 	isErrorTheme,
 	isErrorText,
 	isErrorKind,
@@ -59,7 +61,9 @@ const NotesInputs: React.FC<InitialState> = ({
 				<div className={styles.box_inputs}>
 					<div className={styles.info_textarea}>
 						<label className={styles.label_textarea}>wpisz tekst max 100 znaków:</label>
-						<span className={styles.marks_textarea}>Znaków: 0</span>
+						<span className={styles.marks_textarea}>
+							Znaków: <span className={styles.marks}>{countMarks}</span>
+						</span>
 					</div>
 					<textarea className={styles.textarea} value={inputText} onChange={e => changeText(e.target.value)}></textarea>
 					<span className={styles.error}>{isErrorText}</span>
