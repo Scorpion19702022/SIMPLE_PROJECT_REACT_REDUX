@@ -69,6 +69,11 @@ const NotesComponent = () => {
 			setEmptyTheme('')
 			setEmptyText('')
 			setEmptyKind('')
+			setTheme('')
+			setInputDate(currentDate)
+			setText('')
+			setKind('wybierz kategorię')
+			setMarksCounter(0)
 		}
 	}
 
