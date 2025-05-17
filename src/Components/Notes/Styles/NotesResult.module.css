@@ -125,7 +125,7 @@
 	}
 
 	.box_info_select {
-		height: 30%;
+		height: 25%;
 	}
 
 	.counter {
@@ -134,18 +134,35 @@
 
 	.box_btns_select {
 		justify-content: space-between;
+		height: 40%;
 	}
 
 	.btn_select {
 		width: 18%;
-		height: 40%;
 		padding: 0.4em;
 		margin: 0em;
 		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.btn_select:hover {
+		background-color: var(--color-dark11);
+		color: var(--color-color01);
+	}
+
+	.btn_clean_all {
+		padding: 0.6em;
+		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.btn_clean_all:hover {
+		background-color: var(--color-dark11);
+		color: var(--color-color01);
 	}
 
 	.box_notes {
-		height: 60%;
+		height: 65%;
 	}
 
 	.heading {
