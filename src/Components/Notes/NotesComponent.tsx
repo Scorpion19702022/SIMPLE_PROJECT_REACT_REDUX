@@ -3,7 +3,14 @@ import NotesInputs from './NotesInputs'
 import styles from './Styles/NotesComponent.module.css'
 import NotesResult from './NotesResult'
 
+import { v4 as uuidv4 } from 'uuid'
+import { useAppDispatch, useAppSelector } from '../../Hooks/useReduxHooks'
+import { addNotes } from '../../Features/Notes/NotesSlice'
+
 const NotesComponent = () => {
+	const {} = useAppSelector(state => state.notes)
+	const dispatch = useAppDispatch()
+
 	const currentDate = new Date().toLocaleString('en-CA').slice(0, 10)
 
 	const [theme, setTheme] = useState<string>('')
@@ -67,6 +74,7 @@ const NotesComponent = () => {
 			setEmptyText('')
 			setEmptyKind('')
 		} else if (theme !== '' && text !== '' && kind !== 'wybierz kategorię') {
+			dispatch(addNotes({ id: uuidv4(), themeType: theme, dateType: inputDate, textType: text, categoryType: kind }))
 			setEmptyTheme('')
 			setEmptyText('')
 			setEmptyKind('')
