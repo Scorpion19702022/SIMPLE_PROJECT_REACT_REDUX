@@ -41,16 +41,70 @@
 
 .box_info_select {
 	width: 100%;
-	height: 20%;
+	height: 25%;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
 	padding: 1em;
 	background-color: var(--color-dark10);
+	border: 0.04em solid var(--color-dark06);
+}
+
+.box_counter {
+	width: 100%;
+	height: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.counter {
+	width: 100%;
+	text-align: center;
+	color: var(--color-color03);
+	padding-bottom: 0.4em;
+	border-bottom: 0.04em dotted var(--color-color08);
+	font-weight: 200;
+}
+
+.count {
+	color: var(--color-color01);
+	font-weight: 400;
+}
+
+.box_btns_select {
+	width: 100%;
+	height: 60%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 1em;
+	border-bottom: 0.04em dotted var(--color-color08);
+}
+
+.btn_select {
+	width: 27%;
+	margin: 0.6em;
+	padding: 0.2em;
+	background: none;
+	border: 0.04em solid var(--color-color06);
+	color: var(--color-color02);
+}
+
+.btn_clean_all {
+	width: 100%;
+	padding: 0.4em;
+	background: none;
+	border: 0.04em solid var(--color-color06);
+	color: var(--color-color02);
+	margin-top: 0.4em;
 }
 
 .box_notes {
 	width: 100%;
-	height: 70%;
+	height: 65%;
 	display: flex;
 	flex-wrap: wrap;
 	background-color: #fff;
