@@ -36,7 +36,8 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	padding-bottom: 2em;
+	bottom: 2em;
+	margin-bottom: 2em;
 }
 
 .box_info_select {
@@ -118,7 +119,8 @@
 
 @media (min-width: 1200px) {
 	.wrapper {
-		width: 70%;
+		width: 72%;
 		height: 780px;
+		padding-bottom: 0em;
 	}
 }
