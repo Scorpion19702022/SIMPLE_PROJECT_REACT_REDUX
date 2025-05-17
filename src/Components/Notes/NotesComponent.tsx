@@ -8,8 +8,10 @@ import { useAppDispatch, useAppSelector } from '../../Hooks/useReduxHooks'
 import { addNotes } from '../../Features/Notes/NotesSlice'
 
 const NotesComponent = () => {
-	const {} = useAppSelector(state => state.notes)
+	const { notesList } = useAppSelector(state => state.notes)
 	const dispatch = useAppDispatch()
+
+	console.log(notesList)
 
 	const currentDate = new Date().toLocaleString('en-CA').slice(0, 10)
 
