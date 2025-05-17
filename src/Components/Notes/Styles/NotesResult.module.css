@@ -50,6 +50,7 @@
 	padding: 1em;
 	background-color: var(--color-dark10);
 	border: 0.04em solid var(--color-dark06);
+	box-shadow: 0.4em 0.4em 1em var(--color-dark11);
 }
 
 .box_counter {
@@ -114,7 +115,6 @@
 	height: 65%;
 	display: flex;
 	flex-wrap: wrap;
-	background-color: #fff;
 }
 
 @media (min-width: 1200px) {
@@ -122,5 +122,33 @@
 		width: 72%;
 		height: 780px;
 		padding-bottom: 0em;
+	}
+
+	.box_info_select {
+		height: 30%;
+	}
+
+	.counter {
+		font-size: 1.2em;
+	}
+
+	.box_btns_select {
+		justify-content: space-between;
+	}
+
+	.btn_select {
+		width: 18%;
+		height: 40%;
+		padding: 0.4em;
+		margin: 0em;
+		cursor: pointer;
+	}
+
+	.box_notes {
+		height: 60%;
+	}
+
+	.heading {
+		font-size: 2em;
 	}
 }
