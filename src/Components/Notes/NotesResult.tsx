@@ -3,7 +3,6 @@ import styles from './Styles/NotesResult.module.css'
 const NotesResult = () => {
 	return (
 		<section className={styles.wrapper}>
-			<h3 className={styles.heading}>Notes</h3>
 			<div className={styles.box_info_select}>
 				<div className={styles.box_counter}>
 					<span className={styles.counter}>
@@ -19,6 +18,7 @@ const NotesResult = () => {
 				</div>
 				<button className={styles.btn_clean_all}>usuń wszystko</button>
 			</div>
+			<h3 className={styles.heading}>Notes</h3>
 			<div className={styles.box_notes}></div>
 		</section>
 	)
