@@ -18,7 +18,7 @@ const NotesResult = () => {
 				</div>
 				<button className={styles.btn_clean_all}>usuń wszystko</button>
 			</div>
-			<h3 className={styles.heading}>Notes</h3>
+			<h3 className={styles.heading}>Twój notes</h3>
 			<div className={styles.box_notes}></div>
 		</section>
 	)

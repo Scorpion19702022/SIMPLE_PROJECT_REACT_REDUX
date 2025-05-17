@@ -102,6 +102,12 @@
 	margin-top: 0.4em;
 }
 
+.heading {
+	width: 100%;
+	text-align: center;
+	color: var(--color-color02);
+}
+
 .box_notes {
 	width: 100%;
 	height: 65%;
