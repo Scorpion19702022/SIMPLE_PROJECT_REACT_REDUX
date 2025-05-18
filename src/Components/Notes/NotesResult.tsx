@@ -1,6 +1,9 @@
+import { useAppSelector } from '../../Hooks/useReduxHooks'
 import styles from './Styles/NotesResult.module.css'
 
 const NotesResult = () => {
+	const { notesList } = useAppSelector(state => state.notes)
+
 	return (
 		<section className={styles.wrapper}>
 			<div className={styles.box_info_select}>
@@ -37,7 +40,12 @@ const NotesResult = () => {
 					<span className={styles.category_info}> - inne</span>
 				</div>
 			</div>
-			<div className={styles.box_notes}></div>
+			<div className={styles.box_notes}>
+				<div className={styles.popup}>
+					<span>Twój notes jest zapełniony</span>
+					<button>X</button>
+				</div>
+			</div>
 		</section>
 	)
 }
