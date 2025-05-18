@@ -19,6 +19,24 @@ const NotesResult = () => {
 				<button className={styles.btn_clean_all}>usuń wszystko</button>
 			</div>
 			<h3 className={styles.heading}>Twój notes</h3>
+			<div className={styles.box_category}>
+				<div className={styles.category}>
+					<div className={styles.category_color}></div>
+					<span className={styles.category_info}> - dom</span>
+				</div>
+				<div className={styles.category}>
+					<div className={styles.category_color}></div>
+					<span className={styles.category_info}> - praca</span>
+				</div>
+				<div className={styles.category}>
+					<div className={styles.category_color}></div>
+					<span className={styles.category_info}> - rozrywka</span>
+				</div>
+				<div className={styles.category}>
+					<div className={styles.category_color}></div>
+					<span className={styles.category_info}> - inne</span>
+				</div>
+			</div>
 			<div className={styles.box_notes}></div>
 		</section>
 	)
