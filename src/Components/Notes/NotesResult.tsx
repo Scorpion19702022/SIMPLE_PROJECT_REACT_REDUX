@@ -42,8 +42,8 @@ const NotesResult = () => {
 			</div>
 			<div className={styles.box_notes}>
 				<div className={styles.popup}>
-					<span>Twój notes jest zapełniony</span>
-					<button>X</button>
+					<span className={styles.popup_info}>Twój notes jest zapełniony</span>
+					<button className={styles.popup_btn}>X</button>
 				</div>
 			</div>
 		</section>
