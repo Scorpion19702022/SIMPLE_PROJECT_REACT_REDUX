@@ -257,6 +257,19 @@
 		font-size: 1em;
 	}
 
+	.popup {
+		width: 50%;
+	}
+
+	.popup_info {
+		font-size: 2em;
+	}
+
+	.popup_btn {
+		background-color: var(--color-dark09);
+		right: 2%;
+	}
+
 	.box_notes {
 		height: 60%;
 		background-color: #fff;
