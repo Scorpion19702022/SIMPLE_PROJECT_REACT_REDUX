@@ -11,8 +11,6 @@ const NotesComponent = () => {
 	const { notesList } = useAppSelector(state => state.notes)
 	const dispatch = useAppDispatch()
 
-	console.log(notesList)
-
 	const currentDate = new Date().toLocaleString('en-CA').slice(0, 10)
 
 	const [theme, setTheme] = useState<string>('')

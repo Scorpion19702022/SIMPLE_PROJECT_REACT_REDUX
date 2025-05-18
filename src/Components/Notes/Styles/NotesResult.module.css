@@ -203,11 +203,27 @@
 		color: var(--color-color01);
 	}
 
-	.box_notes {
-		height: 65%;
-	}
-
 	.heading {
 		font-size: 2em;
+	}
+
+	.category {
+		width: 20%;
+		justify-content: center;
+	}
+
+	.category_color {
+		width: 18px;
+		height: 18px;
+		margin-right: 1em;
+	}
+
+	.category_info {
+		font-size: 1em;
+	}
+
+	.box_notes {
+		height: 60%;
+		background-color: #fff;
 	}
 }
