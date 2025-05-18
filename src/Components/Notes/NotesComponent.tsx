@@ -11,6 +11,8 @@ const NotesComponent = () => {
 	const { notesList } = useAppSelector(state => state.notes)
 	const dispatch = useAppDispatch()
 
+	console.log(notesList)
+
 	const currentDate = new Date().toLocaleString('en-CA').slice(0, 10)
 
 	const [theme, setTheme] = useState<string>('')
@@ -73,7 +75,7 @@ const NotesComponent = () => {
 			setEmptyTheme('podaj tytuł')
 			setEmptyText('')
 			setEmptyKind('')
-		} else if (theme !== '' && text !== '' && kind !== 'wybierz kategorię') {
+		} else if (theme !== '' && text !== '' && kind !== 'wybierz kategorię' && notesList.length < 5) {
 			dispatch(addNotes({ id: uuidv4(), themeType: theme, dateType: inputDate, textType: text, categoryType: kind }))
 			setEmptyTheme('')
 			setEmptyText('')
