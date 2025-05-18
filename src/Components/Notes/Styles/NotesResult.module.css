@@ -162,6 +162,24 @@
 }
 
 .popup {
+	visibility: visible;
+	position: relative;
+	width: 70%;
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--color-dark11);
+	border: 0.04em solid var(--color-dark05);
+	box-shadow: 0.4em 0.4em 1em var(--color-dark11);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.no_popup {
+	visibility: hidden;
 	position: relative;
 	width: 70%;
 	height: 100px;

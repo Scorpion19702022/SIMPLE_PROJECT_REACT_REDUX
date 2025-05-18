@@ -41,7 +41,7 @@ const NotesResult = () => {
 				</div>
 			</div>
 			<div className={styles.box_notes}>
-				<div className={styles.popup}>
+				<div className={notesList.length > 3 ? styles.popup : styles.no_popup}>
 					<span className={styles.popup_info}>Twój notes jest zapełniony</span>
 					<button className={styles.popup_btn}>X</button>
 				</div>
