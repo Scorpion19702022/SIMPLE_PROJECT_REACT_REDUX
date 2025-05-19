@@ -1,4 +1,4 @@
-import { useAppSelector } from '../../Hooks/useReduxHooks'
+import { useAppSelector } from '../../hooks/useReduxHooks'
 import styles from './Styles/NotesResult.module.css'
 
 const NotesResult = () => {

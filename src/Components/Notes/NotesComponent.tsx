@@ -4,7 +4,7 @@ import styles from './Styles/NotesComponent.module.css'
 import NotesResult from './NotesResult'
 
 import { v4 as uuidv4 } from 'uuid'
-import { useAppDispatch, useAppSelector } from '../../Hooks/useReduxHooks'
+import { useAppDispatch, useAppSelector } from '../../hooks/useReduxHooks'
 import { addNotes } from '../../Features/Notes/NotesSlice'
 
 const NotesComponent = () => {
