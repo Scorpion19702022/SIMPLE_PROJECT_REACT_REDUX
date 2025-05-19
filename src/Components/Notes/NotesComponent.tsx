@@ -87,12 +87,15 @@ const NotesComponent = () => {
 			setText('')
 			setKind('wybierz kategorię')
 			setMarksCounter(0)
+		}
+
+		if (notesList.length >= 3) {
 			setPopupClose(true)
 		}
 	}
 
 	const handleClosePopup = () => {
-		setPopupClose(true)
+		setPopupClose(false)
 	}
 
 	return (
