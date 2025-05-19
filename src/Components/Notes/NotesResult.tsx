@@ -1,8 +1,13 @@
-import { useAppSelector } from '../../hooks/useReduxHooks'
+// import { useAppSelector } from '../../hooks/useReduxHooks'
 import styles from './Styles/NotesResult.module.css'
 
-const NotesResult = () => {
-	const { notesList } = useAppSelector(state => state.notes)
+interface InitialProps {
+	popupAction: boolean
+	closePopup: () => void
+}
+
+const NotesResult: React.FC<InitialProps> = ({ popupAction, closePopup }) => {
+	// const { notesList } = useAppSelector(state => state.notes)
 
 	return (
 		<section className={styles.wrapper}>
@@ -41,9 +46,11 @@ const NotesResult = () => {
 				</div>
 			</div>
 			<div className={styles.box_notes}>
-				<div className={notesList.length > 3 ? styles.popup : styles.no_popup}>
+				<div className={!popupAction ? styles.popup : styles.no_popup}>
 					<span className={styles.popup_info}>Twój notes jest zapełniony</span>
-					<button className={styles.popup_btn}>X</button>
+					<button className={styles.popup_btn} onClick={closePopup}>
+						X
+					</button>
 				</div>
 			</div>
 		</section>

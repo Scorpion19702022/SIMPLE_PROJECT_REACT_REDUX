@@ -26,6 +26,8 @@ const NotesComponent = () => {
 	const [emptyText, setEmptyText] = useState<string>('')
 	const [emptyKind, setEmptyKind] = useState<string>('')
 
+	const [popupClose, setPopupClose] = useState<boolean>(false)
+
 	const handleChangeTheme = (e: string) => {
 		setTheme(e)
 	}
@@ -86,6 +88,14 @@ const NotesComponent = () => {
 			setKind('wybierz kategorię')
 			setMarksCounter(0)
 		}
+
+		if (notesList.length > 5) {
+			setPopupClose(false)
+		}
+	}
+
+	const handleClosePopup = () => {
+		setPopupClose(true)
 	}
 
 	return (
@@ -105,7 +115,7 @@ const NotesComponent = () => {
 				changeKind={handleChangeKind}
 				submit={handleSubmit}
 			/>
-			<NotesResult />
+			<NotesResult closePopup={handleClosePopup} popupAction={popupClose} />
 		</section>
 	)
 }
