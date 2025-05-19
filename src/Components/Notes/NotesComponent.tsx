@@ -87,9 +87,10 @@ const NotesComponent = () => {
 			setText('')
 			setKind('wybierz kategorię')
 			setMarksCounter(0)
+			setPopupClose(true)
 		}
 
-		if (notesList.length > 5) {
+		if (notesList.length >= 3) {
 			setPopupClose(false)
 		}
 	}
