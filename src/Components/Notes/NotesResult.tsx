@@ -1,4 +1,5 @@
 // import { useAppSelector } from '../../hooks/useReduxHooks'
+import NotesItem from './NotesItem'
 import styles from './Styles/NotesResult.module.css'
 
 interface InitialProps {
@@ -52,6 +53,7 @@ const NotesResult: React.FC<InitialProps> = ({ popupAction, closePopup }) => {
 						X
 					</button>
 				</div>
+				<NotesItem />
 			</div>
 		</section>
 	)
