@@ -1,4 +1,4 @@
-// import { useAppSelector } from '../../hooks/useReduxHooks'
+import { useAppSelector } from '../../hooks/useReduxHooks'
 import NotesItem from './NotesItem'
 import styles from './Styles/NotesResult.module.css'
 
@@ -8,14 +8,14 @@ interface InitialProps {
 }
 
 const NotesResult: React.FC<InitialProps> = ({ popupAction, closePopup }) => {
-	// const { notesList } = useAppSelector(state => state.notes)
+	const { notesList } = useAppSelector(state => state.notes)
 
 	return (
 		<section className={styles.wrapper}>
 			<div className={styles.box_info_select}>
 				<div className={styles.box_counter}>
 					<span className={styles.counter}>
-						Ilość notatek: <span className={styles.count}>0</span>
+						Ilość notatek: <span className={styles.count}></span>
 					</span>
 				</div>
 				<div className={styles.box_btns_select}>
