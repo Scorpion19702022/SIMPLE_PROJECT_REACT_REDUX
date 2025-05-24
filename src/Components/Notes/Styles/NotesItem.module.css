@@ -28,3 +28,14 @@
 	--color-amusement: #66a9ff;
 	--color-other: #ee7c86;
 }
+
+.card {
+	width: 48%;
+	min-height: 250px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 1em;
+	padding: 1em;
+	background-color: var(--color-other);
+}
