@@ -60,8 +60,8 @@ const NotesInputs: React.FC<InitialState> = ({
 				</div>
 				<div className={styles.box_inputs}>
 					<div className={styles.info_textarea}>
-						<label className={styles.label_textarea}>wpisz tekst max 25 znaków:</label>
-						<span className={inputText.length < 25 ? styles.marks_textarea : styles.marks_border}>
+						<label className={styles.label_textarea}>wpisz tekst max 20 znaków:</label>
+						<span className={inputText.length < 20 ? styles.marks_textarea : styles.marks_border}>
 							Znaków: <span className={styles.marks}>{countMarks}</span>
 						</span>
 					</div>

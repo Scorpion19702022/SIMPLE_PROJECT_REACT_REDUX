@@ -37,7 +37,7 @@ const NotesComponent = () => {
 	}
 
 	const handleChangeText = (e: string) => {
-		if (e.length <= 25) {
+		if (e.length <= 20) {
 			setText(e)
 			setMarksCounter(e.length)
 		}
