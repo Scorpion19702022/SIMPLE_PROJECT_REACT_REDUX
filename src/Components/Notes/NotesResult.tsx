@@ -15,7 +15,7 @@ const NotesResult: React.FC<InitialProps> = ({ popupAction, closePopup }) => {
 			<div className={styles.box_info_select}>
 				<div className={styles.box_counter}>
 					<span className={styles.counter}>
-						Ilość notatek: <span className={styles.count}></span>
+						Ilość notatek: <span className={styles.count}>{notesList.length}</span>
 					</span>
 				</div>
 				<div className={styles.box_btns_select}>
