@@ -47,12 +47,12 @@ const NotesResult: React.FC<InitialProps> = ({ popupAction, closePopup }) => {
 				</div>
 			</div>
 			<div className={styles.box_notes}>
-				<div className={popupAction ? styles.popup : styles.no_popup}>
+				{/* <div className={popupAction ? styles.popup : styles.no_popup}>
 					<span className={styles.popup_info}>Twój notes jest zapełniony</span>
 					<button className={styles.popup_btn} onClick={closePopup}>
 						X
 					</button>
-				</div>
+				</div> */}
 				<NotesItem />
 				<NotesItem />
 				<NotesItem />
