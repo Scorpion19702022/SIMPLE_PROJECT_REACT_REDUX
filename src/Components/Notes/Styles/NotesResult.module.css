@@ -154,7 +154,7 @@
 
 .box_notes {
 	width: 100%;
-	height: 60%;
+	min-height: 60%;
 	display: flex;
 	flex-wrap: wrap;
 }

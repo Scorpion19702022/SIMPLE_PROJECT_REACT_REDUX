@@ -54,6 +54,15 @@ const NotesResult: React.FC<InitialProps> = ({ popupAction, closePopup }) => {
 					</button>
 				</div>
 				<NotesItem />
+				<NotesItem />
+				<NotesItem />
+				<NotesItem />
+				<NotesItem />
+				<NotesItem />
+				<NotesItem />
+				<NotesItem />
+				<NotesItem />
+				<NotesItem />
 			</div>
 		</section>
 	)
