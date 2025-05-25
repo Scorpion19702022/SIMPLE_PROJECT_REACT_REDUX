@@ -32,7 +32,7 @@
 .wrapper {
 	position: relative;
 	width: 90%;
-	height: 700px;
+	min-height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -95,6 +95,7 @@
 	align-items: center;
 	justify-content: space-between;
 	padding: 1em;
+	margin-bottom: 1em;
 	background-color: var(--color-dark10);
 	border: 0.04em solid var(--color-dark06);
 	box-shadow: 0.4em 0.4em 1em var(--color-dark11);
@@ -201,7 +202,7 @@
 
 .box_notes {
 	width: 100%;
-	min-height: 1000px;
+	min-height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
