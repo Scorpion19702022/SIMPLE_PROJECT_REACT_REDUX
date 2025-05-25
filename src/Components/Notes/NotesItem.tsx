@@ -12,7 +12,7 @@ const NotesItem = () => {
 			</p>
 			<em className={styles.date}>12.11.1970</em>
 			<button className={styles.btn}>
-				<RiDeleteBin6Line />
+				<RiDeleteBin6Line className={styles.bin} />
 			</button>
 		</div>
 	)
