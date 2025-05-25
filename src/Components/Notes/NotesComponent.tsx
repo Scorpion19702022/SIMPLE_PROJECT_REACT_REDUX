@@ -29,7 +29,7 @@ const NotesComponent = () => {
 	const [popupClose, setPopupClose] = useState<boolean>(false)
 
 	const handleChangeTheme = (e: string) => {
-		if (e.length < 12) {
+		if (e.length <= 10) {
 			setTheme(e)
 		}
 	}

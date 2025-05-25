@@ -5,7 +5,7 @@ import { RiDeleteBin6Line } from 'react-icons/ri'
 const NotesItem = () => {
 	return (
 		<div className={styles.card}>
-			<h3 className={styles.theme}>Tytuł</h3>
+			<h3 className={styles.theme}>Lorem, ipsum.</h3>
 			<div className={styles.box_content}>
 				<p className={styles.text}>
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. In minima nostrum ipsam repellat sunt optio tempora
