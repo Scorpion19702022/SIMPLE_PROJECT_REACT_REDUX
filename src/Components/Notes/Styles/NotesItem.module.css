@@ -31,7 +31,7 @@
 
 .card {
 	width: 40%;
-	height: 280px;
+	height: 250px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -49,6 +49,12 @@
 	border-bottom: 0.04em solid var(--color-dark10);
 }
 
+.box_content {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
 .text {
 	font-size: 0.8em;
 	padding-bottom: 0.4em;
@@ -58,6 +64,9 @@
 .date {
 	width: 100%;
 	text-align: right;
+	padding-bottom: 0.4em;
+	border-bottom: 0.04em dotted var(--color-dark10);
+	color: var(--color-color08);
 }
 
 .box_btn {
@@ -73,7 +82,7 @@
 }
 
 .bin {
-	font-size: 2em;
+	font-size: 1.6em;
 	color: var(--color-dark11);
 }
 
