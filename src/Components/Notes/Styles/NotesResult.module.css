@@ -30,6 +30,7 @@
 }
 
 .wrapper {
+	position: relative;
 	width: 90%;
 	height: 700px;
 	display: flex;
@@ -160,8 +161,7 @@
 }
 
 .popup {
-	/* position: absolute; */
-	position: relative;
+	position: absolute;
 	visibility: visible;
 	width: 70%;
 	height: 100px;
@@ -178,8 +178,7 @@
 }
 
 .no_popup {
-	position: relative;
-	/* position: absolute; */
+	position: absolute;
 	visibility: hidden;
 }
 

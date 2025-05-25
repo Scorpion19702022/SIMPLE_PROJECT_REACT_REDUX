@@ -12,6 +12,12 @@ const NotesResult: React.FC<InitialProps> = ({ popupAction, closePopup }) => {
 
 	return (
 		<section className={styles.wrapper}>
+			<div className={popupAction ? styles.popup : styles.no_popup}>
+				<span className={styles.popup_info}>Twój notes jest zapełniony</span>
+				<button className={styles.popup_btn} onClick={closePopup}>
+					X
+				</button>
+			</div>
 			<div className={styles.box_info_select}>
 				<div className={styles.box_counter}>
 					<span className={styles.counter}>
@@ -47,12 +53,6 @@ const NotesResult: React.FC<InitialProps> = ({ popupAction, closePopup }) => {
 				</div>
 			</div>
 			<div className={styles.box_notes}>
-				{/* <div className={popupAction ? styles.popup : styles.no_popup}>
-					<span className={styles.popup_info}>Twój notes jest zapełniony</span>
-					<button className={styles.popup_btn} onClick={closePopup}>
-						X
-					</button>
-				</div> */}
 				<NotesItem />
 				<NotesItem />
 				<NotesItem />
