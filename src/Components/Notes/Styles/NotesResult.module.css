@@ -37,7 +37,6 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	bottom: 2em;
 	margin-bottom: 2em;
 }
 
@@ -202,11 +201,11 @@
 
 .box_notes {
 	width: 100%;
-	min-height: 60%;
+	min-height: 1000px;
 	display: flex;
 	justify-content: center;
+	align-items: flex-start;
 	flex-wrap: wrap;
-	margin-bottom: 2em;
 }
 
 @media (min-width: 1200px) {
