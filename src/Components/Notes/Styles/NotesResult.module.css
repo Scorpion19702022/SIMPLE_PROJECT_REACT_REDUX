@@ -157,7 +157,9 @@
 	width: 100%;
 	min-height: 60%;
 	display: flex;
+	justify-content: center;
 	flex-wrap: wrap;
+	margin-bottom: 2em;
 }
 
 .popup {

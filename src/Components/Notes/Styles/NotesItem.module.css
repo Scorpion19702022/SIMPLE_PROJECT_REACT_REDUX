@@ -30,14 +30,23 @@
 }
 
 .card {
-	width: 35%;
-	height: 270px;
+	width: 40%;
+	height: 300px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	margin: 1em;
 	padding: 1em;
 	background-color: var(--color-other);
+	clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%, 0 12%);
+}
+
+.theme {
+	width: 100%;
+	text-align: right;
+	font-size: 1em;
+	padding: 0em 0em 0.2em 2em;
+	border-bottom: 0.04em solid var(--color-dark10);
 }
 
 @media (min-width: 1200px) {
