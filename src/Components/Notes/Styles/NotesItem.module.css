@@ -51,6 +51,8 @@
 
 .text {
 	font-size: 0.8em;
+	padding-bottom: 0.4em;
+	border-bottom: 0.04em dotted var(--color-dark10);
 }
 
 .date {
@@ -58,18 +60,20 @@
 	text-align: right;
 }
 
-.btn {
+.box_btn {
 	width: 100%;
-	padding: 0.2em;
 	display: flex;
 	justify-content: flex-end;
+}
+
+.btn {
+	padding: 0.2em;
 	background: none;
 	border: none;
 }
 
 .bin {
 	font-size: 2em;
-	cursor: pointer;
 	color: var(--color-dark11);
 }
 
