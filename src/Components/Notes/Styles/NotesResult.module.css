@@ -154,6 +154,7 @@
 
 .heading {
 	width: 100%;
+	margin-bottom: 0.6em;
 	text-align: center;
 	color: var(--color-color02);
 }
@@ -202,7 +203,7 @@
 
 .box_notes {
 	width: 100%;
-	min-height: 100%;
+	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
@@ -292,6 +293,6 @@
 	}
 
 	.box_notes {
-		height: 60%;
+		height: 600px;
 	}
 }
