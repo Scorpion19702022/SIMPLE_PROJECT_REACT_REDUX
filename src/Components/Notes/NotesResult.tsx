@@ -1,6 +1,5 @@
 import { TypeNotes } from '../../Features/Notes/TypeNotes'
 import { useAppSelector } from '../../hooks/useReduxHooks'
-import UsersList from '../Users/UsersList'
 import NotesItem from './NotesItem'
 import styles from './Styles/NotesResult.module.css'
 
