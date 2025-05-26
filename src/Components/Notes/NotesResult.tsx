@@ -5,12 +5,12 @@ import NotesItem from './NotesItem'
 import styles from './Styles/NotesResult.module.css'
 
 interface InitialProps {
-	notesList: TypeNotes[]
+	notesLists: TypeNotes[]
 	popupAction: boolean
 	closePopup: () => void
 }
 
-const NotesResult: React.FC<InitialProps> = ({ notesList, popupAction, closePopup }) => {
+const NotesResult: React.FC<InitialProps> = ({ notesLists, popupAction, closePopup }) => {
 	const { notesList } = useAppSelector(state => state.notes)
 
 	return (
@@ -58,8 +58,8 @@ const NotesResult: React.FC<InitialProps> = ({ notesList, popupAction, closePopu
 				</div>
 			</div>
 			<div className={styles.box_notes}>
-				{notesList.map((item: TypeNotes) => (
-					<NotesItem />
+				{notesLists.map((item: TypeNotes) => (
+					<NotesItem notes={item} key={item.id} />
 				))}
 			</div>
 		</section>

@@ -117,7 +117,7 @@ const NotesComponent = () => {
 				changeKind={handleChangeKind}
 				submit={handleSubmit}
 			/>
-			<NotesResult closePopup={handleClosePopup} popupAction={popupClose} />
+			<NotesResult closePopup={handleClosePopup} popupAction={popupClose} notesLists={notesList} />
 		</section>
 	)
 }
