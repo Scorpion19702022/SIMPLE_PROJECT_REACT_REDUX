@@ -90,11 +90,29 @@
 @media (min-width: 1200px) {
 	.card {
 		width: 17%;
-		height: 200px;
+		height: 220px;
 		clip-path: polygon(22% 0, 100% 0, 100% 100%, 0 100%, 0 17%);
 	}
 
 	.theme {
 		font-size: 1.2em;
+	}
+
+	.text {
+		font-size: 1em;
+	}
+
+	.date {
+		color: var(--color-dark11);
+	}
+
+	.bin {
+		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+		color: var(--color-dark07);
+	}
+
+	.bin:hover {
+		color: var(--color-dark11);
 	}
 }
