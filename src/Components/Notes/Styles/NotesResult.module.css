@@ -214,7 +214,7 @@
 	.wrapper {
 		width: 72%;
 		height: 780px;
-		padding-bottom: 0em;
+		margin-bottom: 0em;
 	}
 
 	.box_info_select {
@@ -293,6 +293,6 @@
 	}
 
 	.box_notes {
-		height: 600px;
+		height: 560px;
 	}
 }

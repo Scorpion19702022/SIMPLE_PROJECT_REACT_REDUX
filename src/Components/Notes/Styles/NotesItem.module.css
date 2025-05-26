@@ -38,7 +38,6 @@
 	margin: 1em;
 	padding: 1em;
 	background-color: var(--color-other);
-	box-shadow: 0.4em 0.4em 0.8em var(--color-dark11);
 	border: 0.1em solid var(--color-dark11);
 	clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%, 0 12%);
 }
@@ -90,7 +89,12 @@
 
 @media (min-width: 1200px) {
 	.card {
-		width: 22%;
-		height: 220px;
+		width: 17%;
+		height: 200px;
+		clip-path: polygon(22% 0, 100% 0, 100% 100%, 0 100%, 0 17%);
+	}
+
+	.theme {
+		font-size: 1.2em;
 	}
 }
