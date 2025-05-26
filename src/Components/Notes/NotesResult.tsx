@@ -1,13 +1,16 @@
+import { TypeNotes } from '../../Features/Notes/TypeNotes'
 import { useAppSelector } from '../../hooks/useReduxHooks'
+import UsersList from '../Users/UsersList'
 import NotesItem from './NotesItem'
 import styles from './Styles/NotesResult.module.css'
 
 interface InitialProps {
+	notesList: TypeNotes[]
 	popupAction: boolean
 	closePopup: () => void
 }
 
-const NotesResult: React.FC<InitialProps> = ({ popupAction, closePopup }) => {
+const NotesResult: React.FC<InitialProps> = ({ notesList, popupAction, closePopup }) => {
 	const { notesList } = useAppSelector(state => state.notes)
 
 	return (
@@ -55,14 +58,9 @@ const NotesResult: React.FC<InitialProps> = ({ popupAction, closePopup }) => {
 				</div>
 			</div>
 			<div className={styles.box_notes}>
-				<NotesItem />
-				<NotesItem />
-				<NotesItem />
-				<NotesItem />
-				<NotesItem />
-				<NotesItem />
-				<NotesItem />
-				<NotesItem />
+				{notesList.map((item: TypeNotes) => (
+					<NotesItem />
+				))}
 			</div>
 		</section>
 	)
