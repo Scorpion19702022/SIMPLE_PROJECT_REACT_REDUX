@@ -9,7 +9,17 @@ interface initialProps {
 
 const NotesItem: React.FC<initialProps> = ({ notes }) => {
 	return (
-		<div className={styles.card}>
+		<div
+			className={
+				notes.categoryType === 'dom'
+					? styles.card_home
+					: notes.categoryType === 'praca'
+					? styles.card_work
+					: notes.categoryType === 'rozrywka'
+					? styles.card_amusement
+					: styles.card_other
+			}
+		>
 			<h3 className={styles.theme}>{notes.themeType}</h3>
 			<div className={styles.box_content}>
 				<p className={styles.text}>{notes.textType}</p>
