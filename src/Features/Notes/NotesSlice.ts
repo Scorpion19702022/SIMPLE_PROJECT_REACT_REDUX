@@ -30,7 +30,7 @@ export const NotesSlice = createSlice({
 		},
 
 		deleteNotes: (state: notesState, action: PayloadAction<string>) => {
-			state.notesList.filter(item => item.id !== action.payload)
+			state.notesList = state.notesList.filter(item => item.id !== action.payload)
 		},
 	},
 })

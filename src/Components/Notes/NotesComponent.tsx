@@ -104,7 +104,6 @@ const NotesComponent = () => {
 
 	const handleDeleteOneNotes = (id: string) => {
 		dispatch(deleteNotes(id))
-		console.log('klik')
 	}
 
 	return (
