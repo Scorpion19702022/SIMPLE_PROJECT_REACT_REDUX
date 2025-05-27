@@ -24,8 +24,12 @@ export const NotesSlice = createSlice({
 
 			state.notesList.push(newNotes)
 		},
+
+		deleteAll: (state: notesState) => {
+			state.notesList = []
+		},
 	},
 })
 
-export const { addNotes } = NotesSlice.actions
+export const { addNotes, deleteAll } = NotesSlice.actions
 export default NotesSlice.reducer

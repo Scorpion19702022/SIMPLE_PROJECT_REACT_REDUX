@@ -7,9 +7,10 @@ interface InitialProps {
 	notesLists: TypeNotes[]
 	popupAction: boolean
 	closePopup: () => void
+	deleteAllNotes: () => void
 }
 
-const NotesResult: React.FC<InitialProps> = ({ notesLists, popupAction, closePopup }) => {
+const NotesResult: React.FC<InitialProps> = ({ notesLists, popupAction, closePopup, deleteAllNotes }) => {
 	const { notesList } = useAppSelector(state => state.notes)
 
 	return (
@@ -33,7 +34,9 @@ const NotesResult: React.FC<InitialProps> = ({ notesLists, popupAction, closePop
 					<button className={styles.btn_select}>rozrywka</button>
 					<button className={styles.btn_select}>inne</button>
 				</div>
-				<button className={styles.btn_clean_all}>usuń wszystko</button>
+				<button className={styles.btn_clean_all} onClick={deleteAllNotes}>
+					usuń wszystko
+				</button>
 			</div>
 			<h3 className={styles.heading}>Twój notes</h3>
 			<div className={styles.box_category}>
