@@ -16,11 +16,9 @@ const NotesResult: React.FC<InitialProps> = ({ notesLists, popupAction, closePop
 		<section className={styles.wrapper}>
 			<div className={popupAction ? styles.popup : styles.no_popup}>
 				<span className={styles.popup_info}>Twój notes jest zapełniony</span>
-				<div className={styles.box_popup_btns}>
-					<button className={styles.popup_btn} onClick={closePopup}>
-						X
-					</button>
-				</div>
+				<button className={styles.popup_btn} onClick={closePopup}>
+					X
+				</button>
 			</div>
 			<div className={styles.box_info_select}>
 				<div className={styles.box_counter}>
