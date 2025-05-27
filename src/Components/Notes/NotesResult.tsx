@@ -8,7 +8,7 @@ interface InitialProps {
 	popupAction: boolean
 	closePopup: () => void
 	deleteAllNotes: () => void
-	deleteNotes: () => void
+	deleteNotes: (id: string) => void
 }
 
 const NotesResult: React.FC<InitialProps> = ({ notesLists, popupAction, closePopup, deleteAllNotes, deleteNotes }) => {

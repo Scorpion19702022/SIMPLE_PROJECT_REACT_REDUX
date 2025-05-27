@@ -5,13 +5,11 @@ import NotesResult from './NotesResult'
 
 import { v4 as uuidv4 } from 'uuid'
 import { useAppDispatch, useAppSelector } from '../../hooks/useReduxHooks'
-import { addNotes, deleteAll } from '../../Features/Notes/NotesSlice'
+import { addNotes, deleteAll, deleteNotes } from '../../Features/Notes/NotesSlice'
 
 const NotesComponent = () => {
 	const { notesList } = useAppSelector(state => state.notes)
 	const dispatch = useAppDispatch()
-
-	console.log(notesList)
 
 	const currentDate = new Date().toLocaleString('en-CA').slice(0, 10)
 
@@ -104,6 +102,11 @@ const NotesComponent = () => {
 		dispatch(deleteAll())
 	}
 
+	const handleDeleteOneNotes = (id: string) => {
+		dispatch(deleteNotes(id))
+		console.log('klik')
+	}
+
 	return (
 		<section className={styles.wrapper}>
 			<NotesInputs
@@ -126,6 +129,7 @@ const NotesComponent = () => {
 				popupAction={popupClose}
 				notesLists={notesList}
 				deleteAllNotes={handleDeleteAllNotes}
+				deleteNotes={handleDeleteOneNotes}
 			/>
 		</section>
 	)
