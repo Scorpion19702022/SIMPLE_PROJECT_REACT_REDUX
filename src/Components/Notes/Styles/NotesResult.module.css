@@ -143,6 +143,15 @@
 	color: var(--color-color02);
 }
 
+.btn_select:disabled {
+	width: 27%;
+	margin: 0.6em;
+	padding: 0.2em;
+	background-color: var(--color-dark08);
+	border: 0.04em solid var(--color-color08);
+	color: var(--color-color06);
+}
+
 .btn_clean_all {
 	width: 100%;
 	padding: 0.4em;
@@ -241,6 +250,10 @@
 	.btn_select:hover {
 		background-color: var(--color-dark11);
 		color: var(--color-color01);
+	}
+
+	.btnn_select:disabled {
+		cursor: auto;
 	}
 
 	.btn_clean_all {
