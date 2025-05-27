@@ -5,9 +5,10 @@ import { RiDeleteBin6Line } from 'react-icons/ri'
 
 interface initialProps {
 	notes: TypeNotes
+	deleteOneNotes: (id: string) => void
 }
 
-const NotesItem: React.FC<initialProps> = ({ notes }) => {
+const NotesItem: React.FC<initialProps> = ({ notes, deleteOneNotes }) => {
 	return (
 		<div
 			className={
@@ -27,7 +28,7 @@ const NotesItem: React.FC<initialProps> = ({ notes }) => {
 			</div>
 			<div className={styles.box_btn}>
 				<button className={styles.btn}>
-					<RiDeleteBin6Line className={styles.bin} />
+					<RiDeleteBin6Line className={styles.bin} onClick={() => deleteOneNotes(notes.id)} />
 				</button>
 			</div>
 		</div>

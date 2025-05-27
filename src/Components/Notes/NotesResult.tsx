@@ -8,9 +8,10 @@ interface InitialProps {
 	popupAction: boolean
 	closePopup: () => void
 	deleteAllNotes: () => void
+	deleteNotes: () => void
 }
 
-const NotesResult: React.FC<InitialProps> = ({ notesLists, popupAction, closePopup, deleteAllNotes }) => {
+const NotesResult: React.FC<InitialProps> = ({ notesLists, popupAction, closePopup, deleteAllNotes, deleteNotes }) => {
 	const { notesList } = useAppSelector(state => state.notes)
 
 	return (
@@ -59,7 +60,7 @@ const NotesResult: React.FC<InitialProps> = ({ notesLists, popupAction, closePop
 			</div>
 			<div className={styles.box_notes}>
 				{notesLists.map((item: TypeNotes) => (
-					<NotesItem notes={item} key={item.id} />
+					<NotesItem notes={item} key={item.id} deleteOneNotes={deleteNotes} />
 				))}
 			</div>
 		</section>

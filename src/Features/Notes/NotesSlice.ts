@@ -28,8 +28,12 @@ export const NotesSlice = createSlice({
 		deleteAll: (state: notesState) => {
 			state.notesList = []
 		},
+
+		deleteNotes: (state: notesState, action: PayloadAction<string>) => {
+			state.notesList.filter(item => item.id !== action.payload)
+		},
 	},
 })
 
-export const { addNotes, deleteAll } = NotesSlice.actions
+export const { addNotes, deleteAll, deleteNotes } = NotesSlice.actions
 export default NotesSlice.reducer
