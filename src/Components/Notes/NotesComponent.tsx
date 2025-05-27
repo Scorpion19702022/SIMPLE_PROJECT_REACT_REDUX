@@ -79,7 +79,7 @@ const NotesComponent = () => {
 			setEmptyTheme('podaj tytuł')
 			setEmptyText('')
 			setEmptyKind('')
-		} else if (theme !== '' && text !== '' && kind !== 'wybierz kategorię' && notesList.length < 3) {
+		} else if (theme !== '' && text !== '' && kind !== 'wybierz kategorię' && notesList.length < 10) {
 			dispatch(addNotes({ id: uuidv4(), themeType: theme, dateType: inputDate, textType: text, categoryType: kind }))
 			setEmptyTheme('')
 			setEmptyText('')
@@ -91,7 +91,7 @@ const NotesComponent = () => {
 			setMarksCounter(0)
 		}
 
-		if (notesList.length >= 3) {
+		if (notesList.length >= 10) {
 			setPopupClose(true)
 		}
 	}
