@@ -32,10 +32,18 @@ const NotesResult: React.FC<InitialProps> = ({ notesLists, popupAction, closePop
 					<button className={styles.btn_select} disabled={notesList.length === 0 ? true : false}>
 						wszystkie
 					</button>
-					<button className={styles.btn_select}>dom</button>
-					<button className={styles.btn_select}>praca</button>
-					<button className={styles.btn_select}>rozrywka</button>
-					<button className={styles.btn_select}>inne</button>
+					<button className={styles.btn_select} disabled={notesList.length === 0 ? true : false}>
+						dom
+					</button>
+					<button className={styles.btn_select} disabled={notesList.length === 0 ? true : false}>
+						praca
+					</button>
+					<button className={styles.btn_select} disabled={notesList.length === 0 ? true : false}>
+						rozrywka
+					</button>
+					<button className={styles.btn_select} disabled={notesList.length === 0 ? true : false}>
+						inne
+					</button>
 				</div>
 				<button className={styles.btn_clean_all} onClick={deleteAllNotes}>
 					usuń wszystko
