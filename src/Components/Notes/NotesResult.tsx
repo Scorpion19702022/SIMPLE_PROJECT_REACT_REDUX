@@ -29,7 +29,9 @@ const NotesResult: React.FC<InitialProps> = ({ notesLists, popupAction, closePop
 					</span>
 				</div>
 				<div className={styles.box_btns_select}>
-					<button className={styles.btn_select}>wszystkie</button>
+					<button className={styles.btn_select} disabled={notesList.length === 0 ? true : false}>
+						wszystkie
+					</button>
 					<button className={styles.btn_select}>dom</button>
 					<button className={styles.btn_select}>praca</button>
 					<button className={styles.btn_select}>rozrywka</button>

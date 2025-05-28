@@ -148,8 +148,8 @@
 	margin: 0.6em;
 	padding: 0.2em;
 	background-color: var(--color-dark08);
-	border: 0.04em solid var(--color-color08);
-	color: var(--color-color06);
+	border: 0.04em solid var(--color-dark11);
+	color: var(--color-dark05);
 }
 
 .btn_clean_all {
@@ -253,7 +253,10 @@
 	}
 
 	.btnn_select:disabled {
-		cursor: auto;
+		width: 18%;
+		padding: 0.4em;
+		background-color: var(--color-dark08);
+		margin: 0em;
 	}
 
 	.btn_clean_all {
