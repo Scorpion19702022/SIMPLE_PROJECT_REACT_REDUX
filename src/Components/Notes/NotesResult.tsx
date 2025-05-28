@@ -45,7 +45,11 @@ const NotesResult: React.FC<InitialProps> = ({ notesLists, popupAction, closePop
 						inne
 					</button>
 				</div>
-				<button className={styles.btn_clean_all} onClick={deleteAllNotes}>
+				<button
+					className={styles.btn_clean_all}
+					onClick={deleteAllNotes}
+					disabled={notesList.length === 0 ? true : false}
+				>
 					usuń wszystko
 				</button>
 			</div>

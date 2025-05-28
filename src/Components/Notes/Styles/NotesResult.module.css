@@ -161,6 +161,16 @@
 	margin-top: 0.4em;
 }
 
+.btn_clean_all:disabled {
+	width: 100%;
+	padding: 0.4em;
+	background: none;
+	background-color: var(--color-dark08);
+	border: 0.04em solid var(--color-dark11);
+	color: var(--color-dark05);
+	margin-top: 0.4em;
+}
+
 .heading {
 	width: 100%;
 	margin-bottom: 0.6em;
