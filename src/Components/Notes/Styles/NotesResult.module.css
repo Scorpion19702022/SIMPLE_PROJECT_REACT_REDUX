@@ -262,11 +262,11 @@
 		color: var(--color-color01);
 	}
 
-	.btnn_select:disabled {
+	.btn_select:disabled {
 		width: 18%;
 		padding: 0.4em;
-		background-color: var(--color-dark08);
 		margin: 0em;
+		cursor: auto;
 	}
 
 	.btn_clean_all {
