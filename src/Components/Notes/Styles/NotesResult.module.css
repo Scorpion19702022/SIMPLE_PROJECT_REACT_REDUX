@@ -143,11 +143,6 @@
 	color: var(--color-color02);
 }
 
-.btn_select:hover {
-	background-color: var(--color-dark11);
-	color: var(--color-color01);
-}
-
 .btn_select:disabled {
 	width: 27%;
 	margin: 0.6em;
@@ -262,10 +257,18 @@
 		transition: all 0.3s ease-in-out;
 	}
 
+	.btn_select:hover {
+		background-color: var(--color-dark11);
+	}
+
 	.btn_select:disabled {
 		width: 18%;
 		padding: 0.4em;
 		margin: 0em;
+		background: none;
+		background-color: var(--color-dark08);
+		border: 0.04em solid var(--color-dark11);
+		color: var(--color-dark05);
 		cursor: auto;
 	}
 
