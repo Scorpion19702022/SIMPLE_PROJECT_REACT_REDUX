@@ -40,7 +40,6 @@
 	background-color: var(--color-home);
 	border: 0.1em solid var(--color-dark11);
 	clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%, 0 12%);
-	box-shadow: 0.6em 0.6em 1em var(--color-color01);
 }
 
 .card_work {
@@ -54,7 +53,6 @@
 	background-color: var(--color-work);
 	border: 0.1em solid var(--color-dark11);
 	clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%, 0 12%);
-	box-shadow: 0.6em 0.6em 1em var(--color-color01);
 }
 
 .card_amusement {
@@ -68,7 +66,6 @@
 	background-color: var(--color-amusement);
 	border: 0.1em solid var(--color-dark11);
 	clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%, 0 12%);
-	box-shadow: 0.6em 0.6em 1em var(--color-color01);
 }
 
 .card_other {
@@ -82,7 +79,6 @@
 	background-color: var(--color-other);
 	border: 0.1em solid var(--color-dark11);
 	clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%, 0 12%);
-	box-shadow: 2em 2em 1em var(--color-color01);
 }
 
 .theme {
