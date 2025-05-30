@@ -283,6 +283,17 @@
 		color: var(--color-color01);
 	}
 
+	.btn_clean_all:disabled {
+		width: 100%;
+		padding: 0.6em;
+		background: none;
+		background-color: var(--color-dark08);
+		border: 0.04em solid var(--color-dark11);
+		color: var(--color-dark05);
+		margin-top: 0.4em;
+		cursor: auto;
+	}
+
 	.heading {
 		font-size: 2em;
 	}
