@@ -132,8 +132,8 @@
 	.card_amusement,
 	.card_other {
 		width: 17%;
-		height: 220px;
-		clip-path: polygon(22% 0, 100% 0, 100% 100%, 0 100%, 0 17%);
+		height: 200px;
+		clip-path: polygon(17% 0, 100% 0, 100% 100%, 0 100%, 0 17%);
 	}
 
 	.theme {
