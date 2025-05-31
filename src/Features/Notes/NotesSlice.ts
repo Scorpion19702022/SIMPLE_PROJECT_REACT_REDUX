@@ -4,11 +4,21 @@ import { TypeNotes } from './TypeNotes'
 interface notesState {
 	notesList: TypeNotes[]
 	selectCategoryNotes: TypeNotes[]
+	isAll: boolean
+	isHome: boolean
+	isJob: boolean
+	isEntertainment: boolean
+	isOther: boolean
 }
 
 const initialState: notesState = {
 	notesList: [],
 	selectCategoryNotes: [],
+	isAll: true,
+	isHome: false,
+	isJob: false,
+	isEntertainment: false,
+	isOther: false,
 }
 
 export const NotesSlice = createSlice({
@@ -31,6 +41,11 @@ export const NotesSlice = createSlice({
 		selectNotes: (state: notesState, action: PayloadAction<string>) => {
 			if (action.payload === 'all') {
 				state.selectCategoryNotes = state.notesList
+				state.isAll = true
+				state.isHome = false
+				state.isJob = false
+				state.isEntertainment = false
+				state.isOther = false
 			} else if (action.payload === 'home') {
 				state.selectCategoryNotes = state.notesList.filter(item => item.categoryType === 'dom')
 			} else if (action.payload === 'job') {
