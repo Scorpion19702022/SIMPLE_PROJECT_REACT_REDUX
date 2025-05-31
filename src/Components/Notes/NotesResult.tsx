@@ -1,18 +1,26 @@
 import { TypeNotes } from '../../Features/Notes/TypeNotes'
-import { useAppSelector } from '../../hooks/useReduxHooks'
+// import { useAppSelector } from '../../hooks/useReduxHooks'
 import NotesItem from './NotesItem'
 import styles from './Styles/NotesResult.module.css'
 
 interface InitialProps {
 	notesLists: TypeNotes[]
+	selectCategory: TypeNotes[]
 	popupAction: boolean
 	closePopup: () => void
 	deleteAllNotes: () => void
 	deleteNotes: (id: string) => void
 }
 
-const NotesResult: React.FC<InitialProps> = ({ notesLists, popupAction, closePopup, deleteAllNotes, deleteNotes }) => {
-	const { notesList } = useAppSelector(state => state.notes)
+const NotesResult: React.FC<InitialProps> = ({
+	notesLists,
+	selectCategory,
+	popupAction,
+	closePopup,
+	deleteAllNotes,
+	deleteNotes,
+}) => {
+	// const { notesList, selectCategoryNotes } = useAppSelector(state => state.notes)
 
 	return (
 		<section className={styles.wrapper}>
@@ -25,30 +33,30 @@ const NotesResult: React.FC<InitialProps> = ({ notesLists, popupAction, closePop
 			<div className={styles.box_info_select}>
 				<div className={styles.box_counter}>
 					<span className={styles.counter}>
-						Ilość notatek: <span className={styles.count}>{notesList.length}</span>
+						Ilość notatek: <span className={styles.count}>{notesLists.length}</span>
 					</span>
 				</div>
 				<div className={styles.box_btns_select}>
-					<button className={styles.btn_select} disabled={notesList.length === 0 ? true : false}>
+					<button className={styles.btn_select} disabled={notesLists.length === 0 ? true : false}>
 						wszystkie
 					</button>
-					<button className={styles.btn_select} disabled={notesList.length === 0 ? true : false}>
+					<button className={styles.btn_select} disabled={notesLists.length === 0 ? true : false}>
 						dom
 					</button>
-					<button className={styles.btn_select} disabled={notesList.length === 0 ? true : false}>
+					<button className={styles.btn_select} disabled={notesLists.length === 0 ? true : false}>
 						praca
 					</button>
-					<button className={styles.btn_select} disabled={notesList.length === 0 ? true : false}>
+					<button className={styles.btn_select} disabled={notesLists.length === 0 ? true : false}>
 						rozrywka
 					</button>
-					<button className={styles.btn_select} disabled={notesList.length === 0 ? true : false}>
+					<button className={styles.btn_select} disabled={notesLists.length === 0 ? true : false}>
 						inne
 					</button>
 				</div>
 				<button
 					className={styles.btn_clean_all}
 					onClick={deleteAllNotes}
-					disabled={notesList.length === 0 ? true : false}
+					disabled={notesLists.length === 0 ? true : false}
 				>
 					usuń wszystko
 				</button>
@@ -73,7 +81,7 @@ const NotesResult: React.FC<InitialProps> = ({ notesLists, popupAction, closePop
 				</div>
 			</div>
 			<div className={styles.box_notes}>
-				{notesLists.map((item: TypeNotes) => (
+				{selectCategory.map((item: TypeNotes) => (
 					<NotesItem notes={item} key={item.id} deleteOneNotes={deleteNotes} />
 				))}
 			</div>
