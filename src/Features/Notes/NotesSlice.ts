@@ -27,7 +27,19 @@ export const NotesSlice = createSlice({
 			state.notesList.push(newNotes)
 		},
 
-		select: (state: notesState, action: PayloadAction<string>) => {},
+		select: (state: notesState, action: PayloadAction<string>) => {
+			if (action.payload === 'all') {
+				state.selectCategoryNotes = state.notesList
+			} else if (action.payload === 'home') {
+				state.selectCategoryNotes = state.notesList.filter(item => item.categoryType === 'dom')
+			} else if (action.payload === 'job') {
+				state.selectCategoryNotes = state.notesList.filter(item => item.categoryType === 'praca')
+			} else if (action.payload === 'entertainment') {
+				state.selectCategoryNotes = state.notesList.filter(item => item.categoryType === 'rozrywka')
+			} else if (action.payload === 'other') {
+				state.selectCategoryNotes = state.notesList.filter(item => item.categoryType === 'inne')
+			}
+		},
 
 		deleteAll: (state: notesState) => {
 			state.notesList = []
