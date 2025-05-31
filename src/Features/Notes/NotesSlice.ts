@@ -3,10 +3,12 @@ import { TypeNotes } from './TypeNotes'
 
 interface notesState {
 	notesList: TypeNotes[]
+	selectCategoryNotes: TypeNotes[]
 }
 
 const initialState: notesState = {
 	notesList: [],
+	selectCategoryNotes: [],
 }
 
 export const NotesSlice = createSlice({
@@ -25,6 +27,8 @@ export const NotesSlice = createSlice({
 			state.notesList.push(newNotes)
 		},
 
+		select: (state: notesState, action: PayloadAction<string>) => {},
+
 		deleteAll: (state: notesState) => {
 			state.notesList = []
 		},
@@ -35,5 +39,5 @@ export const NotesSlice = createSlice({
 	},
 })
 
-export const { addNotes, deleteAll, deleteNotes } = NotesSlice.actions
+export const { addNotes, select, deleteAll, deleteNotes } = NotesSlice.actions
 export default NotesSlice.reducer
