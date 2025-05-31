@@ -25,6 +25,7 @@ export const NotesSlice = createSlice({
 			}
 
 			state.notesList.push(newNotes)
+			state.selectCategoryNotes.push(newNotes)
 		},
 
 		selectNotes: (state: notesState, action: PayloadAction<string>) => {
