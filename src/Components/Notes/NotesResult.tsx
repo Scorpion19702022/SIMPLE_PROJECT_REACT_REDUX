@@ -1,5 +1,5 @@
 import { TypeNotes } from '../../Features/Notes/TypeNotes'
-// import { useAppSelector } from '../../hooks/useReduxHooks'
+import { useAppSelector } from '../../hooks/useReduxHooks'
 import NotesItem from './NotesItem'
 import styles from './Styles/NotesResult.module.css'
 
@@ -22,7 +22,7 @@ const NotesResult: React.FC<InitialProps> = ({
 	deleteNotes,
 	select,
 }) => {
-	// const { notesList, selectCategoryNotes } = useAppSelector(state => state.notes)
+	const { isAll } = useAppSelector(state => state.notes)
 
 	return (
 		<section className={styles.wrapper}>
@@ -40,7 +40,7 @@ const NotesResult: React.FC<InitialProps> = ({
 				</div>
 				<div className={styles.box_btns_select}>
 					<button
-						className={styles.btn_select}
+						className={isAll ? styles.btn_select_active : styles.btn_select}
 						disabled={notesLists.length === 0 ? true : false}
 						onClick={() => select('all')}
 					>
