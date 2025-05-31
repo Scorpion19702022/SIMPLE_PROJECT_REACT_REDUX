@@ -44,6 +44,7 @@ export const NotesSlice = createSlice({
 
 		deleteAll: (state: notesState) => {
 			state.notesList = []
+			state.selectCategoryNotes = []
 		},
 
 		deleteNotes: (state: notesState, action: PayloadAction<string>) => {
