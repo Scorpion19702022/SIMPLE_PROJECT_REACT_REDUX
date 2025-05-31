@@ -8,7 +8,7 @@ import { useAppDispatch, useAppSelector } from '../../hooks/useReduxHooks'
 import { addNotes, deleteAll, deleteNotes } from '../../Features/Notes/NotesSlice'
 
 const NotesComponent = () => {
-	const { notesList } = useAppSelector(state => state.notes)
+	const { notesList, selectCategoryNotes } = useAppSelector(state => state.notes)
 	const dispatch = useAppDispatch()
 
 	const currentDate = new Date().toLocaleString('en-CA').slice(0, 10)
@@ -129,6 +129,7 @@ const NotesComponent = () => {
 				notesLists={notesList}
 				deleteAllNotes={handleDeleteAllNotes}
 				deleteNotes={handleDeleteOneNotes}
+				selectCategory={selectCategoryNotes}
 			/>
 		</section>
 	)
