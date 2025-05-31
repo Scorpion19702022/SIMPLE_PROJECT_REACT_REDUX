@@ -10,6 +10,7 @@ interface InitialProps {
 	closePopup: () => void
 	deleteAllNotes: () => void
 	deleteNotes: (id: string) => void
+	select: (select: string) => void
 }
 
 const NotesResult: React.FC<InitialProps> = ({
@@ -19,6 +20,7 @@ const NotesResult: React.FC<InitialProps> = ({
 	closePopup,
 	deleteAllNotes,
 	deleteNotes,
+	select,
 }) => {
 	// const { notesList, selectCategoryNotes } = useAppSelector(state => state.notes)
 
@@ -37,19 +39,39 @@ const NotesResult: React.FC<InitialProps> = ({
 					</span>
 				</div>
 				<div className={styles.box_btns_select}>
-					<button className={styles.btn_select} disabled={notesLists.length === 0 ? true : false}>
+					<button
+						className={styles.btn_select}
+						disabled={notesLists.length === 0 ? true : false}
+						onClick={() => select('all')}
+					>
 						wszystkie
 					</button>
-					<button className={styles.btn_select} disabled={notesLists.length === 0 ? true : false}>
+					<button
+						className={styles.btn_select}
+						disabled={notesLists.length === 0 ? true : false}
+						onClick={() => select('home')}
+					>
 						dom
 					</button>
-					<button className={styles.btn_select} disabled={notesLists.length === 0 ? true : false}>
+					<button
+						className={styles.btn_select}
+						disabled={notesLists.length === 0 ? true : false}
+						onClick={() => select('job')}
+					>
 						praca
 					</button>
-					<button className={styles.btn_select} disabled={notesLists.length === 0 ? true : false}>
+					<button
+						className={styles.btn_select}
+						disabled={notesLists.length === 0 ? true : false}
+						onClick={() => select('entertainment')}
+					>
 						rozrywka
 					</button>
-					<button className={styles.btn_select} disabled={notesLists.length === 0 ? true : false}>
+					<button
+						className={styles.btn_select}
+						disabled={notesLists.length === 0 ? true : false}
+						onClick={() => select('other')}
+					>
 						inne
 					</button>
 				</div>

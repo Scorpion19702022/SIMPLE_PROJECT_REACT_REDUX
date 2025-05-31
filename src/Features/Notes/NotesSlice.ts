@@ -27,7 +27,7 @@ export const NotesSlice = createSlice({
 			state.notesList.push(newNotes)
 		},
 
-		select: (state: notesState, action: PayloadAction<string>) => {
+		selectNotes: (state: notesState, action: PayloadAction<string>) => {
 			if (action.payload === 'all') {
 				state.selectCategoryNotes = state.notesList
 			} else if (action.payload === 'home') {
@@ -46,10 +46,11 @@ export const NotesSlice = createSlice({
 		},
 
 		deleteNotes: (state: notesState, action: PayloadAction<string>) => {
+			state.selectCategoryNotes = state.notesList.filter(item => item.id !== action.payload)
 			state.notesList = state.notesList.filter(item => item.id !== action.payload)
 		},
 	},
 })
 
-export const { addNotes, select, deleteAll, deleteNotes } = NotesSlice.actions
+export const { addNotes, selectNotes, deleteAll, deleteNotes } = NotesSlice.actions
 export default NotesSlice.reducer

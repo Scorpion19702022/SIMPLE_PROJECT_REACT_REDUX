@@ -5,7 +5,7 @@ import NotesResult from './NotesResult'
 
 import { v4 as uuidv4 } from 'uuid'
 import { useAppDispatch, useAppSelector } from '../../hooks/useReduxHooks'
-import { addNotes, deleteAll, deleteNotes } from '../../Features/Notes/NotesSlice'
+import { addNotes, selectNotes, deleteAll, deleteNotes } from '../../Features/Notes/NotesSlice'
 
 const NotesComponent = () => {
 	const { notesList, selectCategoryNotes } = useAppSelector(state => state.notes)
@@ -94,6 +94,10 @@ const NotesComponent = () => {
 		}
 	}
 
+	const handleSelectNotes = (select: string) => {
+		dispatch(selectNotes(select))
+	}
+
 	const handleClosePopup = () => {
 		setPopupClose(false)
 	}
@@ -130,6 +134,7 @@ const NotesComponent = () => {
 				deleteAllNotes={handleDeleteAllNotes}
 				deleteNotes={handleDeleteOneNotes}
 				selectCategory={selectCategoryNotes}
+				select={handleSelectNotes}
 			/>
 		</section>
 	)
