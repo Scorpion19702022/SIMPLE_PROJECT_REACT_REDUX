@@ -278,8 +278,20 @@
 		transition: all 0.3s ease-in-out;
 	}
 
+	.btn_select_active {
+		width: 18%;
+		padding: 0.4em;
+		margin: 0em;
+		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+	}
+
 	.btn_select:hover {
 		background-color: var(--color-dark11);
+	}
+
+	.btn_select_active:hover {
+		background-color: var(--color-color09);
 	}
 
 	.btn_select:disabled {
