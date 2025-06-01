@@ -22,7 +22,7 @@ const NotesResult: React.FC<InitialProps> = ({
 	deleteNotes,
 	select,
 }) => {
-	const { isAll } = useAppSelector(state => state.notes)
+	const { isAll, isHome, isJob, isEntertainment, isOther } = useAppSelector(state => state.notes)
 
 	return (
 		<section className={styles.wrapper}>
@@ -47,28 +47,28 @@ const NotesResult: React.FC<InitialProps> = ({
 						wszystkie
 					</button>
 					<button
-						className={styles.btn_select}
+						className={isHome ? styles.btn_select_active : styles.btn_select}
 						disabled={notesLists.length === 0 ? true : false}
 						onClick={() => select('home')}
 					>
 						dom
 					</button>
 					<button
-						className={styles.btn_select}
+						className={isJob ? styles.btn_select_active : styles.btn_select}
 						disabled={notesLists.length === 0 ? true : false}
 						onClick={() => select('job')}
 					>
 						praca
 					</button>
 					<button
-						className={styles.btn_select}
+						className={isEntertainment ? styles.btn_select_active : styles.btn_select}
 						disabled={notesLists.length === 0 ? true : false}
 						onClick={() => select('entertainment')}
 					>
 						rozrywka
 					</button>
 					<button
-						className={styles.btn_select}
+						className={isOther ? styles.btn_select_active : styles.btn_select}
 						disabled={notesLists.length === 0 ? true : false}
 						onClick={() => select('other')}
 					>
