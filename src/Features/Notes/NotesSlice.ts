@@ -55,10 +55,25 @@ export const NotesSlice = createSlice({
 				state.isOther = false
 			} else if (action.payload === 'job') {
 				state.selectCategoryNotes = state.notesList.filter(item => item.categoryType === 'praca')
+				state.isAll = false
+				state.isHome = false
+				state.isJob = true
+				state.isEntertainment = false
+				state.isOther = false
 			} else if (action.payload === 'entertainment') {
 				state.selectCategoryNotes = state.notesList.filter(item => item.categoryType === 'rozrywka')
+				state.isAll = false
+				state.isHome = false
+				state.isJob = false
+				state.isEntertainment = true
+				state.isOther = false
 			} else if (action.payload === 'other') {
 				state.selectCategoryNotes = state.notesList.filter(item => item.categoryType === 'inne')
+				state.isAll = false
+				state.isHome = false
+				state.isJob = false
+				state.isEntertainment = false
+				state.isOther = true
 			}
 		},
 
