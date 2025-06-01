@@ -143,7 +143,27 @@
 	color: var(--color-color02);
 }
 
+.btn_select_active {
+	width: 27%;
+	margin: 0.6em;
+	padding: 0.2em;
+	background: none;
+	border: 0.04em solid var(--color-color04);
+	background-color: var(--color-color08);
+	box-shadow: 0em 0em 0.6em var(--color-color02);
+	color: var(--color-color02);
+}
+
 .btn_select:disabled {
+	width: 27%;
+	margin: 0.6em;
+	padding: 0.2em;
+	background-color: var(--color-dark08);
+	border: 0.04em solid var(--color-dark11);
+	color: var(--color-dark05);
+}
+
+.btn_select_active:disabled {
 	width: 27%;
 	margin: 0.6em;
 	padding: 0.2em;
