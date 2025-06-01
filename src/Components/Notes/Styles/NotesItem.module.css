@@ -39,8 +39,8 @@
 	padding: 1em;
 	background-color: var(--color-home);
 	border: 0.1em solid var(--color-dark11);
-	clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%, 0 12%);
-	box-shadow: 0.04em 0.04em 0.8em var(--color-dark11);
+	/* clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%, 0 12%); */
+	box-shadow: 0.4em 0.4em 1em var(--color-dark11);
 }
 
 .card_work {
@@ -53,8 +53,8 @@
 	padding: 1em;
 	background-color: var(--color-work);
 	border: 0.1em solid var(--color-dark11);
-	clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%, 0 12%);
-	box-shadow: 0.04em 0.04em 0.8em var(--color-dark11);
+	/* clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%, 0 12%); */
+	box-shadow: 0.4em 0.4em 1em var(--color-dark11);
 }
 
 .card_amusement {
@@ -67,8 +67,8 @@
 	padding: 1em;
 	background-color: var(--color-amusement);
 	border: 0.1em solid var(--color-dark11);
-	clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%, 0 12%);
-	box-shadow: 0.04em 0.04em 0.8em var(--color-dark11);
+	/* clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%, 0 12%); */
+	box-shadow: 0.4em 0.4em 1em var(--color-dark11);
 }
 
 .card_other {
@@ -81,8 +81,8 @@
 	padding: 1em;
 	background-color: var(--color-other);
 	border: 0.1em solid var(--color-dark11);
-	clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%, 0 12%);
-	box-shadow: 0.04em 0.04em 0.8em var(--color-dark11);
+	/* clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%, 0 12%); */
+	box-shadow: 0.4em 0.4em 1em var(--color-dark11);
 }
 
 .theme {
@@ -137,7 +137,7 @@
 	.card_other {
 		width: 17%;
 		height: 200px;
-		clip-path: polygon(17% 0, 100% 0, 100% 100%, 0 100%, 0 17%);
+		/* clip-path: polygon(17% 0, 100% 0, 100% 100%, 0 100%, 0 17%); */
 	}
 
 	.theme {
