@@ -48,6 +48,11 @@ export const NotesSlice = createSlice({
 				state.isOther = false
 			} else if (action.payload === 'home') {
 				state.selectCategoryNotes = state.notesList.filter(item => item.categoryType === 'dom')
+				state.isAll = false
+				state.isHome = true
+				state.isJob = false
+				state.isEntertainment = false
+				state.isOther = false
 			} else if (action.payload === 'job') {
 				state.selectCategoryNotes = state.notesList.filter(item => item.categoryType === 'praca')
 			} else if (action.payload === 'entertainment') {
