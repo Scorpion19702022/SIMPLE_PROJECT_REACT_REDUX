@@ -248,6 +248,7 @@
 	justify-content: center;
 	align-items: flex-start;
 	flex-wrap: wrap;
+	filter: drop-shadow(0.4em 0.4em 0.8em var(--color-dark11));
 }
 
 @media (min-width: 1200px) {
