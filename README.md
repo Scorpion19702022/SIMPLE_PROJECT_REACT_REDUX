@@ -23,6 +23,20 @@ https://simpleprojectreactredux.vercel.app/
 
 <img src="./src/assets/Home.jpg" alt="home_image" width="50%">
 
+# --------------------
+
+<h2>Project 1: Users list</h2>
+
+<img src="./src/assets/user_screen.jpg" alt="home_image" width="100%">
+
+# --------------------
+
+<h2>Project 2: Notes</h2>
+
+<img src="./src/assets/notes_screen.jpg" alt="home_image" width="100%">
+
+---
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
