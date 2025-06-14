@@ -6,6 +6,19 @@
 
 https://simpleprojectreactredux.vercel.app/
 
+### The technology used is:
+
+- React
+- TypeScript
+- Redux
+- module.css
+
+# --------------------
+
+### resolution:
+
+- from mobile to 1200px
+
 ---
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
