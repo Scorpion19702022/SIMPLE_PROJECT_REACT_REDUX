@@ -1,5 +1,11 @@
 # React + TypeScript + Vite
 
+# --------------------
+
+## This project uses the react-dom library. Navigation takes you to two projects. Technologies used in the project are: React, TypeScript and Readux. The module.css method was used for styling.
+
+---
+
 ## How to run
 
 All commands are run from the root of the project, from a terminal:
