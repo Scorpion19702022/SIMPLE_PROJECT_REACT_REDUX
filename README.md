@@ -38,6 +38,8 @@ https://simpleprojectreactredux.vercel.app/
 
 <img src="./src/assets/user_screen.jpg" alt="home_image" width="100%">
 
+<p>In this project you enter a list of users by providing name, surname and gender. The counter shows the total number of users, the number of women and the number of men. There is also a possibility of selecting users so that the list of all, women and men is displayed</p>
+
 # --------------------
 
 <h2>Project 2: Notes</h2>
