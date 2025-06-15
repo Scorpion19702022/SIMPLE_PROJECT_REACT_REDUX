@@ -2,7 +2,7 @@
 
 # --------------------
 
-## This project uses the react-dom library. Navigation takes you to two projects. Technologies used in the project are: React, TypeScript and Readux. The module.css method was used for styling.
+### This project uses the react-dom library. Navigation takes you to two projects. Technologies used in the project are: React, TypeScript and Readux. The module.css method was used for styling.
 
 ---
 
