@@ -74,6 +74,16 @@
 	align-items: center;
 }
 
+.label {
+	width: 100%;
+	text-align: left;
+	color: var(--color-color05);
+}
+
+.input {
+	width: 100%;
+}
+
 @media (min-width: 1200px) {
 	.wrapper {
 		width: 90%;
