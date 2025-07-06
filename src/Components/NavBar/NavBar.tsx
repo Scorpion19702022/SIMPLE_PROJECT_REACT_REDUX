@@ -33,6 +33,11 @@ const NavBar = () => {
 							Notes
 						</li>
 					</NavLink>
+					<NavLink to='/Magic8Ball'>
+						<li className={styles.link} onClick={handleViewNav}>
+							Magic8Ball
+						</li>
+					</NavLink>
 				</ul>
 			</div>
 		</nav>
