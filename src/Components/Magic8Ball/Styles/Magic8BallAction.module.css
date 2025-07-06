@@ -27,13 +27,10 @@
 .wrapper {
 	width: 90%;
 	height: 520px;
-	/* background-color: var(--color-dark08); */
-	box-shadow: 0.2em 0.2em 1em var(--color-dark11);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	border: 0.04em solid var(--color-dark05);
 	padding: 2em;
 	margin-bottom: 2em;
 }
@@ -65,19 +62,17 @@
 	height: 40%;
 	object-fit: cover;
 	transform: translateX(-18%);
+	cursor: pointer;
 }
 
 @media (min-width: 1200px) {
 	.wrapper {
 		width: 90%;
 		height: 520px;
-		background: none;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		border: none;
-		box-shadow: none;
 		padding: 2em;
 		margin-bottom: 2em;
 	}
