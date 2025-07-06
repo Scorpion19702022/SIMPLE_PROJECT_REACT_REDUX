@@ -65,6 +65,15 @@
 	cursor: pointer;
 }
 
+.box_inputs {
+	width: 100%;
+	padding: 1em 0em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 @media (min-width: 1200px) {
 	.wrapper {
 		width: 90%;
