@@ -12,6 +12,16 @@ const Magic8BallAction = () => {
 					<img className={styles.img} src={imgBall} alt='ball' />
 				</button>
 			</div>
+			<div className={styles.box_inputs}>
+				<label className={styles.label}></label>
+				<input className={styles.input} type='text' />
+				<div className={styles.box_error_info}>
+					<span className={styles.error}>error</span>
+					<span className={styles.counter_signs}>
+						zaków: <span className={styles.signs}>0</span>
+					</span>
+				</div>
+			</div>
 		</section>
 	)
 }
