@@ -1,0 +1,63 @@
+:root {
+	--color-dark01: #ffffff;
+	--color-dark02: #d6d9db;
+	--color-dark03: #aeb4b8;
+	--color-dark04: #868f95;
+	--color-dark05: #5e6a72;
+	--color-dark06: #36454f;
+	--color-dark07: #2b373f;
+	--color-dark08: #20292f;
+	--color-dark09: #151b1f;
+	--color-dark10: #0a0d0f;
+	--color-dark11: #000000;
+
+	--color-color01: #ceeaf1;
+	--color-color02: #9ed5e3;
+	--color-color03: #6dc1d5;
+	--color-color04: #3dacc7;
+	--color-color05: #0d98ba;
+	--color-color06: #0a7994;
+	--color-color07: #075b6f;
+	--color-color08: #053c4a;
+	--color-color09: #021e25;
+
+	--color-error: #e32636;
+}
+
+.wrapper {
+	width: 90%;
+	height: 520px;
+	background-color: var(--color-dark10);
+	box-shadow: 0.2em 0.2em 1em var(--color-dark11);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 0.04em solid var(--color-dark05);
+	padding: 2em;
+	margin-bottom: 2em;
+}
+
+.heading {
+	color: var(--color-color03);
+}
+
+.text {
+	color: var(--color-color05);
+}
+
+@media (min-width: 1200px) {
+	.wrapper {
+		width: 90%;
+		height: 520px;
+		background: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		border: none;
+		box-shadow: none;
+		padding: 2em;
+		margin-bottom: 2em;
+	}
+}
