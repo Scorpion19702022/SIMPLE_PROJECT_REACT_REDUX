@@ -121,7 +121,7 @@
 
 .input {
 	width: 100%;
-	padding: 0.4em 0em;
+	padding: 0.2em 0em;
 	background: none;
 	border: none;
 	border-bottom: 0.04em solid var(--color-color05);
@@ -164,7 +164,7 @@
 @media (min-width: 1200px) {
 	.wrapper {
 		width: 90%;
-		height: 520px;
+		height: 460px;
 	}
 
 	.heading {
@@ -177,10 +177,22 @@
 
 	.box_img {
 		width: 100%;
-		height: 100px;
+		height: 40%;
 	}
 
 	.img {
-		width: 12%;
+		height: 100%;
+	}
+
+	.box_inputs {
+		width: 50%;
+	}
+
+	.input {
+		font-size: 2em;
+	}
+
+	.btn {
+		width: 50%;
 	}
 }
