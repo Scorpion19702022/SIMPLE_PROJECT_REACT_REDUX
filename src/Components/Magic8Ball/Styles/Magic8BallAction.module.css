@@ -121,14 +121,39 @@
 .input {
 	width: 100%;
 	padding: 0.4em 0em;
+	background: none;
+	border: none;
+	border-bottom: 0.04em solid var(--color-color05);
+	font-size: 1.6em;
+	outline: none;
+	color: var(--color-color02);
 }
 
 .box_error_info {
 	width: 100%;
 	padding: 0.2em 0em;
-	color: var(--color-color03);
 	display: flex;
 	justify-content: space-between;
+}
+
+.error {
+	color: var(--color-error);
+	font-weight: 200;
+}
+
+.counter_signs {
+	color: var(--color-color03);
+	font-weight: 200;
+}
+
+.signs {
+	color: var(--color-color02);
+	font-weight: 400;
+}
+
+.btn {
+	width: 100%;
+	margin: 0.8em 0em;
 }
 
 @media (min-width: 1200px) {

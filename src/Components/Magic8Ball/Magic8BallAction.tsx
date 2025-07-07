@@ -18,7 +18,7 @@ const Magic8BallAction = () => {
 				<div className={styles.box_error_info}>
 					<span className={styles.error}>error</span>
 					<span className={styles.counter_signs}>
-						zaków: <span className={styles.signs}>0</span>
+						znaków: <span className={styles.signs}>0</span>
 					</span>
 				</div>
 			</div>
