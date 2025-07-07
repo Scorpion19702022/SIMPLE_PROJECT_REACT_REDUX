@@ -26,7 +26,7 @@
 
 .wrapper {
 	width: 90%;
-	height: 360px;
+	height: 380px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -45,7 +45,7 @@
 
 .box_img {
 	width: 100%;
-	height: 40px;
+	height: 45%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -54,6 +54,7 @@
 
 .btn_ball {
 	width: 100%;
+	height: 100%;
 	background: none;
 	border: none;
 	display: flex;
@@ -62,7 +63,7 @@
 }
 
 .img {
-	width: 50%;
+	height: 90%;
 	object-fit: cover;
 	transform: translateX(-18%);
 	cursor: pointer;
