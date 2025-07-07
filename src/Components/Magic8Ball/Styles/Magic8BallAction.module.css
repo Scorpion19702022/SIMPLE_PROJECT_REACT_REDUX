@@ -78,10 +78,19 @@
 	width: 100%;
 	text-align: left;
 	color: var(--color-color05);
+	padding-bottom: 0.4em;
 }
 
 .input {
 	width: 100%;
+}
+
+.box_error_info {
+	width: 100%;
+	padding: 0.2em 0em;
+	color: var(--color-color03);
+	display: flex;
+	justify-content: space-between;
 }
 
 @media (min-width: 1200px) {
