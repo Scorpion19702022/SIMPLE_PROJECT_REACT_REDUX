@@ -22,6 +22,7 @@ const Magic8BallAction = () => {
 					</span>
 				</div>
 			</div>
+			<button className={styles.btn}>wyczyść wszystko</button>
 		</section>
 	)
 }
