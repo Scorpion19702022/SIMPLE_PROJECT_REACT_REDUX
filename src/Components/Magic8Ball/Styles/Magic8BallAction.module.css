@@ -188,11 +188,22 @@
 		width: 50%;
 	}
 
+	.label {
+		color: var(--color-color04);
+	}
+
 	.input {
 		font-size: 2em;
 	}
 
 	.btn {
 		width: 50%;
+		padding: 0.8em;
+		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.btn:hover {
+		background-color: var(--color-dark11);
 	}
 }
