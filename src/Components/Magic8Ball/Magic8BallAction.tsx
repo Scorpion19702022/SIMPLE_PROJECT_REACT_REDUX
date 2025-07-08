@@ -2,23 +2,30 @@ import styles from './Styles/Magic8BallAction.module.css'
 
 import imgBall from '../../assets/ball-35516_1920.png'
 
-const Magic8BallAction = () => {
+interface initialProps {
+	actionBall: boolean
+	fillInputQuestion: string
+	isError: string
+	signsLength: number
+}
+
+const Magic8BallAction: React.FC<initialProps> = ({ actionBall, fillInputQuestion, isError, signsLength }) => {
 	return (
 		<section className={styles.wrapper}>
 			<h1 className={styles.heading}>Magic8Ball</h1>
 			<span className={styles.text}>wpisz pytanie,kliknij w bilę i poznaj odpowiedź</span>
 			<div className={styles.box_img}>
 				<button className={styles.btn_ball}>
-					<img className={styles.img} src={imgBall} alt='ball' />
+					<img className={actionBall ? styles.img : styles.img_action} src={imgBall} alt='ball' />
 				</button>
 			</div>
 			<div className={styles.box_inputs}>
 				<label className={styles.label}>wpisz pytanie:</label>
-				<input className={styles.input} type='text' />
+				<input className={styles.input} type='text' value={fillInputQuestion} />
 				<div className={styles.box_error_info}>
-					<span className={styles.error}>error</span>
+					<span className={styles.error}>{isError}</span>
 					<span className={styles.counter_signs}>
-						znaków: <span className={styles.signs}>0</span>
+						znaków: <span className={styles.signs}>{signsLength}</span>
 					</span>
 				</div>
 			</div>

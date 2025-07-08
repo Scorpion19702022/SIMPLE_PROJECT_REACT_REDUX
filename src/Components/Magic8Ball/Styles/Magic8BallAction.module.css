@@ -70,7 +70,7 @@
 }
 
 .img_action {
-	width: 50%;
+	height: 90%;
 	object-fit: cover;
 	transform: translateX(-18%);
 	cursor: pointer;
