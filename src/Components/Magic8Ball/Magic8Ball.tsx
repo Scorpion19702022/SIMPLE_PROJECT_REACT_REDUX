@@ -9,6 +9,11 @@ const Magic8Ball = () => {
 	const [error, setError] = useState<string>('')
 	const [quantitySigns, setQuantitySigns] = useState<number>(0)
 
+	const handleChangeInput = (e: string) => {
+		if (e.length >= 50) {
+		}
+	}
+
 	return (
 		<main className={styles.wrapper}>
 			<Magic8BallAction />
