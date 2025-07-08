@@ -1,8 +1,14 @@
+import { useState } from 'react'
 import Magic8BallAction from './Magic8BallAction'
 import Magic8BallResult from './Magic8BallResult'
 import styles from './Styles/Magic8Ball.module.css'
 
 const Magic8Ball = () => {
+	const [actionBall, setActionBall] = useState<boolean>(false)
+	const [inputValue, setInputValue] = useState<string>('')
+	const [error, setError] = useState<string>('')
+	const [quantitySigns, setQuantitySigns] = useState<number>(0)
+
 	return (
 		<main className={styles.wrapper}>
 			<Magic8BallAction />
