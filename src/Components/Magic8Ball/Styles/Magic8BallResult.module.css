@@ -49,12 +49,12 @@
 }
 
 .heading_question {
-	color: var(--color-color03);
+	color: var(--color-color04);
 	font-weight: 200;
 }
 
 .question {
-	color: var(--color-color02);
+	color: var(--color-color03);
 }
 
 .box_answer {
@@ -64,4 +64,15 @@
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+	padding-top: 1em;
+}
+
+.heading_answer {
+	color: var(--color-color04);
+	font-weight: 200;
+}
+
+.answer {
+	color: var(--color-color02);
+	font-size: 1.4em;
 }
