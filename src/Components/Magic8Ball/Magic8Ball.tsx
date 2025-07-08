@@ -11,12 +11,19 @@ const Magic8Ball = () => {
 
 	const handleChangeInput = (e: string) => {
 		if (e.length >= 50) {
+			setInputValue(e)
 		}
 	}
 
 	return (
 		<main className={styles.wrapper}>
-			<Magic8BallAction />
+			<Magic8BallAction
+				isActionBall={actionBall}
+				fillInputQuestion={inputValue}
+				isError={error}
+				signsLength={quantitySigns}
+				changeInput={handleChangeInput}
+			/>
 			<Magic8BallResult />
 		</main>
 	)

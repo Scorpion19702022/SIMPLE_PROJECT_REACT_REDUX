@@ -3,7 +3,7 @@ import styles from './Styles/Magic8BallAction.module.css'
 import imgBall from '../../assets/ball-35516_1920.png'
 
 interface initialProps {
-	actionBall: boolean
+	isActionBall: boolean
 	fillInputQuestion: string
 	isError: string
 	signsLength: number
@@ -11,7 +11,7 @@ interface initialProps {
 }
 
 const Magic8BallAction: React.FC<initialProps> = ({
-	actionBall,
+	isActionBall,
 	fillInputQuestion,
 	isError,
 	signsLength,
@@ -23,7 +23,7 @@ const Magic8BallAction: React.FC<initialProps> = ({
 			<span className={styles.text}>wpisz pytanie,kliknij w bilę i poznaj odpowiedź</span>
 			<div className={styles.box_img}>
 				<button className={styles.btn_ball}>
-					<img className={actionBall ? styles.img : styles.img_action} src={imgBall} alt='ball' />
+					<img className={isActionBall ? styles.img : styles.img_action} src={imgBall} alt='ball' />
 				</button>
 			</div>
 			<div className={styles.box_inputs}>
