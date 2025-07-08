@@ -76,3 +76,10 @@
 	color: var(--color-color02);
 	font-size: 1.4em;
 }
+
+@media (min-width: 1200px) {
+	.wrapper {
+		width: 70%;
+		height: 200px;
+	}
+}
