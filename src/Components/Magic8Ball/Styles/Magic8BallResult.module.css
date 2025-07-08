@@ -32,7 +32,8 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	background-color: var(--color-dark11);
+	background-color: rgba(0, 0, 0, 1);
+	background-image: linear-gradient(155deg, rgba(0, 0, 0, 1) 0%, rgba(10, 13, 15, 1) 50%, rgba(0, 0, 0, 1) 100%);
 	border: 0.04em solid var(--color-color06);
 	box-shadow: 0.4em 0.4em 1em var(--color-dark11);
 }
@@ -80,6 +81,22 @@
 @media (min-width: 1200px) {
 	.wrapper {
 		width: 70%;
-		height: 200px;
+		height: 240px;
+	}
+
+	.heading_question {
+		font-size: 1.2em;
+	}
+
+	.question {
+		font-size: 1.8em;
+	}
+
+	.heading_answer {
+		font-size: 1.2em;
+	}
+
+	.answer {
+		font-size: 2.6em;
 	}
 }
