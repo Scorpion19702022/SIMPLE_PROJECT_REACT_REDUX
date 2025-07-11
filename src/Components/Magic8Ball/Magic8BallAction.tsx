@@ -37,7 +37,7 @@ const Magic8BallAction: React.FC<initialProps> = ({
 				<div className={styles.box_error_info}>
 					<span className={styles.error}>{isError}</span>
 					<span className={styles.counter_signs}>
-						znaków: <span className={styles.signs}>{signsLength}</span>
+						znaków: <span className={signsLength < 30 ? styles.signs : styles.signs_max}>{signsLength}</span>
 					</span>
 				</div>
 			</div>

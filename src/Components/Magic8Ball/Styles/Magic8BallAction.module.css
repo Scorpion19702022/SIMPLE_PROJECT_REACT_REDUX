@@ -152,6 +152,11 @@
 	font-weight: 400;
 }
 
+.signs_max {
+	font-weight: 400;
+	color: var(--color-error);
+}
+
 .btn {
 	width: 100%;
 	margin: 0.8em 0em;
