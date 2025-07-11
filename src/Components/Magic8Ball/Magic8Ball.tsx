@@ -10,7 +10,7 @@ const Magic8Ball = () => {
 	const [quantitySigns, setQuantitySigns] = useState<number>(0)
 
 	const handleChangeInput = (e: string) => {
-		if (e.length <= 50) {
+		if (e.length <= 30) {
 			setInputValue(e)
 			setQuantitySigns(e.length)
 		}
