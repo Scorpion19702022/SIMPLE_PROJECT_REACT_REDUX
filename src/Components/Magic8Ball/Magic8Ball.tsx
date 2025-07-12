@@ -21,7 +21,9 @@ const Magic8Ball = () => {
 		setTimeout(() => {
 			setActionBall(false)
 		}, 1000)
-		if (inputValue === '') {
+		if (inputValue !== '' && inputValue.slice(-1) === '?') {
+			setError('')
+		} else if (inputValue === '') {
 			setError('musisz zadać pytanie')
 		}
 	}
