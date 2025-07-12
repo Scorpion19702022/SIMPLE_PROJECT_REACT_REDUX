@@ -2,10 +2,12 @@ import { useState } from 'react'
 import Magic8BallAction from './Magic8BallAction'
 import Magic8BallResult from './Magic8BallResult'
 import styles from './Styles/Magic8Ball.module.css'
-import { useAppDispatch } from '../../hooks/useReduxHooks'
+import { useAppDispatch, useAppSelector } from '../../hooks/useReduxHooks'
 import { addQuestion } from '../../Features/MagicBall/MagicBallSlice'
 
 const Magic8Ball = () => {
+	const { questionState } = useAppSelector(state => state.magicBall)
+
 	const dispatch = useAppDispatch()
 
 	const [actionBall, setActionBall] = useState<boolean>(false)
@@ -43,7 +45,7 @@ const Magic8Ball = () => {
 				changeInput={handleChangeInput}
 				showAnswer={handleShowAnswer}
 			/>
-			<Magic8BallResult />
+			<Magic8BallResult viewQuestion={questionState} />
 		</main>
 	)
 }
