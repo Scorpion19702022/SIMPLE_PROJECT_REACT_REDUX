@@ -29,7 +29,10 @@ const Magic8Ball = () => {
 		}, 1000)
 		if (inputValue !== '' && inputValue.slice(-1) === '?') {
 			setError('')
-			dispatch(addQuestion(inputValue))
+			setInputValue('')
+			setTimeout(() => {
+				dispatch(addQuestion(inputValue))
+			}, 1000)
 		} else if (inputValue === '') {
 			setError('musisz zadać pytanie')
 		}
