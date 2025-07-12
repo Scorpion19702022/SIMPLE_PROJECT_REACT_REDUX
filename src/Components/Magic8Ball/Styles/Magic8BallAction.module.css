@@ -189,6 +189,11 @@
 		height: 100%;
 	}
 
+	.img_action {
+		height: 100%;
+		animation: ball_action 1s 1;
+	}
+
 	.box_inputs {
 		width: 50%;
 	}

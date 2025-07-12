@@ -18,7 +18,7 @@ const Magic8Ball = () => {
 
 	const handleShowAnswer = () => {
 		setActionBall(true)
-		setInterval(() => {
+		setTimeout(() => {
 			setActionBall(false)
 		}, 1000)
 	}
