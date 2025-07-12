@@ -16,6 +16,13 @@ const Magic8Ball = () => {
 		}
 	}
 
+	const handleShowAnswer = () => {
+		setActionBall(true)
+		setInterval(() => {
+			setActionBall(false)
+		}, 1000)
+	}
+
 	return (
 		<main className={styles.wrapper}>
 			<Magic8BallAction
@@ -24,6 +31,7 @@ const Magic8Ball = () => {
 				isError={error}
 				signsLength={quantitySigns}
 				changeInput={handleChangeInput}
+				showAnswer={handleShowAnswer}
 			/>
 			<Magic8BallResult />
 		</main>
