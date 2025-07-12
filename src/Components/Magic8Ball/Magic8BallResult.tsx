@@ -2,9 +2,10 @@ import styles from './Styles/Magic8BallResult.module.css'
 
 interface initialState {
 	viewQuestion: string
+	viewAnswer: string
 }
 
-const Magic8BallResult: React.FC<initialState> = ({ viewQuestion }) => {
+const Magic8BallResult: React.FC<initialState> = ({ viewQuestion, viewAnswer }) => {
 	return (
 		<section className={styles.wrapper}>
 			<div className={styles.box_question}>
@@ -13,7 +14,7 @@ const Magic8BallResult: React.FC<initialState> = ({ viewQuestion }) => {
 			</div>
 			<div className={styles.box_answer}>
 				<h5 className={styles.heading_answer}>Odpowiedź:</h5>
-				<span className={styles.answer}>odpowiedź</span>
+				<span className={styles.answer}>{viewAnswer}</span>
 			</div>
 		</section>
 	)
