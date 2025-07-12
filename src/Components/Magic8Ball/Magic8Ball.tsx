@@ -3,10 +3,10 @@ import Magic8BallAction from './Magic8BallAction'
 import Magic8BallResult from './Magic8BallResult'
 import styles from './Styles/Magic8Ball.module.css'
 import { useAppDispatch, useAppSelector } from '../../hooks/useReduxHooks'
-import { addQuestion } from '../../Features/MagicBall/MagicBallSlice'
+import { addAnswer, addQuestion } from '../../Features/MagicBall/MagicBallSlice'
 
 const Magic8Ball = () => {
-	const { questionState } = useAppSelector(state => state.magicBall)
+	const { questionState, answerState } = useAppSelector(state => state.magicBall)
 
 	const dispatch = useAppDispatch()
 
@@ -32,6 +32,7 @@ const Magic8Ball = () => {
 			setInputValue('')
 			setTimeout(() => {
 				dispatch(addQuestion(inputValue))
+				dispatch(addAnswer())
 			}, 1000)
 		} else if (inputValue === '') {
 			setError('musisz zadać pytanie')
@@ -48,7 +49,7 @@ const Magic8Ball = () => {
 				changeInput={handleChangeInput}
 				showAnswer={handleShowAnswer}
 			/>
-			<Magic8BallResult viewQuestion={questionState} />
+			<Magic8BallResult viewQuestion={questionState} viewAnswer={answerState} />
 		</main>
 	)
 }
