@@ -25,7 +25,9 @@ export const MagicBallSlice = createSlice({
 	name: 'magicBall',
 	initialState,
 	reducers: {
-		addQuestion: (state: magicBallState, action: PayloadAction) => {},
+		addQuestion: (state: magicBallState, action: PayloadAction<string>) => {
+			state.questionState = action.payload
+		},
 	},
 })
 

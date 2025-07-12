@@ -2,8 +2,12 @@ import { useState } from 'react'
 import Magic8BallAction from './Magic8BallAction'
 import Magic8BallResult from './Magic8BallResult'
 import styles from './Styles/Magic8Ball.module.css'
+import { useAppDispatch } from '../../hooks/useReduxHooks'
+import { addQuestion } from '../../Features/MagicBall/MagicBallSlice'
 
 const Magic8Ball = () => {
+	const dispatch = useAppDispatch()
+
 	const [actionBall, setActionBall] = useState<boolean>(false)
 	const [inputValue, setInputValue] = useState<string>('')
 	const [error, setError] = useState<string>('')
@@ -23,6 +27,7 @@ const Magic8Ball = () => {
 		}, 1000)
 		if (inputValue !== '' && inputValue.slice(-1) === '?') {
 			setError('')
+			dispatch(addQuestion(inputValue))
 		} else if (inputValue === '') {
 			setError('musisz zadać pytanie')
 		}
