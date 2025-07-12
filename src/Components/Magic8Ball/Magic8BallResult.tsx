@@ -1,11 +1,15 @@
 import styles from './Styles/Magic8BallResult.module.css'
 
-const Magic8BallResult = () => {
+interface initialState {
+	viewQuestion: string
+}
+
+const Magic8BallResult: React.FC<initialState> = ({ viewQuestion }) => {
 	return (
 		<section className={styles.wrapper}>
 			<div className={styles.box_question}>
 				<h5 className={styles.heading_question}>Twoje pytanie:</h5>
-				<span className={styles.question}>pytanie</span>
+				<span className={styles.question}>{viewQuestion}</span>
 			</div>
 			<div className={styles.box_answer}>
 				<h5 className={styles.heading_answer}>Odpowiedź:</h5>
