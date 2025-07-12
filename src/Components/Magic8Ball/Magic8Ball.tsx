@@ -32,8 +32,10 @@ const Magic8Ball = () => {
 			setInputValue('')
 			setTimeout(() => {
 				dispatch(addQuestion(inputValue))
-				dispatch(addAnswer())
 			}, 1000)
+			setTimeout(() => {
+				dispatch(addAnswer())
+			}, 2000)
 		} else if (inputValue === '') {
 			setError('musisz zadać pytanie')
 		}
