@@ -28,8 +28,13 @@ export const MagicBallSlice = createSlice({
 		addQuestion: (state: magicBallState, action: PayloadAction<string>) => {
 			state.questionState = action.payload
 		},
+
+		addAnswer: (state: magicBallState) => {
+			const renderAnswer = state.answerList[Math.floor(Math.random() * state.answerList.length)]
+			state.answerState = renderAnswer
+		},
 	},
 })
 
-export const { addQuestion } = MagicBallSlice.actions
+export const { addQuestion, addAnswer } = MagicBallSlice.actions
 export default MagicBallSlice.reducer
