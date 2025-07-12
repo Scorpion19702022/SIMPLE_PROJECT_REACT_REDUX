@@ -8,6 +8,7 @@ interface initialProps {
 	isError: string
 	signsLength: number
 	changeInput: (e: string) => void
+	showAnswer: () => void
 }
 
 const Magic8BallAction: React.FC<initialProps> = ({
@@ -16,6 +17,7 @@ const Magic8BallAction: React.FC<initialProps> = ({
 	isError,
 	signsLength,
 	changeInput,
+	showAnswer,
 }) => {
 	return (
 		<section className={styles.wrapper}>
@@ -23,7 +25,12 @@ const Magic8BallAction: React.FC<initialProps> = ({
 			<span className={styles.text}>wpisz pytanie,kliknij w bilę i poznaj odpowiedź</span>
 			<div className={styles.box_img}>
 				<button className={styles.btn_ball}>
-					<img className={isActionBall ? styles.img : styles.img_action} src={imgBall} alt='ball' />
+					<img
+						onClick={showAnswer}
+						className={!isActionBall ? styles.img : styles.img_action}
+						src={imgBall}
+						alt='ball'
+					/>
 				</button>
 			</div>
 			<div className={styles.box_inputs}>
