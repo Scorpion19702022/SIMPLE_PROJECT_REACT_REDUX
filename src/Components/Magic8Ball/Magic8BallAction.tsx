@@ -9,6 +9,7 @@ interface initialProps {
 	signsLength: number
 	changeInput: (e: string) => void
 	showAnswer: () => void
+	cleanAll: () => void
 }
 
 const Magic8BallAction: React.FC<initialProps> = ({
@@ -18,6 +19,7 @@ const Magic8BallAction: React.FC<initialProps> = ({
 	signsLength,
 	changeInput,
 	showAnswer,
+	cleanAll,
 }) => {
 	return (
 		<section className={styles.wrapper}>
@@ -48,7 +50,9 @@ const Magic8BallAction: React.FC<initialProps> = ({
 					</span>
 				</div>
 			</div>
-			<button className={styles.btn}>wyczyść wszystko</button>
+			<button className={styles.btn} onClick={cleanAll}>
+				wyczyść wszystko
+			</button>
 		</section>
 	)
 }
