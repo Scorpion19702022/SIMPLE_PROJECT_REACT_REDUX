@@ -3,7 +3,7 @@ import Magic8BallAction from './Magic8BallAction'
 import Magic8BallResult from './Magic8BallResult'
 import styles from './Styles/Magic8Ball.module.css'
 import { useAppDispatch, useAppSelector } from '../../hooks/useReduxHooks'
-import { addAnswer, addQuestion } from '../../Features/MagicBall/MagicBallSlice'
+import { addAnswer, addQuestion, cleanAllResult } from '../../Features/MagicBall/MagicBallSlice'
 
 const Magic8Ball = () => {
 	const { questionState, answerState } = useAppSelector(state => state.magicBall)
@@ -43,7 +43,9 @@ const Magic8Ball = () => {
 		}
 	}
 
-	const handleCleanAll = () => {}
+	const handleCleanAll = () => {
+		dispatch(cleanAllResult())
+	}
 
 	return (
 		<main className={styles.wrapper}>
