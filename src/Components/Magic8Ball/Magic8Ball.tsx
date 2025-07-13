@@ -36,6 +36,7 @@ const Magic8Ball = () => {
 			setTimeout(() => {
 				dispatch(addAnswer())
 			}, 2000)
+			setQuantitySigns(0)
 		} else if (inputValue !== '' && inputValue.slice(-1) !== '>') {
 			setError('patynie musi kończyć się pytajnikiem')
 		} else if (inputValue === '') {
