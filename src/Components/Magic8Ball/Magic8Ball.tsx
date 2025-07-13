@@ -20,6 +20,10 @@ const Magic8Ball = () => {
 			setInputValue(e)
 			setQuantitySigns(e.length)
 		}
+
+		if (e.length === 30) {
+			setError('osiągnąłeś maksymalną ilość znaków')
+		}
 	}
 
 	const handleShowAnswer = () => {
