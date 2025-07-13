@@ -43,6 +43,8 @@ const Magic8Ball = () => {
 		}
 	}
 
+	const handleCleanAll = () => {}
+
 	return (
 		<main className={styles.wrapper}>
 			<Magic8BallAction
@@ -52,6 +54,7 @@ const Magic8Ball = () => {
 				signsLength={quantitySigns}
 				changeInput={handleChangeInput}
 				showAnswer={handleShowAnswer}
+				cleanAll={handleCleanAll}
 			/>
 			<Magic8BallResult viewQuestion={questionState} viewAnswer={answerState} />
 		</main>
