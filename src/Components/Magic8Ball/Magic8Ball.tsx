@@ -38,6 +38,8 @@ const Magic8Ball = () => {
 			}, 2000)
 		} else if (inputValue !== '' && inputValue.slice(-1) !== '>') {
 			setError('patynie musi kończyć się pytajnikiem')
+		} else if (inputValue === '') {
+			setError('musisz zadać pytanie')
 		}
 	}
 
