@@ -42,7 +42,7 @@ https://simpleprojectreactredux.vercel.app/
 
 <h2>Project 1: Users list</h2>
 
-<img src="./src/assets/user_screen.jpg" alt="home_image" width="100%">
+<img src="./src/assets/user_screen.jpg" alt="image" width="100%">
 
 <p>In this project you enter a list of users by providing name, surname and gender. The counter shows the total number of users, the number of women and the number of men. There is also a possibility of selecting users so that the list of all, women and men is displayed</p>
 
@@ -50,9 +50,17 @@ https://simpleprojectreactredux.vercel.app/
 
 <h2>Project 2: Notes</h2>
 
-<img src="./src/assets/notes_screen.jpg" alt="home_image" width="100%">
+<img src="./src/assets/notes_screen.jpg" alt="image" width="100%">
 
 <p>In this project there is a notebook. Notebook cards contain title, content and date added. There is also selection by category of note. Color of card highlights category, you can also display only given category or all notes</p>
+
+# --------------------
+
+<h2>Project 3: Magic8Ball</h2>
+
+<img src="./src/assets/magicBall_screen.jpg" alt="image" width="100%">
+
+<p>In this project you can ask a question, click on the ball and get a random answer</p>
 
 ---
 
