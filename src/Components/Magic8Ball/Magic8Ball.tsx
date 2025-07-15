@@ -50,6 +50,8 @@ const Magic8Ball = () => {
 
 	const handleCleanAll = () => {
 		dispatch(cleanAllResult())
+		setError('')
+		setInputValue('')
 	}
 
 	return (
