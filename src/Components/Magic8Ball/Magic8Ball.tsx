@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Magic8BallAction from './Magic8BallAction'
 import Magic8BallResult from './Magic8BallResult'
 import styles from './Styles/Magic8Ball.module.css'
@@ -20,11 +20,15 @@ const Magic8Ball = () => {
 			setInputValue(e)
 			setQuantitySigns(e.length)
 		}
-
-		if (e.length === 30) {
-			setError('osiągnąłeś maksymalną ilość znaków')
-		}
 	}
+
+	useEffect(() => {
+		if (inputValue.length >= 30) {
+			setError('osiągnąłeś maksymalną ilość znaków')
+		} else {
+			setError('')
+		}
+	}, [inputValue.length])
 
 	const handleShowAnswer = () => {
 		setActionBall(true)
