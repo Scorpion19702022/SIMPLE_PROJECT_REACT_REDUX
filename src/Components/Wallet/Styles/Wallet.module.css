@@ -34,5 +34,16 @@
 	align-items: center;
 }
 
+.header {
+	width: 90%;
+	height: 10%;
+	padding-bottom: 1em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 0.04em solid var(--color-dark04);
+}
+
 @media (min-width: 1200px) {
 }

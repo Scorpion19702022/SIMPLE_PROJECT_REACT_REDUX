@@ -3,7 +3,10 @@ import styles from './Styles/Wallet.module.css'
 const Wallet = () => {
 	return (
 		<main className={styles.wrapper}>
-			<h1>Wallet</h1>
+			<div className={styles.header}>
+				<h1 className={styles.heading}>Wallet</h1>
+				<span className={styles.text_heading}>- twój portfel -</span>
+			</div>
 		</main>
 	)
 }
