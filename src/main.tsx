@@ -9,6 +9,7 @@ import HomeComponent from './Components/Home/HomeComponent'
 import { Provider } from 'react-redux'
 import { store } from './Features/store'
 import Magic8Ball from './Components/Magic8Ball/Magic8Ball'
+import Wallet from './Components/Wallet/Wallet'
 
 const router = createBrowserRouter(
 	[
@@ -31,6 +32,10 @@ const router = createBrowserRouter(
 				{
 					path: 'Magic8Ball',
 					element: <Magic8Ball />,
+				},
+				{
+					path: 'Wallet',
+					element: <Wallet />,
 				},
 			],
 		},

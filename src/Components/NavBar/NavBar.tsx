@@ -38,6 +38,11 @@ const NavBar = () => {
 							Magic8Ball
 						</li>
 					</NavLink>
+					<NavLink to='/Wallet'>
+						<li className={styles.link} onClick={handleViewNav}>
+							Wallet
+						</li>
+					</NavLink>
 				</ul>
 			</div>
 		</nav>
