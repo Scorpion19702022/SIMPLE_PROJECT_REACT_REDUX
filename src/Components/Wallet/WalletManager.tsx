@@ -9,6 +9,10 @@ const WalletManager = () => {
 					0<span className={styles.span_count}> zł</span>
 				</span>
 			</div>
+			<div className={styles.box_btns}>
+				<button className={styles.btn}>dodaj transakcję</button>
+				<button className={styles.btn}>usuń wszystko</button>
+			</div>
 		</section>
 	)
 }
