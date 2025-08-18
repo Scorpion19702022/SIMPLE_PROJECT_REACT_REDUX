@@ -1,4 +1,5 @@
 import styles from './Styles/Wallet.module.css'
+import WalletList from './WalletList'
 import WalletManager from './WalletManager'
 
 const Wallet = () => {
@@ -10,6 +11,7 @@ const Wallet = () => {
 			</div>
 			<div className={styles.box_wallet}>
 				<WalletManager />
+				<WalletList />
 			</div>
 		</main>
 	)
