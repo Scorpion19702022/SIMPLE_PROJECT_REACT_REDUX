@@ -21,7 +21,25 @@
 	--color-color08: #053c4a;
 	--color-color09: #021e25;
 
-	--color-error: #e32636;
+	--color-income01: #ccf2d8;
+	--color-income02: #9ae5b1;
+	--color-income03: #67d98a;
+	--color-income04: #35cc62;
+	--color-income05: #03c03c;
+	--color-income06: #029930;
+	--color-income07: #017324;
+	--color-income08: #014c18;
+	--color-income09: #00260c;
+
+	--color-expense01: #f9d3d6;
+	--color-expense02: #f3a8ae;
+	--color-expense03: #ee7c86;
+	--color-expense04: #e8515e;
+	--color-expense05: #e32636;
+	--color-expense06: #b51e2b;
+	--color-expense07: #881620;
+	--color-expense08: #5a0f15;
+	--color-expense09: #2d070a;
 }
 
 .wrapper {
@@ -43,6 +61,15 @@
 	align-items: center;
 	justify-content: center;
 	border-bottom: 0.04em solid var(--color-dark04);
+}
+
+.heading {
+	font-weight: 200;
+	color: var(--color-color02);
+}
+
+.text_heading {
+	color: var(--color-color04);
 }
 
 @media (min-width: 1200px) {
