@@ -41,3 +41,48 @@
 	--color-expense08: #5a0f15;
 	--color-expense09: #2d070a;
 }
+
+.wrapper {
+	width: 100%;
+	height: 200px;
+	padding: 2em;
+	background-color: var(--color-dark10);
+	border: 0.04em solid var(--color-dark05);
+	box-shadow: 0.6em 0.6em 0.6em var(--color-dark10);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header {
+	width: 100%;
+	height: 50%;
+	padding-bottom: 2em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 0.04em dotted var(--color-dark07);
+}
+
+.heading {
+	width: 100%;
+	text-align: center;
+	color: var(--color-dark03);
+	font-weight: 200;
+}
+
+.count {
+	color: var(--color-income05);
+	font-size: 2em;
+	font-weight: 600;
+}
+
+.span_count {
+	color: var(--color-dark03);
+	font-weight: 100;
+}
+
+@media (min-width: 1200px) {
+}
