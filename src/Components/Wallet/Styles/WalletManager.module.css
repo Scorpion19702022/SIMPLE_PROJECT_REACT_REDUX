@@ -101,4 +101,16 @@
 }
 
 @media (min-width: 1200px) {
+	.wrapper {
+		width: 50%;
+		height: 230px;
+	}
+
+	.heading {
+		font-size: 2em;
+	}
+
+	.count {
+		font-size: 3em;
+	}
 }
