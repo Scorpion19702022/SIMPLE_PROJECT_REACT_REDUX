@@ -113,4 +113,15 @@
 	.count {
 		font-size: 3em;
 	}
+
+	.btn {
+		font-size: 1.2em;
+		padding: 0.6em;
+		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.btn:hover {
+		background-color: var(--color-dark11);
+	}
 }
