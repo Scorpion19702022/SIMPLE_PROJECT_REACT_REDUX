@@ -83,7 +83,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	padding: 1em;
+	padding: 1em 1em 2em 1em;
 	background-color: var(--color-dark11);
 	border: 0.04em solid var(--color-dark08);
 }
@@ -102,6 +102,18 @@
 	letter-spacing: 0.2em;
 	padding-bottom: 0.2em;
 	border-bottom: 0.04em solid var(--color-expense05);
+}
+
+.deal_list {
+	width: 100%;
+	height: 80%;
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+}
+
+.list {
+	color: var(--color-color02);
 }
 
 @media (min-width: 1200px) {
