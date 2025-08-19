@@ -137,5 +137,6 @@
 	.box_expense {
 		width: 48%;
 		height: 85%;
+		background-color: var(--color-dark10);
 	}
 }
