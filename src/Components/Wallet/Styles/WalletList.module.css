@@ -84,6 +84,8 @@
 	align-items: center;
 	justify-content: space-between;
 	padding: 1em;
+	background-color: var(--color-dark11);
+	border: 0.04em solid var(--color-dark08);
 }
 
 @media (min-width: 1200px) {
