@@ -66,5 +66,25 @@
 	border-bottom: 0.04em dotted var(--color-dark06);
 }
 
+.box_deal {
+	width: 100%;
+	height: 90%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.box_income,
+.box_expense {
+	width: 100%;
+	height: 48%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1em;
+}
+
 @media (min-width: 1200px) {
 }
