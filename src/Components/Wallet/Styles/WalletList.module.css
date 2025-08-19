@@ -119,4 +119,13 @@
 }
 
 @media (min-width: 1200px) {
+	.wrapper {
+		width: 70%;
+		height: 400px;
+	}
+
+	.box_deal {
+		display: flex;
+		flex-direction: row;
+	}
 }
