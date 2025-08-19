@@ -89,17 +89,19 @@
 }
 
 .heading_income {
-	text-align: center;
 	color: var(--color-income05);
 	font-weight: 500;
 	letter-spacing: 0.2em;
+	padding-bottom: 0.2em;
+	border-bottom: 0.04em solid var(--color-income05);
 }
 
 .heading_expense {
-	text-align: center;
 	color: var(--color-expense05);
 	font-weight: 500;
 	letter-spacing: 0.2em;
+	padding-bottom: 0.2em;
+	border-bottom: 0.04em solid var(--color-expense05);
 }
 
 @media (min-width: 1200px) {
