@@ -124,8 +124,18 @@
 		height: 400px;
 	}
 
+	.heading {
+		margin-bottom: 0em;
+	}
+
 	.box_deal {
 		display: flex;
 		flex-direction: row;
+	}
+
+	.box_income,
+	.box_expense {
+		width: 48%;
+		height: 85%;
 	}
 }
