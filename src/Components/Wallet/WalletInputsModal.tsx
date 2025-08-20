@@ -22,6 +22,10 @@ const WalletInputsModal = () => {
 					</select>
 					<span className={styles.error}>error</span>
 				</div>
+				<div className={styles.box_btns}>
+					<button className={styles.btn}>dodaj</button>
+					<button className={styles.btn}>anuluj</button>
+				</div>
 			</form>
 		</section>
 	)
