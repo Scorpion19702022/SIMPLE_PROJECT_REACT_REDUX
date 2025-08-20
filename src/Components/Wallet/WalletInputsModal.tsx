@@ -1,6 +1,14 @@
 import styles from './Styles/WalletInputsModal.module.css'
 
 const WalletInputsModal = () => {
+	const dealKindOption = ['wybierz', 'przychód', 'wydatek']
+
+	const optionSelect = dealKindOption.map((item, id) => (
+		<option className={styles.option} value={item} key={id}>
+			{item}
+		</option>
+	))
+
 	return (
 		<section className={styles.wrapper}>
 			<h2 className={styles.heading}>{`Twoja transakcja`.toLocaleUpperCase()}</h2>
@@ -17,9 +25,7 @@ const WalletInputsModal = () => {
 				</div>
 				<div className={styles.box_select}>
 					<label className={styles.label}>Wybierz rodzaj transakcji:</label>
-					<select className={styles.select}>
-						<option value=''></option>
-					</select>
+					<select className={styles.select}>{optionSelect}</select>
 					<span className={styles.error}>error</span>
 				</div>
 				<div className={styles.box_btns}>
