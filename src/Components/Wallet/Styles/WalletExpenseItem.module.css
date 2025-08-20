@@ -1,0 +1,43 @@
+:root {
+	--color-dark01: #ffffff;
+	--color-dark02: #d6d9db;
+	--color-dark03: #aeb4b8;
+	--color-dark04: #868f95;
+	--color-dark05: #5e6a72;
+	--color-dark06: #36454f;
+	--color-dark07: #2b373f;
+	--color-dark08: #20292f;
+	--color-dark09: #151b1f;
+	--color-dark10: #0a0d0f;
+	--color-dark11: #000000;
+
+	--color-color01: #ceeaf1;
+	--color-color02: #9ed5e3;
+	--color-color03: #6dc1d5;
+	--color-color04: #3dacc7;
+	--color-color05: #0d98ba;
+	--color-color06: #0a7994;
+	--color-color07: #075b6f;
+	--color-color08: #053c4a;
+	--color-color09: #021e25;
+
+	--color-income01: #ccf2d8;
+	--color-income02: #9ae5b1;
+	--color-income03: #67d98a;
+	--color-income04: #35cc62;
+	--color-income05: #03c03c;
+	--color-income06: #029930;
+	--color-income07: #017324;
+	--color-income08: #014c18;
+	--color-income09: #00260c;
+
+	--color-expense01: #f9d3d6;
+	--color-expense02: #f3a8ae;
+	--color-expense03: #ee7c86;
+	--color-expense04: #e8515e;
+	--color-expense05: #e32636;
+	--color-expense06: #b51e2b;
+	--color-expense07: #881620;
+	--color-expense08: #5a0f15;
+	--color-expense09: #2d070a;
+}
