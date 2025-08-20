@@ -3,8 +3,25 @@ import styles from './Styles/WalletInputsModal.module.css'
 const WalletInputsModal = () => {
 	return (
 		<section className={styles.wrapper}>
-			<form>
-				<div></div>
+			<h2 className={styles.heading}>{`Twoja transakcja`.toLocaleUpperCase()}</h2>
+			<form className={styles.form}>
+				<div className={styles.box_inputs}>
+					<label className={styles.label}>Podaj nazwę transakcji:</label>
+					<input className={styles.input} type='text' />
+					<span className={styles.error}>error</span>
+				</div>
+				<div className={styles.box_inputs}>
+					<label className={styles.label}>Podaj kwotę transakcji:</label>
+					<input className={styles.input} type='number' />
+					<span className={styles.error}>error</span>
+				</div>
+				<div className={styles.box_select}>
+					<label className={styles.label}>Wybierz rodzaj transakcji:</label>
+					<select className={styles.select}>
+						<option value=''></option>
+					</select>
+					<span className={styles.error}>error</span>
+				</div>
 			</form>
 		</section>
 	)
