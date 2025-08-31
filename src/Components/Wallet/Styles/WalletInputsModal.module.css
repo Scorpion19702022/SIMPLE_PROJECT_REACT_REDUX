@@ -151,4 +151,19 @@
 	.box_select {
 		align-items: center;
 	}
+
+	.select {
+		font-size: 1.8em;
+	}
+
+	.btn {
+		font-size: 1.2em;
+		padding: 0.6em;
+		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.btn:hover {
+		background-color: var(--color-dark11);
+	}
 }
