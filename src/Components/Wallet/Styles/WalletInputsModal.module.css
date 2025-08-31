@@ -115,6 +115,20 @@
 	outline: none;
 }
 
+.box_btns {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.btn {
+	width: 40%;
+	padding: 0.4em;
+	background: none;
+	border: 0.04em solid var(--color-dark03);
+	color: var(--color-dark03);
+}
+
 @media (min-width: 1200px) {
 	.wrapper {
 		width: 80%;
