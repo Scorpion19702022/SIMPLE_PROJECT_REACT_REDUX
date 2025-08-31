@@ -138,4 +138,17 @@
 	.heading {
 		font-size: 2em;
 	}
+
+	.form {
+		width: 70%;
+		padding: 1em 0em;
+	}
+
+	.input {
+		font-size: 1.8em;
+	}
+
+	.box_select {
+		align-items: center;
+	}
 }
