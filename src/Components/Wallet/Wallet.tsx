@@ -10,6 +10,12 @@ const Wallet = () => {
 	const [kind, setKing] = useState<string>('wybierz')
 	const [activeModal, setActiveModal] = useState<boolean>(false)
 
+	const handleChangeTheme = (e: string) => {}
+
+	const handleChangeWorth = (e: string) => {}
+
+	const handleChangeKind = (e: string) => {}
+
 	const handleActiveModal = () => {
 		setActiveModal(true)
 	}
@@ -30,6 +36,9 @@ const Wallet = () => {
 					worthInput={worth}
 					kindInput={kind}
 					isCancelModal={activeModal}
+					changeTheme={handleChangeTheme}
+					changeWorth={handleChangeWorth}
+					changeKind={handleChangeKind}
 					cancelModal={handleCacelModal}
 				/>
 				<WalletManager activeModal={handleActiveModal} />
