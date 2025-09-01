@@ -1,6 +1,10 @@
 import styles from './Styles/WalletManager.module.css'
 
-const WalletManager = () => {
+interface initialProps {
+	activeModal: () => void
+}
+
+const WalletManager: React.FC<initialProps> = ({ activeModal }) => {
 	return (
 		<section className={styles.wrapper}>
 			<div className={styles.header}>
@@ -10,7 +14,9 @@ const WalletManager = () => {
 				</span>
 			</div>
 			<div className={styles.box_btns}>
-				<button className={styles.btn}>dodaj transakcję</button>
+				<button className={styles.btn} onClick={activeModal}>
+					dodaj transakcję
+				</button>
 				<button className={styles.btn}>usuń wszystko</button>
 			</div>
 		</section>
