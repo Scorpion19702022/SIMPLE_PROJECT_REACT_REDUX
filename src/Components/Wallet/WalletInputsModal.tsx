@@ -5,6 +5,9 @@ interface initialProps {
 	worthInput: string
 	kindInput: string
 	isCancelModal: boolean
+	changeTheme: (e: string) => void
+	changeWorth: (e: string) => void
+	changeKind: (e: string) => void
 	cancelModal: () => void
 }
 
@@ -13,6 +16,9 @@ const WalletInputsModal: React.FC<initialProps> = ({
 	worthInput,
 	kindInput,
 	isCancelModal,
+	changeTheme,
+	changeWorth,
+	changeKind,
 	cancelModal,
 }) => {
 	const dealKindOption = ['wybierz', 'przychód', 'wydatek']
@@ -29,17 +35,22 @@ const WalletInputsModal: React.FC<initialProps> = ({
 			<form className={styles.form}>
 				<div className={styles.box_inputs}>
 					<label className={styles.label}>Podaj nazwę transakcji:</label>
-					<input className={styles.input} type='text' value={themeInput} />
+					<input className={styles.input} type='text' value={themeInput} onChange={e => changeTheme(e.target.value)} />
 					<span className={styles.error}>error</span>
 				</div>
 				<div className={styles.box_inputs}>
 					<label className={styles.label}>Podaj kwotę transakcji:</label>
-					<input className={styles.input} type='number' value={worthInput} />
+					<input
+						className={styles.input}
+						type='number'
+						value={worthInput}
+						onChange={e => changeWorth(e.target.value)}
+					/>
 					<span className={styles.error}>error</span>
 				</div>
 				<div className={styles.box_select}>
 					<label className={styles.label}>Wybierz rodzaj transakcji:</label>
-					<select className={styles.select} value={kindInput}>
+					<select className={styles.select} value={kindInput} onChange={e => changeKind(e.target.value)}>
 						{optionSelect}
 					</select>
 					<span className={styles.error}>error</span>
