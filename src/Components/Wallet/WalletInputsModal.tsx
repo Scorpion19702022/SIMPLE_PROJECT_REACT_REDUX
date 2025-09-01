@@ -1,11 +1,20 @@
 import styles from './Styles/WalletInputsModal.module.css'
 
 interface initialProps {
+	themeInput: string
+	worthInput: string
+	kindInput: string
 	isCancelModal: boolean
 	cancelModal: () => void
 }
 
-const WalletInputsModal: React.FC<initialProps> = ({ isCancelModal, cancelModal }) => {
+const WalletInputsModal: React.FC<initialProps> = ({
+	themeInput,
+	worthInput,
+	kindInput,
+	isCancelModal,
+	cancelModal,
+}) => {
 	const dealKindOption = ['wybierz', 'przychód', 'wydatek']
 
 	const optionSelect = dealKindOption.map((item, id) => (
@@ -20,17 +29,19 @@ const WalletInputsModal: React.FC<initialProps> = ({ isCancelModal, cancelModal 
 			<form className={styles.form}>
 				<div className={styles.box_inputs}>
 					<label className={styles.label}>Podaj nazwę transakcji:</label>
-					<input className={styles.input} type='text' />
+					<input className={styles.input} type='text' value={themeInput} />
 					<span className={styles.error}>error</span>
 				</div>
 				<div className={styles.box_inputs}>
 					<label className={styles.label}>Podaj kwotę transakcji:</label>
-					<input className={styles.input} type='number' />
+					<input className={styles.input} type='number' value={worthInput} />
 					<span className={styles.error}>error</span>
 				</div>
 				<div className={styles.box_select}>
 					<label className={styles.label}>Wybierz rodzaj transakcji:</label>
-					<select className={styles.select}>{optionSelect}</select>
+					<select className={styles.select} value={kindInput}>
+						{optionSelect}
+					</select>
 					<span className={styles.error}>error</span>
 				</div>
 				<div className={styles.box_btns}>
