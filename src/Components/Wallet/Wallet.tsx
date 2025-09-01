@@ -5,6 +5,9 @@ import WalletList from './WalletList'
 import WalletManager from './WalletManager'
 
 const Wallet = () => {
+	const [theme, setTheme] = useState<string>('')
+	const [worth, setWorth] = useState<string>('')
+	const [kind, setKing] = useState<string>('wybierz')
 	const [activeModal, setActiveModal] = useState<boolean>(false)
 
 	const handleActiveModal = () => {
@@ -22,7 +25,13 @@ const Wallet = () => {
 				<span className={styles.text_heading}>- twój portfel -</span>
 			</div>
 			<div className={styles.box_wallet}>
-				<WalletInputsModal isCancelModal={activeModal} cancelModal={handleCacelModal} />
+				<WalletInputsModal
+					themeInput={theme}
+					worthInput={worth}
+					kindInput={kind}
+					isCancelModal={activeModal}
+					cancelModal={handleCacelModal}
+				/>
 				<WalletManager activeModal={handleActiveModal} />
 				<WalletList />
 			</div>
