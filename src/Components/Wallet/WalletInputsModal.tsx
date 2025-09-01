@@ -15,7 +15,7 @@ const WalletInputsModal: React.FC<initialProps> = ({ isCancelModal, cancelModal 
 	))
 
 	return (
-		<section className={isCancelModal ? styles.wrapper_no_active : styles.wrapper_active}>
+		<section className={!isCancelModal ? styles.wrapper_no_active : styles.wrapper_active}>
 			<h2 className={styles.heading}>{`Twoja transakcja`.toLocaleUpperCase()}</h2>
 			<form className={styles.form}>
 				<div className={styles.box_inputs}>
