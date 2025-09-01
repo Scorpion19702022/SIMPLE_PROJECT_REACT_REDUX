@@ -10,11 +10,17 @@ const Wallet = () => {
 	const [kind, setKing] = useState<string>('wybierz')
 	const [activeModal, setActiveModal] = useState<boolean>(false)
 
-	const handleChangeTheme = (e: string) => {}
+	const handleChangeTheme = (e: string) => {
+		setTheme(e)
+	}
 
-	const handleChangeWorth = (e: string) => {}
+	const handleChangeWorth = (e: string) => {
+		setWorth(e)
+	}
 
-	const handleChangeKind = (e: string) => {}
+	const handleChangeKind = (e: string) => {
+		setKing(e)
+	}
 
 	const handleActiveModal = () => {
 		setActiveModal(true)
