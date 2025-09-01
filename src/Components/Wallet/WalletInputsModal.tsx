@@ -1,6 +1,11 @@
 import styles from './Styles/WalletInputsModal.module.css'
 
-const WalletInputsModal = () => {
+interface initialProps {
+	isCancelModal: boolean
+	cancelModal: () => void
+}
+
+const WalletInputsModal: React.FC<initialProps> = ({ isCancelModal, cancelModal }) => {
 	const dealKindOption = ['wybierz', 'przychód', 'wydatek']
 
 	const optionSelect = dealKindOption.map((item, id) => (
@@ -30,7 +35,9 @@ const WalletInputsModal = () => {
 				</div>
 				<div className={styles.box_btns}>
 					<button className={styles.btn}>dodaj</button>
-					<button className={styles.btn}>anuluj</button>
+					<button className={styles.btn} type='button'>
+						anuluj
+					</button>
 				</div>
 			</form>
 		</section>
