@@ -8,7 +8,9 @@ const Wallet = () => {
 	const [theme, setTheme] = useState<string>('')
 	const [worth, setWorth] = useState<string>('')
 	const [kind, setKing] = useState<string>('wybierz')
-	const [error, setError] = useState<string>('')
+	const [emptyTheme, setEmptyTheme] = useState<string>('')
+	const [emptyWorth, setEmptyWorth] = useState<string>("")
+	const [emptyKind. setEmptyKind] = useState<string>("")
 	const [activeModal, setActiveModal] = useState<boolean>(false)
 
 	const handleChangeTheme = (e: string) => {
