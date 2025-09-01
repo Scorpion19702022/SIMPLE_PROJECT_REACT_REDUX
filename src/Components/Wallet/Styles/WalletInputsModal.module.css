@@ -145,7 +145,7 @@
 }
 
 @media (min-width: 1200px) {
-	.wrapper {
+	.wrapper_active {
 		width: 80%;
 		height: 680px;
 	}

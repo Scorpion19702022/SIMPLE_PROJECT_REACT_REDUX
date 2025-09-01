@@ -15,7 +15,7 @@ const WalletInputsModal: React.FC<initialProps> = ({ isCancelModal, cancelModal 
 	))
 
 	return (
-		<section className={styles.wrapper}>
+		<section className={isCancelModal ? styles.wrapper_no_active : styles.wrapper_active}>
 			<h2 className={styles.heading}>{`Twoja transakcja`.toLocaleUpperCase()}</h2>
 			<form className={styles.form}>
 				<div className={styles.box_inputs}>
@@ -35,7 +35,7 @@ const WalletInputsModal: React.FC<initialProps> = ({ isCancelModal, cancelModal 
 				</div>
 				<div className={styles.box_btns}>
 					<button className={styles.btn}>dodaj</button>
-					<button className={styles.btn} type='button'>
+					<button className={styles.btn} type='button' onClick={cancelModal}>
 						anuluj
 					</button>
 				</div>
