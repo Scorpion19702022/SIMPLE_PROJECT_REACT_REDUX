@@ -45,7 +45,15 @@ const Wallet = () => {
 		}
 
 		if (!theme) {
-			setEmptyTheme('podaj tytuł')
+			setEmptyTheme('podaj tytuł transakcji')
+		}
+
+		if (!worth) {
+			setEmptyWorth('podaj kwotę transakcji')
+		}
+
+		if (!kind) {
+			setEmptyKind('wybierz rodzaj transakcji')
 		}
 
 		setTheme('')
