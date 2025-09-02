@@ -12,6 +12,7 @@ interface initialProps {
 	changeWorth: (e: string) => void
 	changeKind: (e: string) => void
 	cancelModal: () => void
+	submit: (e: React.FormEvent) => void
 }
 
 const WalletInputsModal: React.FC<initialProps> = ({
@@ -26,6 +27,7 @@ const WalletInputsModal: React.FC<initialProps> = ({
 	changeWorth,
 	changeKind,
 	cancelModal,
+	submit,
 }) => {
 	const dealKindOption = ['wybierz', 'przychód', 'wydatek']
 
@@ -38,7 +40,7 @@ const WalletInputsModal: React.FC<initialProps> = ({
 	return (
 		<section className={!isCancelModal ? styles.wrapper_no_active : styles.wrapper_active}>
 			<h2 className={styles.heading}>{`Twoja transakcja`.toLocaleUpperCase()}</h2>
-			<form className={styles.form}>
+			<form className={styles.form} onSubmit={submit}>
 				<div className={styles.box_inputs}>
 					<label className={styles.label}>Podaj nazwę transakcji:</label>
 					<input className={styles.input} type='text' value={themeInput} onChange={e => changeTheme(e.target.value)} />
