@@ -14,7 +14,9 @@ const Wallet = () => {
 	const [activeModal, setActiveModal] = useState<boolean>(false)
 
 	const handleChangeTheme = (e: string) => {
-		setTheme(e)
+		if (e.length <= 15) {
+			setTheme(e)
+		}
 	}
 
 	const handleChangeWorth = (e: string) => {
