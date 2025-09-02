@@ -7,7 +7,7 @@ import WalletManager from './WalletManager'
 const Wallet = () => {
 	const [theme, setTheme] = useState<string>('')
 	const [worth, setWorth] = useState<string>('')
-	const [kind, setKing] = useState<string>('wybierz')
+	const [kind, setKind] = useState<string>('wybierz')
 	const [emptyTheme, setEmptyTheme] = useState<string>('')
 	const [emptyWorth, setEmptyWorth] = useState<string>('')
 	const [emptyKind, setEmptyKind] = useState<string>('')
@@ -25,7 +25,7 @@ const Wallet = () => {
 	}
 
 	const handleChangeKind = (e: string) => {
-		setKing(e)
+		setKind(e)
 	}
 
 	useEffect(() => {
@@ -47,6 +47,10 @@ const Wallet = () => {
 		if (!theme) {
 			setEmptyTheme('podaj tytuł')
 		}
+
+		setTheme('')
+		setWorth('')
+		setKind('wybierz')
 	}
 
 	const handleCacelModal = () => {
