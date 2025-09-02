@@ -40,6 +40,9 @@ const Wallet = () => {
 
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault()
+		if (theme !== '' && worth !== '' && kind !== 'wybierz') {
+			setActiveModal(false)
+		}
 	}
 
 	const handleCacelModal = () => {
