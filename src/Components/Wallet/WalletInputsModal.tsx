@@ -64,7 +64,9 @@ const WalletInputsModal: React.FC<initialProps> = ({
 					<span className={styles.error}>{emptyKindInput}</span>
 				</div>
 				<div className={styles.box_btns}>
-					<button className={styles.btn}>dodaj</button>
+					<button className={styles.btn} type='submit'>
+						dodaj
+					</button>
 					<button className={styles.btn} type='button' onClick={cancelModal}>
 						anuluj
 					</button>

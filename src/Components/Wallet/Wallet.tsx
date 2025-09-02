@@ -38,6 +38,10 @@ const Wallet = () => {
 		setActiveModal(true)
 	}
 
+	const handleSubmit = (e: React.FormEvent) => {
+		e.preventDefault()
+	}
+
 	const handleCacelModal = () => {
 		setActiveModal(false)
 	}
@@ -61,6 +65,7 @@ const Wallet = () => {
 					changeWorth={handleChangeWorth}
 					changeKind={handleChangeKind}
 					cancelModal={handleCacelModal}
+					submit={handleSubmit}
 				/>
 				<WalletManager activeModal={handleActiveModal} />
 				<WalletList />
