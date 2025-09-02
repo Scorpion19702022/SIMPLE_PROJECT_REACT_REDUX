@@ -9,8 +9,8 @@ const Wallet = () => {
 	const [worth, setWorth] = useState<string>('')
 	const [kind, setKing] = useState<string>('wybierz')
 	const [emptyTheme, setEmptyTheme] = useState<string>('')
-	const [emptyWorth, setEmptyWorth] = useState<string>("")
-	const [emptyKind. setEmptyKind] = useState<string>("")
+	const [emptyWorth, setEmptyWorth] = useState<string>('')
+	const [emptyKind, setEmptyKind] = useState<string>('')
 	const [activeModal, setActiveModal] = useState<boolean>(false)
 
 	const handleChangeTheme = (e: string) => {
@@ -46,6 +46,9 @@ const Wallet = () => {
 					themeInput={theme}
 					worthInput={worth}
 					kindInput={kind}
+					emptyThemeInput={emptyTheme}
+					emptyWorthInput={emptyWorth}
+					emptyKindInput={emptyKind}
 					isCancelModal={activeModal}
 					changeTheme={handleChangeTheme}
 					changeWorth={handleChangeWorth}
