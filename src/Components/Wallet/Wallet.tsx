@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './Styles/Wallet.module.css'
 import WalletInputsModal from './WalletInputsModal'
 import WalletList from './WalletList'
@@ -16,6 +16,7 @@ const Wallet = () => {
 	const handleChangeTheme = (e: string) => {
 		if (e.length <= 15) {
 			setTheme(e)
+			setEmptyTheme('')
 		}
 	}
 
@@ -26,6 +27,12 @@ const Wallet = () => {
 	const handleChangeKind = (e: string) => {
 		setKing(e)
 	}
+
+	useEffect(() => {
+		if (theme.length >= 15) {
+			setEmptyTheme('osiągnąłeś maksymalną ilość znaków')
+		}
+	}, [theme.length])
 
 	const handleActiveModal = () => {
 		setActiveModal(true)
