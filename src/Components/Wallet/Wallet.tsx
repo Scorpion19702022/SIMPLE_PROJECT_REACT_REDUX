@@ -55,6 +55,9 @@ const Wallet = () => {
 
 	const handleCacelModal = () => {
 		setActiveModal(false)
+		setTheme('')
+		setWorth('')
+		setKind('wybierz')
 	}
 
 	return (
