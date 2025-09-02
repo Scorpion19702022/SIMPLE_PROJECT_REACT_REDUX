@@ -30,7 +30,7 @@ const Wallet = () => {
 
 	useEffect(() => {
 		if (theme.length >= 15) {
-			setEmptyTheme('osiągnąłeś maksymalną ilość znaków')
+			setEmptyTheme('osiągnąłeś maksymalną ilość 15 znaków')
 		}
 	}, [theme.length])
 
@@ -42,6 +42,10 @@ const Wallet = () => {
 		e.preventDefault()
 		if (theme !== '' && worth !== '' && kind !== 'wybierz') {
 			setActiveModal(false)
+		}
+
+		if (!theme) {
+			setEmptyTheme('podaj tytuł')
 		}
 	}
 
