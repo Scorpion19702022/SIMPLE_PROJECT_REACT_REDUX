@@ -65,6 +65,9 @@ const Wallet = () => {
 		setTheme('')
 		setWorth('')
 		setKind('wybierz')
+		setEmptyTheme('')
+		setEmptyWorth('')
+		setEmptyKind('')
 	}
 
 	return (
