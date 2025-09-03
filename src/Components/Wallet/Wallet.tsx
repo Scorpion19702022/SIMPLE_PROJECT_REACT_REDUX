@@ -31,6 +31,8 @@ const Wallet = () => {
 	useEffect(() => {
 		if (theme.length >= 15) {
 			setEmptyTheme('osiągnąłeś maksymalną ilość 15 znaków')
+		} else {
+			setEmptyTheme('')
 		}
 	}, [theme.length])
 
