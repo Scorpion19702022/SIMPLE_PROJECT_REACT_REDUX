@@ -36,6 +36,12 @@ const Wallet = () => {
 		}
 	}, [theme.length])
 
+	useEffect(() => {
+		if (worth !== '') {
+			setEmptyWorth('')
+		}
+	}, [worth])
+
 	const handleActiveModal = () => {
 		setActiveModal(true)
 	}
