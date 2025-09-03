@@ -40,7 +40,14 @@ const Wallet = () => {
 
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault()
-		if (theme !== '' && worth !== '' && kind !== 'wybierz') {
+		if (theme !== '' && worth !== '' && kind === 'przychód') {
+			setActiveModal(false)
+			setTheme('')
+			setWorth('')
+			setKind('wybierz')
+		}
+
+		if (theme !== '' && worth !== '' && kind === 'wydatek') {
 			setActiveModal(false)
 			setTheme('')
 			setWorth('')
@@ -55,7 +62,7 @@ const Wallet = () => {
 			setEmptyWorth('podaj kwotę transakcji')
 		}
 
-		if (!kind) {
+		if (kind === 'wybierz') {
 			setEmptyKind('wybierz rodzaj transakcji')
 		}
 	}
