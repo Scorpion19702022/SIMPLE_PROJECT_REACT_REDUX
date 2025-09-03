@@ -42,6 +42,9 @@ const Wallet = () => {
 		e.preventDefault()
 		if (theme !== '' && worth !== '' && kind !== 'wybierz') {
 			setActiveModal(false)
+			setTheme('')
+			setWorth('')
+			setKind('wybierz')
 		}
 
 		if (!theme) {
@@ -55,10 +58,6 @@ const Wallet = () => {
 		if (!kind) {
 			setEmptyKind('wybierz rodzaj transakcji')
 		}
-
-		setTheme('')
-		setWorth('')
-		setKind('wybierz')
 	}
 
 	const handleCacelModal = () => {
