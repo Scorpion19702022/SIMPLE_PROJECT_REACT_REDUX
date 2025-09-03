@@ -42,6 +42,12 @@ const Wallet = () => {
 		}
 	}, [worth])
 
+	useEffect(() => {
+		if (kind !== 'wybierz') {
+			setEmptyKind('')
+		}
+	}, [kind])
+
 	const handleActiveModal = () => {
 		setActiveModal(true)
 	}
