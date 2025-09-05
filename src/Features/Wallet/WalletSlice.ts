@@ -1,3 +1,4 @@
+import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 import { TypesWallet } from './TypesWallet'
 
 interface WalletState {
@@ -5,7 +6,16 @@ interface WalletState {
 	walletExpense: TypesWallet[]
 }
 
-const InitialState: WalletState = {
+const initialState: WalletState = {
 	walletIncome: [],
 	walletExpense: [],
 }
+
+const WalletSlice = createSlice({
+	name: 'wallet',
+	initialState,
+	reducers: {},
+})
+
+export const {} = WalletSlice.actions
+export default WalletSlice.reducer
