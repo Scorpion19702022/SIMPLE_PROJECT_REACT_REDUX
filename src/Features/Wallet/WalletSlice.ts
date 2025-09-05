@@ -25,8 +25,19 @@ const WalletSlice = createSlice({
 
 			state.walletIncome.push(dealIncome)
 		},
+
+		addExpenseDeal: (state: WalletState, action: PayloadAction<TypesWallet>) => {
+			const expenseDeal: TypesWallet = {
+				id: action.payload.id,
+				themeType: action.payload.themeType,
+				worthType: action.payload.worthType,
+				kindType: action.payload.kindType,
+			}
+
+			state.walletExpense.push(expenseDeal)
+		},
 	},
 })
 
-export const { addIncomeDeal } = WalletSlice.actions
+export const { addIncomeDeal, addExpenseDeal } = WalletSlice.actions
 export default WalletSlice.reducer
