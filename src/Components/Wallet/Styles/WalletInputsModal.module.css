@@ -131,6 +131,10 @@
 	outline: none;
 }
 
+.option {
+	outline: none;
+}
+
 .box_btns {
 	width: 100%;
 	display: flex;
