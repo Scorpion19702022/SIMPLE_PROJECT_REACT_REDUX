@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { TypesWallet } from './TypesWallet'
 
 interface WalletState {
@@ -14,8 +14,19 @@ const initialState: WalletState = {
 const WalletSlice = createSlice({
 	name: 'wallet',
 	initialState,
-	reducers: {},
+	reducers: {
+		addIncomeDeal: (state: WalletState, action: PayloadAction<TypesWallet>) => {
+			const dealIncome: TypesWallet = {
+				id: action.payload.id,
+				themeType: action.payload.themeType,
+				worthType: action.payload.worthType,
+				kindType: action.payload.kindType,
+			}
+
+			state.walletIncome.push(dealIncome)
+		},
+	},
 })
 
-export const {} = WalletSlice.actions
+export const { addIncomeDeal } = WalletSlice.actions
 export default WalletSlice.reducer
