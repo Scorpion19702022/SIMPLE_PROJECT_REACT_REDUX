@@ -41,3 +41,17 @@
 	--color-expense08: #5a0f15;
 	--color-expense09: #2d070a;
 }
+
+.box_income {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 0.2em 0em;
+}
+
+.income_theme {
+	color: var(--color-dark02);
+}
+
+@media (min-width: 1200px) {
+}

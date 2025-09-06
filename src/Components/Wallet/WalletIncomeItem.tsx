@@ -8,8 +8,8 @@ interface initialProps {
 const WalletIncomeItem: React.FC<initialProps> = ({ walletIncomeListResult }) => {
 	return (
 		<div className={styles.box_income}>
-			<span>{walletIncomeListResult.themeType.toLocaleUpperCase()}</span>
-			<span>{walletIncomeListResult.worthType}</span>
+			<span className={styles.income_theme}>{walletIncomeListResult.themeType.toLocaleUpperCase()}</span>
+			<span className={styles.income_worth}>{walletIncomeListResult.worthType}</span>
 			<button className={styles.btn}>usuń</button>
 		</div>
 	)
