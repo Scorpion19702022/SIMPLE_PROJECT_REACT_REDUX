@@ -1,8 +1,13 @@
+import { TypesWallet } from '../../Features/Wallet/TypesWallet'
 import styles from './Styles/WalletList.module.css'
 import WalletExpenseItem from './WalletExpenseItem'
 import WalletIncomeItem from './WalletIncomeItem'
 
-const WalletList = () => {
+interface initialProps {
+	walletListIncome: TypesWallet[]
+}
+
+const WalletList: React.FC<initialProps> = ({ walletListIncome }) => {
 	return (
 		<section className={styles.wrapper}>
 			<h2 className={styles.heading}>{`lista transakcji`.toLocaleUpperCase()}</h2>
@@ -10,7 +15,9 @@ const WalletList = () => {
 				<div className={styles.box_income}>
 					<h3 className={styles.heading_income}>{`przychody`.toLocaleUpperCase()}</h3>
 					<div className={styles.deal_list}>
-						<WalletIncomeItem />
+						{walletListIncome.map((item: TypesWallet) => (
+							<WalletIncomeItem key={item.id} walletIncomeListResult={item} />
+						))}
 					</div>
 					<div className={styles.box_sum}>
 						<span className={styles.text_sum}>

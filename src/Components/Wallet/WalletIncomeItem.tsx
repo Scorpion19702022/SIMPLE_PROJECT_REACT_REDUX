@@ -1,10 +1,16 @@
+import { TypesWallet } from '../../Features/Wallet/TypesWallet'
 import styles from './Styles/WalletIncomeItem.module.css'
 
-const WalletIncomeItem = () => {
+interface initialProps {
+	walletIncomeListResult: TypesWallet
+}
+
+const WalletIncomeItem: React.FC<initialProps> = ({ walletIncomeListResult }) => {
 	return (
 		<div className={styles.box_income}>
-			<span className={styles.income_theme}>Temat</span>
-			<span className={styles.income_worth}>5000</span>
+			<span>{walletIncomeListResult.themeType.toLocaleUpperCase()}</span>
+			<span>{walletIncomeListResult.worthType}</span>
+			<button className={styles.btn}>usuń</button>
 		</div>
 	)
 }
