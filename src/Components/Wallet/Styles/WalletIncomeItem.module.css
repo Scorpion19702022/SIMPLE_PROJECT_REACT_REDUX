@@ -53,6 +53,7 @@
 .income_theme {
 	width: 40%;
 	color: var(--color-dark02);
+	font-weight: 200;
 }
 
 .income_worth {
