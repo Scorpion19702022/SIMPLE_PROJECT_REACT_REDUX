@@ -15,9 +15,13 @@ const WalletList: React.FC<initialProps> = ({ walletListIncome }) => {
 				<div className={styles.box_income}>
 					<h3 className={styles.heading_income}>{`przychody`.toLocaleUpperCase()}</h3>
 					<div className={styles.deal_list}>
-						{walletListIncome.map((item: TypesWallet) => (
-							<WalletIncomeItem key={item.id} walletIncomeListResult={item} />
-						))}
+						<ul>
+							{walletListIncome.map((item: TypesWallet) => (
+								<li>
+									<WalletIncomeItem key={item.id} walletIncomeListResult={item} />
+								</li>
+							))}
+						</ul>
 					</div>
 					<div className={styles.box_sum}>
 						<span className={styles.text_sum}>
