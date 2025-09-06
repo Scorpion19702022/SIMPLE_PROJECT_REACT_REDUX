@@ -20,15 +20,6 @@ const Wallet = () => {
 	const [emptyKind, setEmptyKind] = useState<string>('')
 	const [activeModal, setActiveModal] = useState<boolean>(false)
 
-	const [countTest, setCountTest] = useState<number>(0)
-
-	useEffect(() => {
-		const worthIncome = walletIncome.map(item => item.worthType)
-		setCountTest(worthIncome.reduce((acc: number, curr) => +acc + +curr, 0))
-	}, [walletIncome])
-
-	console.log(countTest)
-
 	const handleChangeTheme = (e: string) => {
 		if (e.length <= 15) {
 			setTheme(e)
