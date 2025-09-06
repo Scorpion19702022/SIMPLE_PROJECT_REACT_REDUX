@@ -118,6 +118,29 @@
 	color: var(--color-color02);
 }
 
+.box_sum {
+	width: 100%;
+	padding: 0.2em 0em 0em 0em;
+	display: flex;
+	justify-content: flex-end;
+	border-top: 0.04em dotted var(--color-dark06);
+}
+
+.text_sum {
+	color: var(--color-dark04);
+	font-weight: 200;
+}
+
+.sum_income {
+	color: var(--color-income05);
+	font-weight: 400;
+}
+
+.sum_expense {
+	color: var(--color-expense05);
+	font-weight: 400;
+}
+
 @media (min-width: 1200px) {
 	.wrapper {
 		width: 70%;
