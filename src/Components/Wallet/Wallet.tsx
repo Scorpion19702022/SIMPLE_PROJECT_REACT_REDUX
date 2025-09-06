@@ -21,7 +21,7 @@ const Wallet = () => {
 	const [activeModal, setActiveModal] = useState<boolean>(false)
 
 	const handleChangeTheme = (e: string) => {
-		if (e.length <= 15) {
+		if (e.length <= 12) {
 			setTheme(e)
 			setEmptyTheme('')
 		}
@@ -36,8 +36,8 @@ const Wallet = () => {
 	}
 
 	useEffect(() => {
-		if (theme.length >= 15) {
-			setEmptyTheme('osiągnąłeś maksymalną ilość 15 znaków')
+		if (theme.length >= 12) {
+			setEmptyTheme('osiągnąłeś maksymalną ilość 12 znaków')
 		} else {
 			setEmptyTheme('')
 		}
