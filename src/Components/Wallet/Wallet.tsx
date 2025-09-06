@@ -3,11 +3,13 @@ import styles from './Styles/Wallet.module.css'
 import WalletInputsModal from './WalletInputsModal'
 import WalletList from './WalletList'
 import WalletManager from './WalletManager'
+import { v4 as uuidv4 } from 'uuid'
 import { useDispatch } from 'react-redux'
 import { useAppSelector } from '../../hooks/useReduxHooks'
+import { addIncomeDeal } from '../../Features/Wallet/WalletSlice'
 
 const Wallet = () => {
-	const {} = useAppSelector(state => state.wallet)
+	const { walletIncome, walletExpense } = useAppSelector(state => state.wallet)
 	const dispatch = useDispatch()
 
 	const [theme, setTheme] = useState<string>('')
@@ -61,6 +63,14 @@ const Wallet = () => {
 		e.preventDefault()
 		if (theme !== '' && worth !== '' && kind === 'przychód') {
 			setActiveModal(false)
+			dispatch(
+				addIncomeDeal({
+					id: uuidv4(),
+					themeType: theme,
+					worthType: worth,
+					kindType: kind,
+				})
+			)
 			setTheme('')
 			setWorth('')
 			setKind('wybierz')
