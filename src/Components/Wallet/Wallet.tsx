@@ -3,8 +3,13 @@ import styles from './Styles/Wallet.module.css'
 import WalletInputsModal from './WalletInputsModal'
 import WalletList from './WalletList'
 import WalletManager from './WalletManager'
+import { useDispatch } from 'react-redux'
+import { useAppSelector } from '../../hooks/useReduxHooks'
 
 const Wallet = () => {
+	const {} = useAppSelector(state => state.wallet)
+	const dispatch = useDispatch()
+
 	const [theme, setTheme] = useState<string>('')
 	const [worth, setWorth] = useState<string>('')
 	const [kind, setKind] = useState<string>('wybierz')
