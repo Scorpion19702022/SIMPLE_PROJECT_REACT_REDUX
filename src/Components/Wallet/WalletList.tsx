@@ -13,8 +13,8 @@ const WalletList = () => {
 						<WalletIncomeItem />
 					</div>
 					<div className={styles.box_sum}>
-						<span>
-							Razem: <span>0 zł</span>
+						<span className={styles.text_sum}>
+							Razem: <span className={styles.sum_income}>0 zł</span>
 						</span>
 					</div>
 				</div>
@@ -24,8 +24,8 @@ const WalletList = () => {
 						<WalletExpenseItem />
 					</div>
 					<div className={styles.box_sum}>
-						<span>
-							Razem: <span>0 zł</span>
+						<span className={styles.text_sum}>
+							Razem: <span className={styles.sum_expense}>0 zł</span>
 						</span>
 					</div>
 				</div>
