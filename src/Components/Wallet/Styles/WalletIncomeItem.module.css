@@ -50,7 +50,14 @@
 }
 
 .income_theme {
+	width: 40%;
 	color: var(--color-dark02);
+}
+
+.income_worth {
+	width: 30%;
+	text-align: right;
+	color: var(--color-income05);
 }
 
 @media (min-width: 1200px) {
