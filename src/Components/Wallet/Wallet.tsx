@@ -128,7 +128,7 @@ const Wallet = () => {
 					submit={handleSubmit}
 				/>
 				<WalletManager activeModal={handleActiveModal} />
-				<WalletList walletListIncome={walletIncome} />
+				<WalletList walletListIncome={walletIncome} walletListExpense={walletExpense} />
 			</div>
 		</main>
 	)
