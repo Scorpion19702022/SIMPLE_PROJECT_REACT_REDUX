@@ -6,7 +6,7 @@ import WalletManager from './WalletManager'
 import { v4 as uuidv4 } from 'uuid'
 import { useDispatch } from 'react-redux'
 import { useAppSelector } from '../../hooks/useReduxHooks'
-import { addIncomeDeal } from '../../Features/Wallet/WalletSlice'
+import { addExpenseDeal, addIncomeDeal } from '../../Features/Wallet/WalletSlice'
 
 const Wallet = () => {
 	const { walletIncome, walletExpense } = useAppSelector(state => state.wallet)
@@ -78,6 +78,14 @@ const Wallet = () => {
 
 		if (theme !== '' && worth !== '' && kind === 'wydatek') {
 			setActiveModal(false)
+			dispatch(
+				addExpenseDeal({
+					id: uuidv4(),
+					themeType: theme,
+					worthType: worth,
+					kindType: kind,
+				})
+			)
 			setTheme('')
 			setWorth('')
 			setKind('wybierz')
