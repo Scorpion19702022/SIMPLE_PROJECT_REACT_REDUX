@@ -5,9 +5,10 @@ import WalletIncomeItem from './WalletIncomeItem'
 
 interface initialProps {
 	walletListIncome: TypesWallet[]
+	walletListExpense: TypesWallet[]
 }
 
-const WalletList: React.FC<initialProps> = ({ walletListIncome }) => {
+const WalletList: React.FC<initialProps> = ({ walletListIncome, walletListExpense }) => {
 	return (
 		<section className={styles.wrapper}>
 			<h2 className={styles.heading}>{`lista transakcji`.toLocaleUpperCase()}</h2>
@@ -32,7 +33,13 @@ const WalletList: React.FC<initialProps> = ({ walletListIncome }) => {
 				<div className={styles.box_expense}>
 					<h3 className={styles.heading_expense}>{`wydatki`.toLocaleUpperCase()}</h3>
 					<div className={styles.deal_list}>
-						<WalletExpenseItem />
+						<ul>
+							{walletListExpense.map((item: TypesWallet) => (
+								<li>
+									<WalletExpenseItem key={item.id} walletExpenseListResult={item} />
+								</li>
+							))}
+						</ul>
 					</div>
 					<div className={styles.box_sum}>
 						<span className={styles.text_sum}>
