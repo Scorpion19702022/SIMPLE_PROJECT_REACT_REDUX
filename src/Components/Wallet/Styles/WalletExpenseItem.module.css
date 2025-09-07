@@ -41,3 +41,39 @@
 	--color-expense08: #5a0f15;
 	--color-expense09: #2d070a;
 }
+
+.box_expense {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 0.4em 0em;
+	border-bottom: 0.04em dotted var(--color-dark05);
+}
+
+.expense_theme {
+	width: 40%;
+	color: var(--color-dark02);
+	font-weight: 200;
+}
+
+.expense_worth {
+	width: 30%;
+	text-align: right;
+	color: var(--color-expense05);
+}
+
+.box_btn {
+	width: 18%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.btn {
+	width: 100%;
+	background: none;
+	border: 0.04em solid var(--color-dark04);
+	color: var(--color-dark02);
+}
+
+@media (min-width: 1200px) {
+}
