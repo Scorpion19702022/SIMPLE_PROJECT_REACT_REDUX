@@ -9,7 +9,9 @@ const WalletIncomeItem: React.FC<initialProps> = ({ walletIncomeListResult }) =>
 	return (
 		<div className={styles.box_income}>
 			<span className={styles.income_theme}>{walletIncomeListResult.themeType.toLocaleUpperCase()}</span>
-			<span className={styles.income_worth}>{walletIncomeListResult.worthType}</span>
+			<span className={styles.income_worth}>
+				{walletIncomeListResult.worthType} <span className={styles.worth}> zł</span>
+			</span>
 			<div className={styles.box_btn}>
 				<button className={styles.btn}>usuń</button>
 			</div>
