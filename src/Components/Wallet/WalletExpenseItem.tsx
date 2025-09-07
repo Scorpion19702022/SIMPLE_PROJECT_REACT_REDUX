@@ -9,8 +9,11 @@ interface initialProps {
 const WalletExpenseItem: React.FC<initialProps> = ({ walletExpenseListResult }) => {
 	return (
 		<div className={styles.box_expense}>
-			<span className={styles.expense_theme}>Temat</span>
-			<span className={styles.expense_worth}>200</span>
+			<span className={styles.expense_theme}>{walletExpenseListResult.themeType.toLocaleUpperCase()}</span>
+			<span className={styles.expense_worth}>{walletExpenseListResult.worthType}</span>
+			<div className={styles.box_btn}>
+				<button className={styles.btn}>usuń</button>
+			</div>
 		</div>
 	)
 }
