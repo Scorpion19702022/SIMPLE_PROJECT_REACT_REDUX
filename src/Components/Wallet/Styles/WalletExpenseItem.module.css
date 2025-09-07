@@ -62,6 +62,11 @@
 	color: var(--color-expense05);
 }
 
+.worth {
+	color: var(--color-dark04);
+	font-weight: 200;
+}
+
 .box_btn {
 	width: 18%;
 	display: flex;
