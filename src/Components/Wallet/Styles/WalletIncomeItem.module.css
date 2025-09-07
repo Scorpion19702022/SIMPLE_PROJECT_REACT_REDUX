@@ -70,7 +70,25 @@
 
 .btn {
 	width: 100%;
+	background: none;
+	border: 0.04em solid var(--color-dark04);
+	color: var(--color-dark02);
 }
 
 @media (min-width: 1200px) {
+	.income_theme {
+		width: 25%;
+	}
+
+	.income_worth {
+		width: 25%;
+	}
+
+	.box_btn {
+		width: 30%;
+	}
+
+	.btn {
+		width: 60%;
+	}
 }
