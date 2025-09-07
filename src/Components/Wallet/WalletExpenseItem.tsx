@@ -1,6 +1,12 @@
 import styles from './Styles/WalletExpenseItem.module.css'
 
-const WalletExpenseItem = () => {
+import { TypesWallet } from '../../Features/Wallet/TypesWallet'
+
+interface initialProps {
+	walletExpenseListResult: TypesWallet
+}
+
+const WalletExpenseItem: React.FC<initialProps> = ({ walletExpenseListResult }) => {
 	return (
 		<div className={styles.box_expense}>
 			<span className={styles.expense_theme}>Temat</span>
