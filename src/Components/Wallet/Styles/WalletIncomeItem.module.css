@@ -78,6 +78,7 @@
 @media (min-width: 1200px) {
 	.income_theme {
 		width: 25%;
+		font-size: 1.2em;
 	}
 
 	.income_worth {
@@ -90,5 +91,11 @@
 
 	.btn {
 		width: 60%;
+		cursor: pointer;
+		transition: all 0.2s ease-in-out;
+	}
+
+	.btn:hover {
+		background-color: var(--color-dark11);
 	}
 }
