@@ -7,9 +7,15 @@ interface initialProps {
 	walletListIncome: TypesWallet[]
 	walletListExpense: TypesWallet[]
 	deleteDealIncome: (id: string) => void
+	deleteDealExpense: (id: string) => void
 }
 
-const WalletList: React.FC<initialProps> = ({ walletListIncome, walletListExpense, deleteDealIncome }) => {
+const WalletList: React.FC<initialProps> = ({
+	walletListIncome,
+	walletListExpense,
+	deleteDealIncome,
+	deleteDealExpense,
+}) => {
 	return (
 		<section className={styles.wrapper}>
 			<h2 className={styles.heading}>{`lista transakcji`.toLocaleUpperCase()}</h2>
@@ -31,7 +37,7 @@ const WalletList: React.FC<initialProps> = ({ walletListIncome, walletListExpens
 					<h3 className={styles.heading_expense}>{`wydatki`.toLocaleUpperCase()}</h3>
 					<div className={styles.deal_list}>
 						{walletListExpense.map((item: TypesWallet) => (
-							<WalletExpenseItem key={item.id} walletExpenseListResult={item} />
+							<WalletExpenseItem key={item.id} walletExpenseListResult={item} deleteDeal={deleteDealExpense} />
 						))}
 					</div>
 					<div className={styles.box_sum}>
