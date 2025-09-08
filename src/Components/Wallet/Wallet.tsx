@@ -122,6 +122,8 @@ const Wallet = () => {
 		dispatch(deleteDealExpense(id))
 	}
 
+	const handleDeleteAllDeal = () => {}
+
 	return (
 		<main className={styles.wrapper}>
 			<div className={styles.header}>
@@ -143,7 +145,7 @@ const Wallet = () => {
 					cancelModal={handleCacelModal}
 					submit={handleSubmit}
 				/>
-				<WalletManager activeModal={handleActiveModal} />
+				<WalletManager activeModal={handleActiveModal} deleteAllDeal={handleDeleteAllDeal} />
 				<WalletList
 					walletListIncome={walletIncome}
 					walletListExpense={walletExpense}
