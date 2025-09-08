@@ -118,6 +118,8 @@ const Wallet = () => {
 		dispatch(deleteDealIncome(id))
 	}
 
+	const handleDeleteDealExpense = (id: string) => {}
+
 	return (
 		<main className={styles.wrapper}>
 			<div className={styles.header}>
@@ -144,6 +146,7 @@ const Wallet = () => {
 					walletListIncome={walletIncome}
 					walletListExpense={walletExpense}
 					deleteDealIncome={handleDeleteDealIncome}
+					deleteDealExpense={handleDeleteDealExpense}
 				/>
 			</div>
 		</main>
