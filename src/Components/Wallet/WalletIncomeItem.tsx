@@ -3,9 +3,10 @@ import styles from './Styles/WalletIncomeItem.module.css'
 
 interface initialProps {
 	walletIncomeListResult: TypesWallet
+	deleteDeal: (id: string) => void
 }
 
-const WalletIncomeItem: React.FC<initialProps> = ({ walletIncomeListResult }) => {
+const WalletIncomeItem: React.FC<initialProps> = ({ walletIncomeListResult, deleteDeal }) => {
 	return (
 		<div className={styles.box_income}>
 			<span className={styles.income_theme}>{walletIncomeListResult.themeType.toLocaleUpperCase()}</span>
@@ -13,7 +14,9 @@ const WalletIncomeItem: React.FC<initialProps> = ({ walletIncomeListResult }) =>
 				{walletIncomeListResult.worthType} <span className={styles.worth}> zł</span>
 			</span>
 			<div className={styles.box_btn}>
-				<button className={styles.btn}>usuń</button>
+				<button className={styles.btn} onClick={() => deleteDeal(walletIncomeListResult.id)}>
+					usuń
+				</button>
 			</div>
 		</div>
 	)
