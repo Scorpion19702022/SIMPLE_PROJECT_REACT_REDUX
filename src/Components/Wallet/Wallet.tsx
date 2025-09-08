@@ -6,7 +6,7 @@ import WalletManager from './WalletManager'
 import { v4 as uuidv4 } from 'uuid'
 import { useDispatch } from 'react-redux'
 import { useAppSelector } from '../../hooks/useReduxHooks'
-import { addExpenseDeal, addIncomeDeal } from '../../Features/Wallet/WalletSlice'
+import { addExpenseDeal, addIncomeDeal, deleteDealIncome } from '../../Features/Wallet/WalletSlice'
 
 const Wallet = () => {
 	const { walletIncome, walletExpense } = useAppSelector(state => state.wallet)
@@ -114,7 +114,9 @@ const Wallet = () => {
 		setEmptyKind('')
 	}
 
-	const handleDeleteDealIncome = (id: string) => {}
+	const handleDeleteDealIncome = (id: string) => {
+		dispatch(deleteDealIncome(id))
+	}
 
 	return (
 		<main className={styles.wrapper}>
@@ -138,7 +140,11 @@ const Wallet = () => {
 					submit={handleSubmit}
 				/>
 				<WalletManager activeModal={handleActiveModal} />
-				<WalletList walletListIncome={walletIncome} walletListExpense={walletExpense} />
+				<WalletList
+					walletListIncome={walletIncome}
+					walletListExpense={walletExpense}
+					deleteDealIncome={handleDeleteDealIncome}
+				/>
 			</div>
 		</main>
 	)
