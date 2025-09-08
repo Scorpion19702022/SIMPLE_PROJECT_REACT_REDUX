@@ -36,8 +36,12 @@ const WalletSlice = createSlice({
 
 			state.walletExpense.push(expenseDeal)
 		},
+
+		deleteDealIncome: (state: WalletState, action: PayloadAction<string>) => {
+			state.walletIncome = state.walletIncome.filter(item => item.id !== action.payload)
+		},
 	},
 })
 
-export const { addIncomeDeal, addExpenseDeal } = WalletSlice.actions
+export const { addIncomeDeal, addExpenseDeal, deleteDealIncome } = WalletSlice.actions
 export default WalletSlice.reducer

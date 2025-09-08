@@ -114,6 +114,8 @@ const Wallet = () => {
 		setEmptyKind('')
 	}
 
+	const handleDeleteDealIncome = (id: string) => {}
+
 	return (
 		<main className={styles.wrapper}>
 			<div className={styles.header}>
