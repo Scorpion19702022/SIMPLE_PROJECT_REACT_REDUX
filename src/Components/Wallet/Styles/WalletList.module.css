@@ -157,6 +157,10 @@
 		margin-bottom: 0em;
 	}
 
+	.text_sum {
+		font-size: 1.2em;
+	}
+
 	.box_deal {
 		display: flex;
 		flex-direction: row;
