@@ -14,9 +14,9 @@ const WalletManager: React.FC<initialProps> = ({ activeModal, deleteAllDeal }) =
 		<section className={styles.wrapper}>
 			<div className={styles.header}>
 				<h2 className={styles.heading}>{`dostępne środki:`.toLocaleUpperCase()}</h2>
-				<span className={styles.count}>
+				<span className={totalSum > 0 ? styles.above_value : styles.below_value}>
 					{totalSum}
-					<span className={styles.span_count}> zł</span>
+					<span className={styles.span_value}> zł</span>
 				</span>
 			</div>
 			<div className={styles.box_btns}>
