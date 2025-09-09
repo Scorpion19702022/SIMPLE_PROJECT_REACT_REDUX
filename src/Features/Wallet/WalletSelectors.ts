@@ -4,7 +4,7 @@ import { RootState } from '../store'
 export const selectWalletIncome = (state: RootState) => state.wallet.walletIncome
 export const selectWalletExpense = (state: RootState) => state.wallet.walletExpense
 
-export const selectIcomeSum = createSelector([selectWalletIncome], income =>
+export const selectIncomeSum = createSelector([selectWalletIncome], income =>
 	income.reduce((acc, curr) => acc + +curr, 0)
 )
 

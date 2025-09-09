@@ -4,8 +4,7 @@ import WalletInputsModal from './WalletInputsModal'
 import WalletList from './WalletList'
 import WalletManager from './WalletManager'
 import { v4 as uuidv4 } from 'uuid'
-import { useDispatch } from 'react-redux'
-import { useAppSelector } from '../../hooks/useReduxHooks'
+import { useAppDispatch, useAppSelector } from '../../hooks/useReduxHooks'
 import {
 	addExpenseDeal,
 	addIncomeDeal,
@@ -16,7 +15,7 @@ import {
 
 const Wallet = () => {
 	const { walletIncome, walletExpense } = useAppSelector(state => state.wallet)
-	const dispatch = useDispatch()
+	const dispatch = useAppDispatch()
 
 	const [theme, setTheme] = useState<string>('')
 	const [worth, setWorth] = useState<string>('')
