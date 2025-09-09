@@ -142,6 +142,11 @@
 	font-weight: 400;
 }
 
+.span {
+	color: var(--color-dark04);
+	font-weight: 200;
+}
+
 @media (min-width: 1200px) {
 	.wrapper {
 		width: 70%;
