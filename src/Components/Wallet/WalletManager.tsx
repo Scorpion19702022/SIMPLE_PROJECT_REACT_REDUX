@@ -1,3 +1,5 @@
+import { selectTotalSum } from '../../Features/Wallet/WalletSelectors'
+import { useAppSelector } from '../../hooks/useReduxHooks'
 import styles from './Styles/WalletManager.module.css'
 
 interface initialProps {
@@ -6,12 +8,15 @@ interface initialProps {
 }
 
 const WalletManager: React.FC<initialProps> = ({ activeModal, deleteAllDeal }) => {
+	const totalSum = useAppSelector(selectTotalSum)
+
 	return (
 		<section className={styles.wrapper}>
 			<div className={styles.header}>
 				<h2 className={styles.heading}>{`dostępne środki:`.toLocaleUpperCase()}</h2>
 				<span className={styles.count}>
-					0<span className={styles.span_count}> zł</span>
+					{totalSum}
+					<span className={styles.span_count}> zł</span>
 				</span>
 			</div>
 			<div className={styles.box_btns}>
