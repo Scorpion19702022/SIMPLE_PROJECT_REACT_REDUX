@@ -73,13 +73,19 @@
 	font-weight: 200;
 }
 
-.count {
+.above_value {
 	color: var(--color-income05);
 	font-size: 2em;
 	font-weight: 600;
 }
 
-.span_count {
+.below_value {
+	color: var(--color-expense05);
+	font-size: 2em;
+	font-weight: 600;
+}
+
+.span_value {
 	color: var(--color-dark03);
 	font-weight: 100;
 }
