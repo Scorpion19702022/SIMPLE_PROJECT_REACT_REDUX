@@ -11,3 +11,8 @@ export const selectIncomeSum = createSelector([selectWalletIncome], income =>
 export const selectExpenseSum = createSelector([selectWalletExpense], expense =>
 	expense.reduce((acc, curr) => acc + +curr.worthType, 0)
 )
+
+export const selectTotalSum = createSelector(
+	[selectIncomeSum, selectExpenseSum],
+	(incomeSum, expenseSum) => incomeSum - expenseSum
+)
