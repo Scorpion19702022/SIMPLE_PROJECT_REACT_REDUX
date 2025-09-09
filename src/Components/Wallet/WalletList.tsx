@@ -2,7 +2,7 @@ import { TypesWallet } from '../../Features/Wallet/TypesWallet'
 import styles from './Styles/WalletList.module.css'
 import WalletExpenseItem from './WalletExpenseItem'
 import WalletIncomeItem from './WalletIncomeItem'
-import { selectIncomeSum } from '../../Features/Wallet/WalletSelectors'
+import { selectExpenseSum, selectIncomeSum } from '../../Features/Wallet/WalletSelectors'
 import { useAppSelector } from '../../hooks/useReduxHooks'
 
 interface initialProps {
@@ -19,6 +19,7 @@ const WalletList: React.FC<initialProps> = ({
 	deleteDealExpense,
 }) => {
 	const incomeSum = useAppSelector(selectIncomeSum)
+	const expenseSum = useAppSelector(selectExpenseSum)
 
 	return (
 		<section className={styles.wrapper}>
@@ -46,7 +47,7 @@ const WalletList: React.FC<initialProps> = ({
 					</div>
 					<div className={styles.box_sum}>
 						<span className={styles.text_sum}>
-							Razem: <span className={styles.sum_expense}>0 zł</span>
+							Razem: <span className={styles.sum_expense}>{expenseSum}</span>
 						</span>
 					</div>
 				</div>
