@@ -116,8 +116,9 @@
 		font-size: 2em;
 	}
 
-	.count {
-		font-size: 3em;
+	.above_value,
+	.below_value {
+		font-size: 2.6em;
 	}
 
 	.btn {
