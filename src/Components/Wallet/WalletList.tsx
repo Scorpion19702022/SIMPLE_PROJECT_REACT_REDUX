@@ -34,7 +34,10 @@ const WalletList: React.FC<initialProps> = ({
 					</div>
 					<div className={styles.box_sum}>
 						<span className={styles.text_sum}>
-							Razem: <span className={styles.sum_income}>{incomeSum}</span>
+							Razem:{' '}
+							<span className={styles.sum_income}>
+								{incomeSum} <span className={styles.span}> zł</span>
+							</span>
 						</span>
 					</div>
 				</div>
@@ -47,7 +50,10 @@ const WalletList: React.FC<initialProps> = ({
 					</div>
 					<div className={styles.box_sum}>
 						<span className={styles.text_sum}>
-							Razem: <span className={styles.sum_expense}>{expenseSum}</span>
+							Razem:{' '}
+							<span className={styles.sum_expense}>
+								{expenseSum} <span className={styles.span}> zł</span>
+							</span>
 						</span>
 					</div>
 				</div>
