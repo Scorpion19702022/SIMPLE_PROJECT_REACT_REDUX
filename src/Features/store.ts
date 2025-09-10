@@ -20,6 +20,8 @@ store.subscribe(() => {
 		localStorage.removeItem('walletIncome')
 		localStorage.removeItem('walletExpense')
 	} else {
+		localStorage.getItem('walletIncome', JSON.stringify(state.walletIncome))
+		localStorage.getItem('walletExpense', JSON.stringify(state.walletExpense))
 	}
 })
 
