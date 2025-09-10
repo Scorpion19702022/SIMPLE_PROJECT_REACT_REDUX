@@ -6,6 +6,11 @@ interface WalletState {
 	walletExpense: TypesWallet[]
 }
 
+const loadFromLocalStorage = (key: string): TypesWallet[] => {
+	const data = localStorage.getItem(key)
+	return data ? JSON.parse(data) : []
+}
+
 const initialState: WalletState = {
 	walletIncome: [],
 	walletExpense: [],
