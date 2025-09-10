@@ -12,9 +12,14 @@ const loadFromLocalStorage = (key: string): TypesWallet[] => {
 }
 
 const initialState: WalletState = {
-	walletIncome: [],
-	walletExpense: [],
+	walletIncome: loadFromLocalStorage('walletIncome'),
+	walletExpense: loadFromLocalStorage('walletExpense'),
 }
+
+// const initialState: WalletState = {
+// 	walletIncome: [],
+// 	walletExpense: [],
+// }
 
 const WalletSlice = createSlice({
 	name: 'wallet',
