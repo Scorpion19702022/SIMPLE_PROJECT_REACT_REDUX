@@ -68,7 +68,7 @@ https://simpleprojectreactredux.vercel.app/
 
 <img src="./src/assets/wallet_screen.jpg" alt="image" width="100%">
 
-<p>In this project there is a notebook. Notebook cards contain title, content and date added. There is also selection by category of note. Color of card highlights category, you can also display only given category or all notes</p>
+<p>In this project, you can manage your income and expenses. Data is saved in local storage and will be permanently accessible for management in a given browser</p>
 
 ---
 
