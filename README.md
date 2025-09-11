@@ -62,6 +62,14 @@ https://simpleprojectreactredux.vercel.app/
 
 <p>In this project you can ask a question, click on the ball and get a random answer</p>
 
+# --------------------
+
+<h2>Project 4: Wallet</h2>
+
+<img src="./src/assets/wallet_screen.jpg" alt="image" width="100%">
+
+<p>In this project there is a notebook. Notebook cards contain title, content and date added. There is also selection by category of note. Color of card highlights category, you can also display only given category or all notes</p>
+
 ---
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
